@@ -1,5 +1,10 @@
+- content_for :page_class, " blog-layout"
+
 - wrap_layout :layout do
 
   #blog-content
 
-    = yield
+    = partial "blog/sidebar"
+
+    section.blog-main
+      = yield

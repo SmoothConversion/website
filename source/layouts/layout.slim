@@ -25,7 +25,7 @@ html
 
     = yield_content :head
 
-  body
+  body class="#{yield_content :page_class}"
     = yield_content :pre_content
 
     #wrap

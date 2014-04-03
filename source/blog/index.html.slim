@@ -1,1 +1,7 @@
-p Smooth Conversion Blog
+
+- 10.times do
+  - blog.articles.first(5).each do |article|
+    = partial "article_info", locals: {article: article}
+
+
+

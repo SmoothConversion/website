@@ -1,0 +1,13 @@
+
+.article-heading
+  h2= article.title
+
+  .article-info
+    h6
+      span.date= article.date.strftime('%b %e %Y')
+      span.num-comments
+    h5.tags= article.tags.join(", ")
+
+
+
+

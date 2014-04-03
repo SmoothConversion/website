@@ -1,0 +1,14 @@
+nav.site-nav
+  ul
+    li.home
+      a href="/" Home
+    li.team
+      a href="/team" Team
+
+    - if locals[:blog]
+      li.archives
+        a href="/archives" Archives
+
+    - else
+      li.blog
+        a href="/blog" Blog

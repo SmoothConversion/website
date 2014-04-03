@@ -3,6 +3,8 @@ title: Smooth Conversion - Home
 page: index
 ---
 
+- content_for :page_class, "index-page"
+
 - content_for :head do
   link rel="canonical" href="http://smoothconversion.com"
 
@@ -36,7 +38,7 @@ section.secondary-info.left-img
   img src="/img/dev-icon.png"
 
   p
-    = "Our combined expertise in software engineering, user interface design, and customer analytics serves a primary focus: "
+    = "Our combined expertise in software engineering, user interface design, customer analytics, and project management serves a primary focus: "
     strong
       = "making your business more efficient and more profitable."
 
@@ -71,9 +73,7 @@ section.subscribe-cta
   p
     strong Learn how to optimize your business for growth:
 
-  form action="http://smoothconversion.createsend.com/t/d/s/xhyjr/"
-    input.email placeholder="Your email" name="cm-xhyjr-xhyjr" type="email" required="required"
-    input.outline-button type="submit" value="Get Free Tips"
+  = partial "email_subscribe"
 
 
 - content_for :post_content do
