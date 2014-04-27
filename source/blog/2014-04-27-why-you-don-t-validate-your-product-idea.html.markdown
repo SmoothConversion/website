@@ -1,0 +1,94 @@
+---
+title: Why You Don't Validate Your Product Idea
+date: 2014-04-27 17:29 UTC
+tags: Lean
+image: mad-scientist.jpg
+---
+
+Eureka!  You’ve just had that flash of inspiration where the stars aligned, the fog lifted, and everything became clear to you in a single instant and all that was left, so forehead-smackingly obvious in hindsight, was the Perfect Product Idea.  For the next few hours the idea consumes you.  You can’t focus on your work.  You have conversations with people but you don’t hear a word they say.
+
+Suddenly you can’t stand it anymore and you decide to go for it.  You begin broadcasting the idea to the masses and immediately break ground on construction.
+
+And yet, some part of you knows this is the wrong approach.  What you should be doing is properly validating this new idea.  You nod your head knowingly when you hear stories about companies who spend multiple years and millions of dollars developing in isolation a product that nobody ends up wanting.  And you smile sagely when reading about a company whose early customer interviews allowed them to smoothly pivot into a wildly profitable trajectory.
+
+And yet you still don’t do it!  
+
+Why is this?!
+
+### Introducing: The Heads Down Hacker
+
+![The Heads Down Hacker](heads-down-hacker.jpg)
+
+The Heads Down Hacker has technical talent and experience building products.  He jumps right into the building stage because he is passionate about technology and the challenges of product development.  Picking a tech stack, architecting data models, and digging into the nitty gritty are his strengths. 
+
+Stereotypically, the Heads Down Hacker is more comfortable negotiating a complex error stack trace than a Tuesday night networking event.  When social interaction is not your strong suit, the idea of talking to lots of people about anything can be daunting.
+
+And then to make yourself vulnerable by putting your idea out into the world to be shot down and picked apart... 
+
+Terrifying.
+
+When the Heads Down Hacker finally does muster up the courage to get feedback from the friendliest possible contact, any negative feedback or constructive criticism is dismissed as an edge case or crank opinion.
+
+### Introducing: The Excitable Entrepreneur
+
+This person has the opposite problem.  The Excitable Entrepreneur is a people person, a social butterfly exuberantly thrusting her product idea in front of anyone who will give her the time of day.  She doesn’t stop to consider whether her listener is part of the target market or has any relevant experience in the problem space. 
+
+When constructive criticism comes, the Excitable Entrepreneur wants to please everybody and takes each feature request as gospel.  The product specs grow to Tolstoyesque proportions until the minimum viable product becomes an inviable albatross.
+
+As this cycle continues, the product morphs and evolves so quickly that it becomes unrecognizable from each interview to the next.  By the time the Excitable Entrepreneur sits down with a developer or investor, nobody can figure out if she wants to build a home automation app or the next Facebook clone.
+
+## What You Can Do
+
+Conveniently enough, the prescription for both is basically the same.  
+
+### Know Thyself
+
+The first task is to shine the bright light of self-reflection upon yourself.  Towards which archetype do you tend?  The Heads Down Hacker or the Excitable Entrepreneur?  
+
+*Hi, my name is Lennon, and I’m a recovering Heads Down Hacker.*  
+
+While I’ve had numerous working relationships with Excitable Entrepreneurs, I tend towards mulling an idea over for just a few hours and then diving in head first.  Over-confidence in the awesomeness of my idea combined with the irresistible pull of an exciting tech challenge was too much to withstand and before I knew it I was neck deep in git branches and database migrations.
+
+### Focus on the problem and not the product
+
+It’s important to remember that shiny new products come out all the time.  It’s the ones that solve a real pain point that are successful.  You can build the prettiest, most robustly constructed website of all time, but if that site doesn’t actually solve anyone’s problems, you’ll have a beautiful and efficient ghost town.  However if the problem you’re trying to solve is painful enough for enough people, they will get excited about your product even if it’s the ugliest piece of crap they’ve ever laid eyes on.
+
+Once a problem is zeroed in on, the Heads Down Hacker’s natural inclination is to assume that because they have problem X, everybody has problem X and feels the same way about it.  Conversely, the Excitable Entrepreneur will listen to all feedback and try to solve everybody’s problems, dreaming of 100% adoption.  
+
+Which brings us to:
+
+### Interview the right people
+
+If you are a Heads Down Hacker and have a tendency to interview very few people and to reject constructive criticism out of hand, it’s important to identify people who you respect and whose feedback you would listen to.  The opportunity to interact with high caliber humans will give you motivation to leave your code cave and put your idea in front of eyeballs.  
+
+Additionally, the Heads Down Hacker often struggles with product launches.  Realizing that every customer interview done in the right problem space is a potential early adopter will give additional motivation to validate the idea.  You’re building your mailing list right from the start before you ever write a line of code.
+
+For the Excitable Entrepreneur, ensure that you are targeting and paying special attention to the feedback from people who deal directly and frequently with the problem your product is attempting to solve.
+
+### Stay Disciplined
+
+If the concept of speaking with 100 people about anything is overwhelming to you, it’s important to break the task down into small manageable chunks.  
+
+Using a combination of your existing contacts, Google(LINK ME!), Linked-In(LINK ME!),  Meetup.com(LINK ME!), and relevant company or university directories, make a list of people you think encounter your target problem on a frequent basis.  Start slowly.  Reach out to two or three per week.  Less daunting numbers will make it easier to stay disciplined and keep up the momentum.  Use whatever tools work for you to keep you on schedule.  Personally, I use a Trello (LINK ME!) board and a personal calendar to schedule items in advance.  
+
+For the more excitable persona, you’ll have no trouble finding and speaking with interested parties.  Instead, you’ll need to have discipline staying focused on a single problem and giving it a fair exploration.  
+
+When doing potential user interviews to validate problem X, you’re inevitably going to hear:  “I sometimes have problem X, but what I really need help with is problem Y and problem Z.  That doesn’t mean you immediately throw problem X in the trash and move on to solving Y and Z.  And you shouldn’t now be trying to solve X, Y and Z.  That mindset leads down the path of the universal super product that does everything under the sun but is impossible to build or use.  If you try to solve everyone’s problems, you won’t solve anyone’s well.
+
+Make a note of problems Y and Z.  If at the end of your potential user interviews it’s become clear that problems Y and Z are more prevalent and painful than problem X, that is the time to consider a pivot.  
+
+### Attempt to be objective
+
+Unless you’re a zen master, you are going to be extremely biased about your big idea.  That is a given.  So how will it then be possible to objectively gather feedback?  The best answer I’ve seen to this question is in Chapter 15 of Lean Analytics by Alistair Croll and Ben Yoskovitz (http://leananalyticsbook.com/).  
+
+Two of my favorite recommendations from that chapter are writing an interview script(link to explanation) and creating a grading rubric(Link To Explanation).  One common objectivity pitfall is asking questions that will only yield the answers you want to hear.  By following Alistair and Ben’s question criteria, creating a script in advance and showing that script to others who are far less attached to your idea, you can create a solid set of questions that will cut to the heart of the matter and avoid leading the witness(link to explanation).
+
+## Conclusion
+
+If you’ve read this far, you’ve got an entrepreneurial mindset.  You see problems in the world and you get excited by thinking of profitable solutions to those problems.  Therefore the one event I guarantee will happen to you, probably sooner rather than later, is that you’ll be accosted with the notion that you know how millions of people can do something better than it’s currently being done.  It happens to me multiple times a week.  
+
+Does this make me an arrogant blowhard?
+
+If I dive right in and spend months of my team’s time and thousands of my company’s dollars on a whim of an idea, if go around broadcasting the next big thing before doing little more than daydreaming, if I start my software team on an endless feature death march to nowhere, then yes, yes I am.  But if I hit the pavement, talk to the right people, stay disciplined about my target problem, and do my best to be objective, I could be on my way to making millions of lives easier and more productive.
+
+Don’t be an arrogant blowhard.  Validate your product idea.
