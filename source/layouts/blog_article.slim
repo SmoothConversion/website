@@ -1,2 +1,7 @@
 - wrap_layout :blog do
   
+  = partial "/blog/article_info", locals: {article: current_page, summary: false}
+
+  .article
+    = yield
+  

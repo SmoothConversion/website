@@ -31,7 +31,8 @@ require 'slim'
 #  :which_fake_page => "Rendering a fake page with a local variable" }
 
 page "/*", layout: "landing"
-page "/blog/*", layout: "blog"
+page "/blog/*", layout: "blog_article"
+page "/blog", layout: "blog"
 page "/feed.xml", layout: false
 
 ###

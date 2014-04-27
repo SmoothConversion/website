@@ -1,6 +1,6 @@
 
 - blog.articles.first(10).each do |article|
-  = partial "article_info", locals: {article: article}
+  = partial "/blog/article_info", locals: {article: article, summary: true}
 
 
 

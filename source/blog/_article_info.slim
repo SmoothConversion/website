@@ -1,12 +1,13 @@
 
-.article-info
+.article-info class=("is-summary" if summary)
   
-  = partial "article_heading", locals: {article: article}
+  = partial "/blog/article_heading", locals: {article: article, summary: summary}
 
   img src=article.data.image
 
-  .summary= article.summary
+  - if summary
+    .summary= article.summary
 
-  = link_to "Read More", article.url, class: "outline-button read-more"
+    = link_to "Read More", article.url, class: "outline-button read-more"
 
 
