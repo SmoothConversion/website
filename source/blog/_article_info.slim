@@ -1,9 +1,12 @@
 
 .article-info
+  
   = partial "article_heading", locals: {article: article}
 
   img src=article.data.image
 
   .summary= article.summary
+
+  = link_to "Read More", article.url, class: "outline-button read-more"
 
 

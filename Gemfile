@@ -20,3 +20,4 @@ gem "compass-h5bp", "~> 0.1.2" # HTML5 Boilerplate styles
 # For faster file watcher updates on Windows:
 gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 
+gem "pry"

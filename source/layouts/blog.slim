@@ -2,9 +2,12 @@
 
 - wrap_layout :layout do
 
-  #blog-content
+  #blog
+
+    = partial "blog/mobile_header"
 
     = partial "blog/sidebar"
 
     section.blog-main
-      = yield
+      .content
+        = yield

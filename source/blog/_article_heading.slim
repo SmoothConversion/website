@@ -1,12 +1,13 @@
 
 .article-heading
-  h2= article.title
+  h2 = link_to article.title, article.url
 
-  .article-info
+  .heading-info
     h6
-      span.date= article.date.strftime('%b %e %Y')
-      span.num-comments
-    h5.tags= article.tags.join(", ")
+      span.date= article.date.strftime('%B %e, %Y')
+      span.tags= article.tags.map {|tag| link_to tag.humanize, tag_path(tag)}.join(", ")
+
+      span.num-comments 67 comments
 
 
 

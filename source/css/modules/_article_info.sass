@@ -1,0 +1,72 @@
+.article-info
+  margin-bottom: 30px
+  padding-bottom: 30px
+  text-align: center
+  img
+    width: 100%
+    margin: 17px 0 5px 0
+
+  .article-heading
+    text-align: left
+    h2
+      width: 100%
+      border-bottom: 1px solid $light-border-gray
+      padding-bottom: 20px
+      margin: 0
+      margin-bottom: 15px
+
+      a  
+        color: $dark-gray
+        text-decoration: none
+        font-family: "Quicksand"
+        font-size: 30px
+        font-weight: 400
+
+        &:hover::after
+          content: '»'
+          margin-left: 8px
+
+    .heading-info
+      font-family: "Quicksand"
+      h6
+        +clearfix
+        color: $blue
+        width: 100%
+        margin: 0
+        font-size: 15px
+
+        span.date
+          display: inline-block 
+          float: left
+          margin-right: 12px
+
+        span.num-comments
+          display: inline-block
+          float: right
+        
+        span.tags 
+          &,a
+            font-weight: 200
+            color: $dark-gray
+            text-decoration: none
+          
+          a:hover
+            text-decoration: underline
+
+
+  .summary
+    text-align: left
+    margin-bottom: 30px
+
+  a.read-more
+    background: $blue
+    color: white
+    border: 2px solid $dark-blue
+    font-family: "Merriweather Sans"
+    font-size: 16px
+    font-weight: normal
+    padding: 10px 25px
+    +border-radius(5px)
+
+
+

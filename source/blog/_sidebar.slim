@@ -3,6 +3,13 @@ aside.sidebar
   = partial "logo"
   = partial "nav", locals: {blog: true}
 
-  = image_tag "/img/blog/blog-building-sketch.png"
+  = image_tag "/img/blog/blog-building-sketch.png", class: "sidebar-building"
 
-  = partial "email_subscribe"
+  .subscribe-container
+
+    p
+      = "Design your business for "
+      strong growth
+      = ":"
+
+    = partial "email_subscribe", locals: {subscribe_button: "Get Free Tips"}

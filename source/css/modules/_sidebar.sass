@@ -1,5 +1,61 @@
 .sidebar
-  background: #FAFAFA
+  padding: 15px
+  background: $lightest-gray
+  text-align: center
+  overflow-x: hidden
+  position: relative
+
+  .logo img
+    width: 290px
+
+  img.sidebar-building
+    width: 290px
+    height: auto
+    opacity: 0.2
+    margin-top: -25px
 
   nav.site-nav
+    text-align: right
+    margin-top: -10px
+    width: 308px
+    li
+      margin: 2px
+
+      a
+        font-size: 13px
+        padding: 5px 10px
+
+  .subscribe-container
+    background: hsla(0,0%,98%,0.7)
+    position: absolute
+    left: 0
+    bottom: 80px
+
+    p
+      text-align: center
+      color: $dark-gray
+      margin: 35px 0 18px 0
+      font-size: 14px
+
+    form.subscribe
+      input.email
+        width: 220px
+        font-size: 13px
+        padding: 9px
+        margin: 0 0 23px 0
+        display: inline-block
+
+      .outline-button
+        border: none
+        background: $medium-gray
+        font-weight: normal
+        color: white
+        +border-radius(7px)
+        padding: 8px 18px
+        font-size: 13px
+        &:hover
+          background: darken($medium-gray, 15%)
+
+
+
 
