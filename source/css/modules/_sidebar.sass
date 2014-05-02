@@ -3,12 +3,15 @@
   background: $lightest-gray
   text-align: center
   overflow-x: hidden
+  overflow-y: hidden
   position: relative
   
   #newsletter-circle
     z-index: 1000
-    position: relative
-
+    position: absolute
+    bottom: -17px
+    left: 15px
+    color: $green
   .logo img
     width: 290px
 
@@ -42,6 +45,8 @@
       font-size: 14px
 
     form.subscribe
+      z-index: 1001
+      position: relative
       input.email
         width: 220px
         font-size: 13px
