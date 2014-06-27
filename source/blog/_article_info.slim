@@ -3,11 +3,13 @@
   
   = partial "/blog/article_heading", locals: {article: article, summary: summary}
 
-  img src=article.data.image
-
   - if summary
+    = link_to image_tag(article.url + article.data.image), article.url
+
     .summary= article.summary
 
     = link_to "Read More", article.url, class: "outline-button read-more"
+  - else
+    img src=article.data.image
 
 

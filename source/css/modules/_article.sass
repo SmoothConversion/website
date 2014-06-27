@@ -1,8 +1,109 @@
 .right
   float: right
-  
-.margin-left
-  margin-left: 20px
+  margin: 0 0 30px 50px
+.left
+  float: left
+  margin: 0 0 0 0
 
+.article
+  width: 100%
+  margin-bottom: 100px
+  font-size: 21px
+  font-weight: 200
+  line-height: 38px
+
+  a, a:visited
+    color: $green
+    text-decoration: none 
+    font-weight: bold
   
+  h2
+    font-family: "Quicksand"
+    font-size: 28px
+    // border: 2px solid $medium-gray
+    margin: 60px 0 30px
+    background: $very-light-gray
+    color: darken($very-light-gray, 50%)
+    padding: 20px
+    background: $dark-blue
+    color: white
+    font-weight: 600
+
+    // &::after
+    //   content: "⥤"
+    //   font-size: 30px
+    //   margin-left: 10px
+    //   font-weight: 600
+    //   position: relative 
+    //   top: 4px
+
+    &.split
+      padding: 0
+      background: $very-light-gray
+      color: darken($very-light-gray, 50%)
+      font-weight: 600
+
+    span.left-em
+      background: $dark-blue
+      color: white //lighten($dark-blue, 40%)
+      display: inline-block
+      text-transform: uppercase
+      margin: 0
+      padding: 20px
+      margin-right: 10px
+      font-weight: 200
+
+  h3
+    color: $dark-blue
+    font-size: 25px
+    font-weight: 800
+    margin: 30px 0 15px 0
+    &::before
+      content: "✣"
+      font-size: 28px
+      margin: 0 10px 0 5px
+
+  blockquote
+    +clearfix
+    background: $very-light-gray
+    color: darken($very-light-gray, 70%)
+    box-sizing: border-box
+    margin: 35px 0
+    padding: 15px 30px
+    position: relative
+    display: -webkit-box
+    -webkit-box-pack: center
+    -webkit-box-align: center
+    display: box
+    box-pack: center
+    box-align: center
+
+    p
+      position: relative 
+      z-index: 2
+      text-shadow: 1px 1px darken($very-light-gray, 3%)
+      width: 75%
+      margin: 20px 0
+      text-align: left
+
+    &::before, &::after
+      font-size: 150px
+      position: absolute
+      color: darken($very-light-gray, 5%)
+
+    &::before
+      content: "❝"
+      left: 18px
+      top: 58px
+
+    &::after
+      content: "❞"
+      right: 16px
+      bottom: 15px
+      
+
+
+
+
+
 

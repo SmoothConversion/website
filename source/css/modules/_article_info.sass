@@ -1,27 +1,28 @@
 .article-info
   text-align: center
 
-  &.summary-info
+  &.is-summary
     margin-bottom: 30px
     padding-bottom: 30px
 
   img
     width: 100%
-    margin: 17px 0 5px 0
+    margin: 25px 0 5px 0
 
   .article-heading
     text-align: left
-    h2
+    h1
       width: 100%
       border-bottom: 1px solid $light-border-gray
-      padding-bottom: 20px
+      padding-bottom: 15px
       margin: 0
-      margin-bottom: 15px
+      margin-bottom: 25px
 
       &,a  
         color: $dark-gray
         font-family: "Quicksand"
-        font-size: 30px
+        font-size: 35px
+        line-height: 55px
         font-weight: 400
       
       a
@@ -44,39 +45,71 @@
         color: $blue
         width: 100%
         margin: 0
-        font-size: 15px
+        font-size: 22px
 
-        span.date
+        span.author
+          margin-right: 10px
+          // background: $dark-yellow
+          padding: 5px
+          +border-radius(2px)
+          a, a:visited
+            color: $blue
+            text-decoration: none
+            font-weight: bold
+
+        span.date 
           display: inline-block 
-          float: left
-          margin-right: 12px
+          margin-right: 13px
+          font-size: 20px
+          color: #838383
+          font-weight: normal
 
         span.num-comments
           display: inline-block
           float: right
-        
-        span.tags 
-          &,a
-            font-weight: 200
-            color: $dark-gray
+
+          a
+            color: #838383
+            font-weight: normal
             text-decoration: none
-          
+            font-size: 20px
+            color: black
+            font-weight: normal
+
           a:hover
             text-decoration: underline
+
+        
+        span.tags 
+          position: relative
+          top: -2.5px
+          a, a:hover
+            background-color: $medium-gray
+            color: white
+            font-size: 12px
+            padding: 5px 8px
+            text-decoration: none
+            font-weight: bold
+            +border-radius(9px)
+            margin-right: 1.5px
+          
 
 
   .summary
     text-align: left
-    margin-bottom: 30px
+    margin-bottom: 40px
+    font-size: 21px
+    font-weight: 200
+    line-height: 38px
 
   a.read-more
     background: $blue
     color: white
     border: 2px solid $dark-blue
     font-family: "Merriweather Sans"
-    font-size: 16px
+    font-size: 21px
     font-weight: normal
-    padding: 10px 25px
+    padding: 12px 27px
     +border-radius(5px)
 
 

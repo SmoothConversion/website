@@ -1,19 +1,15 @@
-
 .article-heading
-  
-
-  h2 
+  h1 
     = link_to("«","/blog", class: "back") unless summary
     span.title
       = summary ? link_to(article.title, article.url) : article.title
 
   .heading-info
     h6
+      span.author= link_to article.data.author, "/team##{article.data.author.split(" ").first.downcase}"
       span.date= article.date.strftime('%B %e, %Y')
-      span.tags= article.tags.map {|tag| link_to tag.humanize, tag_path(tag)}.join(", ")
+      span.tags= article.tags.map {|tag| link_to tag, tag_path(tag)}.join(" ").html_safe
 
-      span.num-comments 67 comments
-
-
+      span.num-comments = link_to "", article.url + "#disqus_thread"
 
 
