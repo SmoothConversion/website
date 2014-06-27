@@ -1,116 +1,126 @@
-.article-info
-  text-align: center
-
-  &.is-summary
-    margin-bottom: 30px
-    padding-bottom: 30px
-
-  img
-    width: 100%
-    margin: 25px 0 5px 0
-
-  .article-heading
-    text-align: left
-    h1
+=article-info($mobile)
+  $multiplier: if($mobile, $mobile-blog-font-multiplier, 1)
+  .article-info
+    text-align: center
+  
+    &.is-summary
+      margin-bottom: 30px * $multiplier
+      padding-bottom: 30px * $multiplier
+  
+    img
       width: 100%
-      border-bottom: 1px solid $light-border-gray
-      padding-bottom: 15px
-      margin: 0
-      margin-bottom: 25px
-
-      &,a  
-        color: $dark-gray
-        font-family: "Quicksand"
-        font-size: 35px
-        line-height: 55px
-        font-weight: 400
-      
-      a
-        text-decoration: none
-
-        &.back
-          padding-right: 10px
-          color: $blue
-
-      .title a:hover::after
-        content: '»'
-        margin-left: 8px
-        color: $blue
-
-
-    .heading-info
-      font-family: "Quicksand"
-      h6
-        +clearfix
-        color: $blue
+      margin: 25px 0 5px 0
+  
+    .article-heading
+      text-align: left
+      h1
         width: 100%
+        border-bottom: 1px solid $light-border-gray
+        padding-bottom: 15px * $multiplier
         margin: 0
-        font-size: 22px
-
-        span.author
-          margin-right: 10px
-          // background: $dark-yellow
-          padding: 5px
-          +border-radius(2px)
-          a, a:visited
+        margin-bottom: 25px * $multiplier
+  
+        &,a  
+          color: $dark-gray
+          font-family: "Quicksand"
+          font-size: 35px * $multiplier
+          line-height: 55px * $multiplier
+          font-weight: 400
+        
+        a
+          text-decoration: none
+  
+          &.back
+            padding-right: 10px * $multiplier
             color: $blue
-            text-decoration: none
-            font-weight: bold
-
-        span.date 
-          display: inline-block 
-          margin-right: 13px
-          font-size: 20px
-          color: #838383
-          font-weight: normal
-
-        span.num-comments
-          display: inline-block
-          float: right
-
-          a
+  
+        .title a:hover::after
+          content: '»'
+          margin-left: 8px
+          color: $blue
+  
+  
+      .heading-info
+        font-family: "Quicksand"
+        h6
+          +clearfix
+          color: $blue
+          width: 100%
+          margin: 0
+          font-size: 22px * $multiplier
+  
+          span.author
+            margin-right: 10px
+            // background: $dark-yellow
+            padding: 5px * $multiplier
+            +border-radius(2px)
+            a, a:visited
+              color: $blue
+              text-decoration: none
+              font-weight: bold
+  
+          span.date 
+            display: inline-block 
+            margin-right: 13px
+            font-size: 20px * $multiplier
             color: #838383
             font-weight: normal
-            text-decoration: none
-            font-size: 20px
-            color: black
-            font-weight: normal
-
-          a:hover
-            text-decoration: underline
-
-        
-        span.tags 
-          position: relative
-          top: -2.5px
-          a, a:hover
-            background-color: $medium-gray
-            color: white
-            font-size: 12px
-            padding: 5px 8px
-            text-decoration: none
-            font-weight: bold
-            +border-radius(9px)
-            margin-right: 1.5px
+  
+          span.num-comments
+            display: inline-block
+            float: right
+  
+            a
+              color: #838383
+              font-weight: normal
+              text-decoration: none
+              font-size: 20px * $multiplier
+              color: black
+              font-weight: normal
+  
+            a:hover
+              text-decoration: underline
+  
           
+          .tags
+            position: relative
+            top: -2.5px
+            a, a:hover
+              background-color: $medium-gray
+              color: white
+              font-size: 12px * $multiplier + if($mobile, 5px, 0)
+              padding: 5px*$multiplier 8px*$multiplier
+              text-decoration: none
+              font-weight: bold
+              +border-radius(9px * $multiplier)
+              margin-right: 1.5px * $multiplier
+            &.desktop
+              display: if($mobile, none, inline)
+          div.mobile-tags
+            display: if($mobile, block, none)
+            margin: 40px 0 20px 5px
+            
+  
+  
+    .summary
+      text-align: left
+      margin-bottom: 40px * $multiplier
+      font-size: 21px * $multiplier
+      font-weight: 200
+      line-height: 38px * $multiplier
+  
+    a.read-more
+      background: $blue
+      color: white
+      border: 2px solid $dark-blue
+      font-family: "Merriweather Sans"
+      font-size: 21px * $multiplier
+      font-weight: normal
+      padding: 12px 27px
+      +border-radius(5px)
 
++article-info(false)
 
-  .summary
-    text-align: left
-    margin-bottom: 40px
-    font-size: 21px
-    font-weight: 200
-    line-height: 38px
-
-  a.read-more
-    background: $blue
-    color: white
-    border: 2px solid $dark-blue
-    font-family: "Merriweather Sans"
-    font-size: 21px
-    font-weight: normal
-    padding: 12px 27px
-    +border-radius(5px)
-
-
+@media (max-device-width : 800px)
+  +article-info(true)  
 

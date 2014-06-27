@@ -7,9 +7,9 @@
   .heading-info
     h6
       span.author= link_to article.data.author, "/team##{article.data.author.split(" ").first.downcase}"
-      span.date= article.date.strftime('%B %e, %Y')
-      span.tags= article.tags.map {|tag| link_to tag, tag_path(tag)}.join(" ").html_safe
+      /span.date= article.date.strftime('%B %e, %Y')
+      span.tags.desktop= article.tags.map {|tag| link_to tag, tag_path(tag)}.join(" ").html_safe
 
       span.num-comments = link_to "", article.url + "#disqus_thread"
-
+      div.tags.mobile-tags= article.tags.map {|tag| link_to tag, tag_path(tag)}.join(" ").html_safe
 

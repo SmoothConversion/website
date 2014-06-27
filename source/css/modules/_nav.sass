@@ -16,7 +16,13 @@ nav.site-nav li
       text-decoration: none
 
   &:hover a
-    font-weight: "quicksand bold"
+    border-bottom: 2px solid $blue
 
-
-
+@media (max-device-width : 800px)
+  .landing-layout
+    nav.site-nav li 
+      top: -10px
+      a
+        font-size: 34px
+    header .logo img
+      width: 500px

@@ -1,3 +1,8 @@
+$team-body-font: 25px
+$team-body-line-height: 40px
+$team-name-bar-font: 29px
+$team-name-bar-email-font: 18px
+
 #team-content
   margin-top: 40px
 
@@ -29,8 +34,8 @@ section.team
 
   .body
     padding: 10px 40px
-    font-size: 25px
-    line-height: 40px
+    font-size: $team-body-font
+    line-height: $team-body-line-height
 
     a, a:visited, a:hover
       text-decoration: none
@@ -42,3 +47,15 @@ section.team
 
   &#lennon .name-bar
     background: $dark-yellow
+
+@media (max-device-width : 800px)
+  section.team
+    .body
+      font-size: $mobile-font-multiplier * $team-body-font
+      line-height: $mobile-font-multiplier * $team-body-line-height
+    .name-bar
+      padding: 30px
+      .name
+        font-size: $mobile-font-multiplier * $team-name-bar-font
+      .email
+        font-size: $mobile-font-multiplier * $team-name-bar-email-font + 5px
