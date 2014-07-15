@@ -2,26 +2,28 @@ nav.site-nav li
   display: inline
   margin: 5px
   position: relative
-  top: -20px
+  top: -17px
 
   a
     font-size: 18px
     color: $dark-yellowish-gray
     text-decoration: none
     display: inline-block
-    padding: 15px
+    padding: 12px
+    border-bottom: 1px solid white
+    +single-transition(border, 125ms, ease-out)
 
     &:visited
       color: $dark-yellowish-gray
       text-decoration: none
 
   &:hover a
-    border-bottom: 2px solid $blue
+    border-bottom: 1px solid $dark-blue
 
 @media (max-device-width : 800px)
   .landing-layout
     nav.site-nav li 
-      top: -10px
+      top: -8px
       a
         font-size: 34px
     header .logo img

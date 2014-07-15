@@ -1,0 +1,66 @@
+=article-cta($mobile)
+  $multiplier: if($mobile, $mobile-blog-font-multiplier, 1)
+  .article-cta
+    +clearfix
+    margin-top: 65px * $multiplier
+    width: 100%
+    font-size: 27px * $multiplier
+    margin-bottom: 10px * $multiplier
+
+    .contact-us
+      +box-sizing(border-box)
+      text-align: center
+      color: darken($yellow, 50%)
+      width: 100%
+      background: $yellow
+      padding: 20px * $multiplier
+
+      p.copy
+        margin-bottom: 55px * $multiplier
+
+      p.email 
+        margin-bottom: 40px * $multiplier
+        font-size: 23px * $multiplier
+
+    .register
+      +clearfix
+      margin-top: 65px * $multiplier
+      font-size: 27px * $multiplier
+      +box-sizing(border-box)
+      width: 100%
+      border: 3px * $multiplier solid $gray
+
+      .copy
+        float: left 
+        background: $gray
+        color: $dark-gray
+        padding: 30px * $multiplier
+        display: inline-block
+        +box-sizing(border-box)
+
+      .signup
+        float: right
+        &::before
+          content: "☞"
+          color: $green
+          font-size: 40px * $multiplier
+          margin-right: 20px * $multiplier
+          position: relative 
+          top: 30px * $multiplier
+          left: -67.5px * $multiplier
+          float: left
+
+      .newsletter-signup
+        color: $green
+        font-size: 23px * $multiplier
+        border-bottom: 2px * $multiplier solid $green
+        padding-bottom: 5px * $multiplier
+        font-weight: normal
+        position: relative 
+        top: 25px * $multiplier
+        left: -67.5px * $multiplier
+
++article-cta(false)
+
+@media (max-device-width : 800px)
+  +article-cta(true)    

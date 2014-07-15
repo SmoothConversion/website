@@ -5,6 +5,8 @@
   .article
     = yield
 
+    = partial "/blog/article_cta", locals: {article: current_page}
+
   .comments
     #disqus_thread
 

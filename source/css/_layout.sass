@@ -2,7 +2,6 @@ html, body
   margin: 0
   padding: 0
   width: 100%
-  min-width: 1200px
 
 .landing-layout
 
@@ -41,9 +40,31 @@ html, body
     min-width: 475px
     padding: 35px 45px
     +box-sizing(border-box)
-  
 
-@media (min-device-width : 801px)
+@media (max-device-width : 800px)
+  .blog-layout
+    .sidebar
+      display: none
+    .mobile-header
+      display: block 
+
+@media (min-device-width : 800px)
+  html, body, #wrap, .blog-main
+    width: 800px
+
+@media (min-device-width : 601px)
+  html, body, #wrap, .blog-main
+    width: 600px
+
+@media (min-device-width : 321px)
+  html, body, #wrap, .blog-main
+    width: 320px
+
+@media (min-device-width: 801px)
+  #wrap, .blog-main
+    min-width: 1200px
+    width: auto
+
   .blog-layout
     .sidebar
       float: left
@@ -53,20 +74,12 @@ html, body
       width: 325px
   
     .blog-main
-      max-width: 950px
+      width: 950px
       float: left
       margin-left: 355px
 
     .mobile-header
       display: none
-
-@media (max-device-width : 800px)
-  .blog-layout
-    .sidebar
-      display: none
-    .mobile-header
-      display: block 
-
 
 .tablet, .mobile 
   display: none

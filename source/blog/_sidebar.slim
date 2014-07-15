@@ -1,7 +1,7 @@
 
 aside.sidebar
   = partial "logo"
-  = partial "nav", locals: {blog: true}
+  = partial "nav"
 
   = image_tag "/img/blog/blog-building-sketch.png", class: "sidebar-building"
   
@@ -14,5 +14,5 @@ aside.sidebar
       strong growth
       = ":"
 
-    = partial "email_subscribe", locals: {subscribe_button: "Get Free Tips"}
+    = partial "email_subscribe", locals: {subscribe_button: "Get New Posts By Email"}
     

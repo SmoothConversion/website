@@ -80,12 +80,11 @@
   
             a:hover
               text-decoration: underline
-  
           
           .tags
             position: relative
             top: -2.5px
-            a, a:hover
+            > span
               background-color: $medium-gray
               color: white
               font-size: 12px * $multiplier + if($mobile, 5px, 0)
@@ -93,14 +92,12 @@
               text-decoration: none
               font-weight: bold
               +border-radius(9px * $multiplier)
-              margin-right: 1.5px * $multiplier
+              margin-right: 7.5px * $multiplier
             &.desktop
               display: if($mobile, none, inline)
           div.mobile-tags
             display: if($mobile, block, none)
             margin: 40px 0 20px 5px
-            
-  
   
     .summary
       text-align: left

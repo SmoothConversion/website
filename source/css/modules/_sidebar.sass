@@ -7,11 +7,12 @@
   position: relative
   
   #newsletter-circle
-    z-index: 1000
+    z-index: 3
     position: absolute
     bottom: -17px
     left: 15px
     color: $green
+    pointer-events: none
   .logo img
     width: 290px
 
@@ -31,12 +32,19 @@
       a
         font-size: 13px
         padding: 5px 10px
+        border-bottom: 1px solid $lightest-gray 
+
+        &:hover
+          border-bottom: 1px solid $medium-gray 
+
+
 
   .subscribe-container
     background: hsla(0,0%,98%,0.7)
     position: absolute
     left: 0
     bottom: 80px
+    z-index: 2
 
     p
       text-align: center
@@ -61,7 +69,7 @@
         color: white
         +border-radius(7px)
         padding: 8px 18px
-        font-size: 13px
+        font-size: 14px
         &:hover
           background: darken($medium-gray, 15%)
 
