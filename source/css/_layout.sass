@@ -31,6 +31,7 @@ html, body
       z-index: 2
 
   img.footer
+    min-width: 1200px
     max-width: 100%
 
 .blog-layout
@@ -47,18 +48,29 @@ html, body
       display: none
     .mobile-header
       display: block 
-
-@media (min-device-width : 800px)
   html, body, #wrap, .blog-main
     width: 800px
 
-@media (min-device-width : 601px)
+@media (max-device-width : 641px)
   html, body, #wrap, .blog-main
-    width: 600px
+    width: 640px
 
-@media (min-device-width : 321px)
+  img.footer
+    min-width: 640px
+
+@media (max-device-width : 481px)
+  html, body, #wrap, .blog-main
+    width: 480px
+
+  img.footer
+    min-width: 640px
+
+@media (max-device-width : 321px)
   html, body, #wrap, .blog-main
     width: 320px
+
+  img.footer
+    min-width: 640px
 
 @media (min-device-width: 801px)
   #wrap, .blog-main
