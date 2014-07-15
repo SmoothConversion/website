@@ -7,7 +7,7 @@
     p.email = partial "contact_email"
 
 
-  .register
+  .register.split-cta
 
     span.copy.desktop Loved what you read?
     
@@ -19,3 +19,11 @@
     
     .mobile-subscribe.mobile
       = partial "email_subscribe", locals: {subscribe_button: "Get New Posts By Email"} 
+
+  .twitter
+    - author = article.data.author.split(" ").first
+    - twitter = {"Lennon" => "LennonRubin", "Dane" => "Danenania"}[author]
+    span.copy.desktop ="Want more from #{author}'s brain?"
+    span.copy.mobile ="More from #{author}"
+    a href="https://twitter.com/#{twitter}" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large"
+      = "Follow @#{twitter}"
