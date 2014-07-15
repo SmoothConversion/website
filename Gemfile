@@ -21,3 +21,4 @@ gem "compass-h5bp", "~> 0.1.2" # HTML5 Boilerplate styles
 gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 
 gem "pry"
+gem 'builder', '~> 3.0'
