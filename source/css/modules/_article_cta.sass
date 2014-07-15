@@ -5,6 +5,7 @@
     margin-top: 65px * $multiplier
     width: 100%
     font-size: 27px * $multiplier
+    line-height: 47px * $multiplier
     margin-bottom: 10px * $multiplier
 
     .contact-us
@@ -23,16 +24,18 @@
         font-size: 23px * $multiplier
 
     .register
+      $bg: if($mobile, darken($gray, 4%), $gray)
+
       +clearfix
       margin-top: 65px * $multiplier
       font-size: 27px * $multiplier
       +box-sizing(border-box)
       width: 100%
-      border: 3px * $multiplier solid $gray
+      border: if($mobile, 4px, 3px) * $multiplier solid $bg
 
       .copy
         float: left 
-        background: $gray
+        background: $bg
         color: $dark-gray
         padding: 30px * $multiplier
         display: inline-block

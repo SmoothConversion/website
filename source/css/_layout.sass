@@ -34,13 +34,10 @@ html, body
     min-width: 1200px
     max-width: 100%
 
-.blog-layout
-  .blog-main
-    display: inline-block
-    width: auto
-    min-width: 475px
-    padding: 35px 45px
-    +box-sizing(border-box)
+.blog-layout .blog-main
+  width: auto
+  padding: 35px 45px
+  +box-sizing(border-box)
 
 @media (max-device-width : 800px)
   .blog-layout
@@ -48,35 +45,53 @@ html, body
       display: none
     .mobile-header
       display: block 
-      width: 100%
-  html, body, #wrap, .blog-main
-    width: 800px
+  html, body, #wrap
+    width: 800px * 2
+
+  #blog, .blog-main
+    width: 800px * 2
+    display: block
 
 @media (max-device-width : 641px)
-  html, body, #wrap, .blog-main
-    width: 640px
+  html, body, #wrap
+    width: 640px * 2
 
   img.footer
-    min-width: 640px
+    min-width: 640px * 2
+
+  #blog, .blog-main
+    width: 640px * 2
+    display: block
 
 @media (max-device-width : 481px)
-  html, body, #wrap, .blog-main
-    width: 480px
+  html, body, #wrap
+    width: 480px * 2
 
   img.footer
-    min-width: 640px
+    min-width: 480px * 2
+
+  #blog, .blog-main
+    width: 480px * 2
+    display: block
 
 @media (max-device-width : 321px)
-  html, body, #wrap, .blog-main
-    width: 320px
+  html, body, #wrap
+    width: 320px * 2
 
   img.footer
-    min-width: 640px
+    min-width: 320px * 2
+
+  #blog, .blog-main
+    width: 320px * 2
+    display: block
 
 @media (min-device-width: 801px)
-  #wrap, .blog-main
+  #wrap
     min-width: 1200px
+
+  .blog-main
     width: auto
+    display: inline-block
 
   .blog-layout
     .sidebar
@@ -103,4 +118,6 @@ html, body
 
   .tablet, .mobile
     display: block !important
+
+  
 

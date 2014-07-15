@@ -3,8 +3,8 @@
   +box-sizing(border-box)
   background: $lightest-gray
   width: 100%
-  padding: 30px
-  margin-bottom: 20px
+  padding: 25px
+  padding-bottom: 0
   
   .logo, .site-nav, .site-nav ul
     display: inline-block 
@@ -13,12 +13,17 @@
     float: left
 
     img 
-      width: 500px
+      width: 290px
 
   .site-nav 
     float: right
     a
-      font-size: 34px
-      margin-left: 25px
-      position: relative 
-      top: 18px
+      font-size: 20px
+      margin-left: 5px
+
+      &:first-of-type
+        margin-left: 0
+
+  .logo, .site-nav 
+    position: relative 
+    top: 5px

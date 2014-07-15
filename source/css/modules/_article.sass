@@ -47,6 +47,7 @@
         background: $very-light-gray
         color: darken($very-light-gray, 50%)
         font-weight: 600
+        font-size:  28px * if($mobile, $multiplier * .75, $multiplier)
   
       span.left-em
         background: $dark-blue
@@ -88,7 +89,7 @@
         z-index: 2
         text-shadow: 1px 1px darken($very-light-gray, 3%)
         width: 75% 
-        margin: 20px*$multiplier 0
+        margin: if($mobile, 55px, 20px) 0
         text-align: left
   
       &::before, &::after
