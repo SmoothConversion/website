@@ -11,9 +11,11 @@
 
     span.copy.desktop Loved what you read?
     
-    span.mobile.copy Loved what you read?
-
     span.signup.desktop = link_to article.data.register_cta || "Get notified of future posts", 
                         "#", 
-                        class: "newsletter-signup" 
-
+                        class: "newsletter-signup"
+                        
+	span.mobile.copy Loved what you read?
+    
+    .mobile-subscribe.mobile
+	  = partial "email_subscribe", locals: {subscribe_button: "Get New Posts By Email"} 
