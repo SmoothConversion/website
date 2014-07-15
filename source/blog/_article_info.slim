@@ -4,12 +4,12 @@
   = partial "/blog/article_heading", locals: {article: article, summary: summary}
 
   - if summary
-    = link_to image_tag(article.url + article.data.image), article.url
+    = link_to image_tag(article.path.gsub(".html", "/") + article.data.image), article.url
 
     .summary= article.summary
 
     = link_to "Read More", article.url, class: "outline-button read-more"
   - else
-    img src=article.data.image
+    = image_tag(article.path.gsub(".html", "/") + article.data.image)
 
 

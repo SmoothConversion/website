@@ -19,7 +19,7 @@ Why is this?!
 
 <h2 class="split"> <span class="left-em">Introducing:</span> The Heads Down Hacker </h2>
 
-<%= image_tag (current_page.url + "heads-down-hacker.jpg"), style: "width: 100%" %>
+<%= image_tag (current_page.path.gsub(".html", "/") + "heads-down-hacker.jpg"), style: "width: 100%" %>
 
 The Heads Down Hacker has technical talent and experience building products.  He jumps right into the building stage because he is passionate about technology and the challenges of product development.  Picking a tech stack, architecting data models, and digging into the nitty gritty are his strengths. 
 
@@ -33,7 +33,7 @@ When the Heads Down Hacker finally does muster up the courage to get feedback fr
 
 <h2 class="split"> <span class="left-em">Introducing:</span> The Excitable Entrepreneur </h2>
 
-<%= link_to (image_tag (current_page.url + "do-all-the-things.jpg"), :class => "right"), "http://hyperboleandahalf.blogspot.com/2010/06/this-is-why-ill-never-be-adult.html", {:target => "_blank"} %>
+<%= link_to (image_tag (current_page.path.gsub(".html", "/") + "do-all-the-things.jpg"), :class => "right"), "http://hyperboleandahalf.blogspot.com/2010/06/this-is-why-ill-never-be-adult.html", {:target => "_blank"} %>
 
 This person has the opposite problem.  The Excitable Entrepreneur is a people person, a social butterfly exuberantly thrusting her product idea in front of anyone who will give her the time of day.  She doesn’t stop to consider whether her listener is part of the target market or has any relevant experience in the problem space. 
 
@@ -65,7 +65,7 @@ Which brings us to:
 
 ### Interview the right people
 
-<%= image_tag (current_page.url + "snowden.jpg"), class: "right", width: "290px" %>
+<%= image_tag (current_page.path.gsub(".html", "/") + "snowden.jpg"), class: "right", width: "290px" %>
 
 If you are a Heads Down Hacker and have a tendency to interview very few people and to reject constructive criticism out of hand, it’s important to identify people who you respect and whose feedback you would listen to.  The opportunity to interact with high caliber humans will give you motivation to leave your code cave and put your idea in front of eyeballs.  
 
