@@ -24,6 +24,8 @@
 
     &.bg2
       background: $gray
+      @if $mobile-portrait
+        height: 650px
 
     &.bg3
       background: $yellow
@@ -91,11 +93,18 @@
           float: right
           margin-top: 85px
           margin-right: 40px
+          @if $mobile-portrait
+            width: 335px
+            float: none
+            margin-left: auto
+            margin-right: auto
+            margin-top: 248px
+            display: block
 
         p
           float: left
-          width: 585px
-          margin: 115px 0 0 40px
+          width: if($mobile-portrait, auto, 585px)
+          margin: if($mobile-portrait, 15px, 115px) 0 0 40px
 
     section.contact-cta
       @extend .secondary-info
@@ -154,16 +163,35 @@
     p
       width: auto
   .section-bg
-    &.bg2
-      height: 525px
+    &.bg1
+      height: 558px
+  .index-page
+    #landing-content
+      section.contact-cta
+        span
+          font-size: 20px
+      section.subscribe-cta
+        margin-left: 0
+        width: auto
+        padding: 30px
+        form
+          text-align: center
+          input.email
+            width: 90%
+            margin-bottom: 15px
 
-@media (max-width : 650px)
+@media (max-width : 645px)
   .section-bg
-    &.bg2
-      height: 565px
+    &.bg1
+      height: 605px
 
       
-@media (max-width : 480px)
+@media (max-width : 556px)
   .section-bg
-    &.bg2
-      margin-top: 613px
+    &.bg1
+      height: 663px
+  .index-page
+    #landing-content
+      section.contact-cta
+        span
+          font-size: 18px
