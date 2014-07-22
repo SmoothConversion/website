@@ -1,6 +1,6 @@
-=article-info($tablet, $mobile)
-  $multiplier: if($mobile, $mobile-blog-font-multiplier, 1)
-  $multiplier: if($tablet, $tablet-blog-font-multiplier, $multiplier)
+=article-info($mobile-landscape, $mobile-portrait)
+  $multiplier: if($mobile-portrait, $mobile-blog-font-multiplier, 1)
+  $multiplier: if($mobile-landscape, $mobile-landscape-blog-font-multiplier, $multiplier)
 
   .article-info
     text-align: center
@@ -90,17 +90,20 @@
             > span
               background-color: $medium-gray
               color: white
-              font-size: 12px * $multiplier + if($mobile, 5px, 0)
+              font-size: 12px * $multiplier + if($mobile-portrait, 5px, 0)
               padding: 5px*$multiplier 8px*$multiplier
               text-decoration: none
               font-weight: bold
               +border-radius(9px * $multiplier)
               margin-right: 7.5px * $multiplier
-            &.desktop
-              display: if($mobile, none, inline)
+            &.desktop-tags
+              display: if($mobile-portrait or $mobile-landscape, none, inline)
           div.mobile-tags
-            display: if($mobile, block, none)
+            display: if($mobile-portrait or $mobile-landscape, block, none)
             margin: 20px 0 0 5px
+            > span 
+              font-size: 14px
+
   
     .summary
       text-align: left
@@ -121,9 +124,11 @@
 
 +article-info(false, false)
 
-@media (max-width : 480px)
-  +article-info(false,true)
+@media (max-width : 800px)
+  +article-info(true, false)
 
-@media (max-width : 680px)
-  +article-info(true, false)  
+@media (max-width : 480px)
+  +article-info(false, true)
+
+
 

@@ -1,6 +1,6 @@
 @import "//fonts.googleapis.com/css?family=Merriweather:regular,bold,italic|Merriweather+Sans:regular|Quicksand:regular,bold"
 
-=landing($mobile)
+=landing($mobile-portrait)
   $section-height: 600px
 
   .index-page header nav
@@ -14,7 +14,7 @@
     font-size: 34px
     line-height: 61px
 
-  $bg-fill-start: if($mobile, 800px, 720px)
+  $bg-fill-start: if($mobile-portrait, 800px, 720px)
   .section-bg
     @extend .section-block
 
@@ -54,7 +54,7 @@
 
       img
         position: absolute
-        top: if($mobile, 100px, 50px)
+        top: if($mobile-portrait, 100px, 50px)
         left: 650px
         width: 550px
 

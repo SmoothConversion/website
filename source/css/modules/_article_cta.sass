@@ -1,5 +1,7 @@
-=article-cta($mobile)
-  $multiplier: if($mobile, $mobile-blog-font-multiplier, 1)
+=article-cta($mobile-landscape, $mobile-portrait)
+  $multiplier: if($mobile-portrait or $mobile-landscape, $mobile-blog-font-multiplier, 1)
+  $multiplier: if($mobile-landscape, $mobile-landscape-blog-font-multiplier, $multiplier)
+
   .article-cta
     +clearfix
     margin-top: 65px * $multiplier
@@ -14,7 +16,7 @@
       color: darken($yellow, 50%)
       width: 100%
       background: $yellow
-      padding: 20px * $multiplier
+      padding: if($mobile-portrait or $mobile-landscape, 25px, 20px * $multiplier)
 
       p.copy
         margin-bottom: 55px * $multiplier
@@ -23,15 +25,18 @@
         margin-bottom: 40px * $multiplier
         font-size: 23px * $multiplier
 
+      .email .tablet.mobile 
+        font-size: if($mobile-portrait, 14.5px, 16.5px * $multiplier)
+
     .register
-      $bg: if($mobile, darken($gray, 4%), darken($gray, 2%))
+      $bg: if($mobile-portrait or $mobile-landscape, darken($gray, 4%), darken($gray, 2%))
 
       +clearfix
       margin-top: 65px * $multiplier
       font-size: 27px * $multiplier
       +box-sizing(border-box)
       width: 100%
-      border: if($mobile, 4px, 3px) * $multiplier solid $bg
+      border: if($mobile-portrait or $mobile-landscape, 4px, 3px) * $multiplier solid $bg
 
       .copy
         float: left 
@@ -52,7 +57,9 @@
         input
           margin-bottom: 35px
         input[type=email]
-          width: 430px
+          width: 80%
+          @if $mobile-portrait or $mobile-landscape 
+            font-size: 18px
         input[type=submit]
           border-width: 2px
           font-size: 80%
@@ -89,13 +96,26 @@
       padding: 20px 30px
       color: $dark-blue
 
+      @if $mobile-portrait 
+        font-size: 14px
+        font-weight: bold
+      @else if $mobile-landscape
+        font-size: 15px
+        font-weight: bold
 
       #twitter-widget-0
         position: absolute
         right: 30px
         top: 28px
 
-+article-cta(false)
 
-@media (max-width : 800px)
-  +article-cta(true)    
++article-cta(false, false)
+
+
+@media (max-width : 680px)
+  +article-cta(true, false) 
+
+@media (max-width : 480px)
+  +article-cta(false,true)
+
+    

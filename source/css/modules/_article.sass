@@ -1,7 +1,5 @@
-=article($tablet, $mobile)
-  $multiplier: if($mobile, $mobile-blog-font-multiplier, 1)
-  $multiplier: if($tablet, $tablet-blog-font-multiplier, $multiplier)
-
+=article($mobile-landscape, $mobile-portrait)
+  $multiplier: if($mobile-portrait, $mobile-blog-font-multiplier, 1)
   .right
     float: right
     margin: 0 0 30px*$multiplier 50px*$multiplier
@@ -26,8 +24,11 @@
       &.right, &.left 
         max-width: 100%
 
-        @if $mobile
+        @if $mobile-landscape or $mobile-portrait
           clear: both
+          width: 100%
+          height: auto
+
   
     a, a:visited
       color: $green
@@ -36,7 +37,7 @@
     
     h2
       font-family: "Quicksand"
-      font-size: 28px * if($mobile, $multiplier * .9, $multiplier)
+      font-size: 28px * if($mobile-portrait, $multiplier * .9, $multiplier)
       // border: 2px solid $medium-gray
       margin: 60px*$multiplier 0 30px*$multiplier
       background: $very-light-gray
@@ -59,7 +60,7 @@
         background: $very-light-gray
         color: darken($very-light-gray, 50%)
         font-weight: 600
-        font-size:  28px * if($mobile, $multiplier * .75, $multiplier)
+        font-size:  28px * if($mobile-portrait, $multiplier * .75, $multiplier)
   
       span.left-em
         background: $dark-blue
@@ -70,7 +71,18 @@
         padding: 20px * $multiplier
         margin-right: 10px * $multiplier
         font-weight: 200
-  
+
+      @if $mobile-portrait or $mobile-landscape 
+        span 
+          +box-sizing(border-box)
+        span.left-em
+          display: block
+          width: 100%
+        span.split-right
+          display: block 
+          padding: 15px
+          width: 100%
+
     h3
       color: $dark-blue
       font-size: 25px * $multiplier
@@ -101,8 +113,8 @@
         z-index: 2
         text-shadow: 1px 1px darken($very-light-gray, 3%)
         width: 75% 
-        margin: if($mobile, 55px, 20px) 0
-        text-align: left
+        padding: 5px if($mobile-portrait or $mobile-landscape, 55px, 30px) 
+        text-align: if($mobile-portrait or $mobile-landscape, center, left)
   
       &::before, &::after
         font-size: 150px * $multiplier
@@ -118,13 +130,21 @@
         content: "❞"
         right: 16px
         bottom: 15px
+
+      @if $mobile-portrait or $mobile-landscape
+        p 
+
+        &::before, &::after
+          font-size: 80px
+
         
 +article(false, false)
 
+@media (max-width : 800px)
+  +article(true, false)
+
 @media (max-width : 480px)
   +article(false,true)
-
-@media (max-width : 680px)
-  +article(true, false) 
+ 
   
   
