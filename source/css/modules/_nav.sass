@@ -32,3 +32,23 @@ nav.site-nav li
     header .logo img
       width: 500px
       margin: 20px 0
+
+@media (max-width: 680px)
+  .landing-layout header 
+    text-align: center 
+    .logo, nav.site-nav
+      display: block 
+      clear: both
+      float: none
+      top: 0
+    
+    nav.site-nav
+      height: 72px
+      
+      ul 
+        padding: 0
+
+
+      &:first-of-type
+        margin-left: 0
+
