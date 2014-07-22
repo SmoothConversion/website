@@ -28,6 +28,7 @@ section.team
       font-size: 18px
       position: relative
       top: 2px
+      display: inline-flex
 
   > img
     width: 100%
@@ -50,14 +51,19 @@ section.team
 
 @media (max-width : 800px)
   section.team
-    width: 100%
-    min-width: 480px
+    width: auto
+    min-width: 400px
+    margin-right: 40px
     .body
       font-size: $mobile-font-multiplier * $team-body-font
       line-height: $mobile-font-multiplier * $team-body-line-height
     .name-bar
-      padding: 30px
+      padding: 17px 0px 24px 0px
+      text-align: center
       .name
         font-size: $mobile-font-multiplier * $team-name-bar-font
+        float: none
       .email
         font-size: $mobile-font-multiplier * $team-name-bar-email-font + 5px
+        float: none
+        display: block
