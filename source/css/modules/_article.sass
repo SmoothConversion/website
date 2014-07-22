@@ -1,5 +1,7 @@
-=article($mobile)
+=article($tablet, $mobile)
   $multiplier: if($mobile, $mobile-blog-font-multiplier, 1)
+  $multiplier: if($tablet, $tablet-blog-font-multiplier, $multiplier)
+
   .right
     float: right
     margin: 0 0 30px*$multiplier 50px*$multiplier
@@ -16,6 +18,16 @@
 
     img
       margin-bottom: 30px * $multiplier
+
+      &.full-width
+        width: 100%
+        height: auto
+
+      &.right, &.left 
+        max-width: 100%
+
+        @if $mobile
+          clear: both
   
     a, a:visited
       color: $green
@@ -107,12 +119,12 @@
         right: 16px
         bottom: 15px
         
-+article(false)
++article(false, false)
 
-@media (max-device-width : 800px)
-  +article(true)    
+@media (max-width : 480px)
+  +article(false,true)
 
-  
-  
+@media (max-width : 680px)
+  +article(true, false) 
   
   

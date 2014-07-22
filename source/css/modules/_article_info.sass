@@ -1,5 +1,7 @@
-=article-info($mobile)
+=article-info($tablet, $mobile)
   $multiplier: if($mobile, $mobile-blog-font-multiplier, 1)
+  $multiplier: if($tablet, $tablet-blog-font-multiplier, $multiplier)
+
   .article-info
     text-align: center
   
@@ -9,6 +11,7 @@
   
     img
       width: 100%
+      height: auto
       margin: 25px 0 5px 0
   
     .article-heading
@@ -116,8 +119,11 @@
       padding: 12px 27px
       +border-radius(5px)
 
-+article-info(false)
++article-info(false, false)
 
-@media (max-device-width : 800px)
-  +article-info(true)  
+@media (max-width : 480px)
+  +article-info(false,true)
+
+@media (max-width : 680px)
+  +article-info(true, false)  
 

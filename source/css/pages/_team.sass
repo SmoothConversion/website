@@ -48,8 +48,10 @@ section.team
   &#lennon .name-bar
     background: $dark-yellow
 
-@media (max-device-width : 800px)
+@media (max-width : 800px)
   section.team
+    width: 100%
+    min-width: 480px
     .body
       font-size: $mobile-font-multiplier * $team-body-font
       line-height: $mobile-font-multiplier * $team-body-line-height
