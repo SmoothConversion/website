@@ -20,35 +20,34 @@ nav.site-nav li
   &:hover a
     border-bottom: 1px solid $dark-blue
 
-@media (max-width : 800px)
-  .landing-layout
-    nav
-      right: 100px 
-    nav.site-nav li 
-      top: -13px
-      a
-        padding: 40px 22px
-        font-size: 34px
-    header .logo img
-      width: 500px
-      margin: 20px 0
-
-@media (max-width: 680px)
-  .landing-layout header 
+@media (max-width: 800px)
+  header 
     text-align: center 
+    +box-sizing(border-box)
     .logo, nav.site-nav
       display: block 
       clear: both
-      float: none
+      float: none !important
       top: 0
+      position: initial
     
     nav.site-nav
-      height: 72px
+      height: 55px
+      width: 100%
       
       ul 
         padding: 0
 
-
       &:first-of-type
         margin-left: 0
+
+  .blog-layout header 
+    margin: 15px 45px 0 45px
+    padding: 10px 0 7px
+    border-bottom: 1px solid $light-border-gray
+  
+    nav.site-nav
+      position: relative 
+      top: 2px
+
 
