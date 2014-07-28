@@ -1,78 +1,135 @@
-=article($mobile-landscape, $mobile-portrait)
-  $multiplier: if($mobile-portrait, $mobile-blog-font-multiplier, 1)
-  .right
-    float: right
-    margin: 0 0 30px*$multiplier 50px*$multiplier
-  .left
-    float: left
-    margin: 0 0 0 0
+.right
+  float: right
+  margin: 0 0 30px 50px
+.left
+  float: left
+  margin: 0 0 0 0
+
+.article
+  width: 100%
+  margin-bottom: 65px
+  font-size: 21px
+  font-weight: 200
+  line-height: 38px
+
+  img
+    margin-bottom: 30px
+
+    &.full-width
+      width: 100%
+      height: auto
+
+    &.right, &.left 
+      max-width: 100%
+
+  a, a:visited
+    color: $green
+    text-decoration: none 
+    font-weight: bold
   
-  .article
-    width: 100%
-    margin-bottom: 65px * $multiplier
-    font-size: 21px * $multiplier
-    font-weight: 200
-    line-height: 38px * $multiplier
+  h2
+    font-family: "Quicksand"
+    font-size: 28px 
+    // border: 2px solid $medium-gray
+    margin: 60px 0 30px
+    background: $very-light-gray
+    color: darken($very-light-gray, 50%)
+    padding: 20px
+    background: $dark-blue
+    color: white
+    font-weight: 600
 
-    img
-      margin-bottom: 30px * $multiplier
+    // &::after
+    //   content: "⥤"
+    //   font-size: 30px
+    //   margin-left: 10px
+    //   font-weight: 600
+    //   position: relative 
+    //   top: 4px
 
-      &.full-width
-        width: 100%
-        height: auto
-
-      &.right, &.left 
-        max-width: 100%
-
-        @if $mobile-landscape or $mobile-portrait
-          clear: both
-          width: 100%
-          height: auto
-
-  
-    a, a:visited
-      color: $green
-      text-decoration: none 
-      font-weight: bold
-    
-    h2
-      font-family: "Quicksand"
-      font-size: 28px * if($mobile-portrait, $multiplier * .9, $multiplier)
-      // border: 2px solid $medium-gray
-      margin: 60px*$multiplier 0 30px*$multiplier
+    &.split
+      padding: 0
       background: $very-light-gray
       color: darken($very-light-gray, 50%)
-      padding: 20px * $multiplier
-      background: $dark-blue
-      color: white
       font-weight: 600
-  
-      // &::after
-      //   content: "⥤"
-      //   font-size: 30px
-      //   margin-left: 10px
-      //   font-weight: 600
-      //   position: relative 
-      //   top: 4px
-  
-      &.split
-        padding: 0
-        background: $very-light-gray
-        color: darken($very-light-gray, 50%)
-        font-weight: 600
-        font-size:  28px * if($mobile-portrait, $multiplier * .75, $multiplier)
-  
-      span.left-em
-        background: $dark-blue
-        color: white //lighten($dark-blue, 40%)
-        display: inline-block
-        text-transform: uppercase
-        margin: 0
-        padding: 20px * $multiplier
-        margin-right: 10px * $multiplier
-        font-weight: 200
+      font-size:  28px 
 
-      @if $mobile-portrait or $mobile-landscape 
+    span.left-em
+      background: $dark-blue
+      color: white //lighten($dark-blue, 40%)
+      display: inline-block
+      text-transform: uppercase
+      margin: 0
+      padding: 20px
+      margin-right: 10px
+      font-weight: 200
+
+  h3
+    color: $dark-blue
+    font-size: 25px
+    font-weight: 800
+    margin: 30px 0 15px 0
+    &::before
+      content: "✣"
+      font-size: 28px
+      margin: 0 10px 0 5px
+
+  blockquote
+    +clearfix
+    background: $very-light-gray
+    color: darken($very-light-gray, 70%)
+    box-sizing: border-box
+    margin: 35px 0
+    padding: 15px 30px
+    position: relative
+    display: -webkit-box
+    -webkit-box-pack: center
+    -webkit-box-align: center
+    display: box
+    box-pack: center
+    box-align: center
+
+    p
+      position: relative 
+      z-index: 2
+      text-shadow: 1px 1px darken($very-light-gray, 3%)
+      width: 75% 
+      padding: 5px 30px
+      text-align: left
+
+    &::before, &::after
+      font-size: 150px
+      position: absolute
+      color: darken($very-light-gray, 5%)
+
+    &::before
+      content: "❝"
+      left: 18px
+      top: 58px
+
+    &::after
+      content: "❞"
+      right: 16px
+      bottom: 15px
+
+        
+@media (max-width : 800px)
+  body.blog-layout .article 
+    > p
+      font-size: 18px 
+      line-height: 30px 
+
+    img.right, img.left 
+      clear: both
+      width: 50%
+      height: auto
+      margin: 4%
+
+    h2
+      font-size: 24px
+      margin: 10% 0 5%
+      
+      &.split
         span 
           +box-sizing(border-box)
         span.left-em
@@ -84,67 +141,26 @@
           width: 100%
 
     h3
-      color: $dark-blue
-      font-size: 25px * $multiplier
-      font-weight: 800
-      margin: 30px*$multiplier 0 15px*$multiplier 0
+      font-size: 20px
+      margin: 8% 0 4%
+
       &::before
-        content: "✣"
-        font-size: 28px * $multiplier
-        margin: 0 10px*$multiplier 0 5px*$multiplier
-  
+        font-size: 24px
+
     blockquote
-      +clearfix
-      background: $very-light-gray
-      color: darken($very-light-gray, 70%)
-      box-sizing: border-box
-      margin: 35px*$multiplier 0
-      padding: 15px*$multiplier 30px*$multiplier
-      position: relative
-      display: -webkit-box
-      -webkit-box-pack: center
-      -webkit-box-align: center
-      display: box
-      box-pack: center
-      box-align: center
-  
-      p
-        position: relative 
-        z-index: 2
-        text-shadow: 1px 1px darken($very-light-gray, 3%)
-        width: 75% 
-        padding: 5px if($mobile-portrait or $mobile-landscape, 55px, 30px) 
-        text-align: if($mobile-portrait or $mobile-landscape, center, left)
-  
+      font-size: 18px
+      line-height: 30px
+
       &::before, &::after
-        font-size: 150px * $multiplier
-        position: absolute
-        color: darken($very-light-gray, 5%)
-  
-      &::before
-        content: "❝"
-        left: 18px
-        top: 58px * $multiplier
-  
-      &::after
-        content: "❞"
-        right: 16px
-        bottom: 15px
+        font-size: 80px
 
-      @if $mobile-portrait or $mobile-landscape
-        p 
 
-        &::before, &::after
-          font-size: 80px
+      &::before 
+        top: 30px
+        left: 10px
+      &::after 
+        bottom: 5px
+        right: 10px
 
-        
-+article(false, false)
-
-@media (max-width : 800px)
-  +article(true, false)
-
-@media (max-width : 480px)
-  +article(false,true)
- 
   
   

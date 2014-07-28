@@ -1,197 +1,252 @@
+// *** Google Fonts ***
 @import "//fonts.googleapis.com/css?family=Merriweather:regular,bold,italic|Merriweather+Sans:regular|Quicksand:regular,bold"
 
-=landing($mobile-portrait)
-  $section-height: 600px
-
-  .index-page header nav
-    right: 150px
-
+// *** Responsive Functions ***
+=bg-responsive($bg-fill-start, $section-height)
   .section-block
     height: $section-height
     margin: 0
 
-  .secondary-text
-    font-size: if($mobile-portrait, 22px, 34px)
-    line-height: if($mobile-portrait, 41px, 61px)
-
-  $bg-fill-start: if($mobile-portrait, 800px, 720px)
   .section-bg
     @extend .section-block
 
     &.bg1
-      background: $blue
-      margin-top: if($mobile-portrait, 553px, $bg-fill-start)
+      margin-top: $bg-fill-start
 
-    &.bg2
-      background: $gray
-      @if $mobile-portrait
-        height: 650px
+=primary-img-responsive($width, $top, $pos, $pos-left)
+  .index-page #landing-content section.primary-info
+    img
+      top:  $top
+      width:  $width
+      @if $pos-left 
+        left: $pos 
+        right: auto
+      @else
+        right: $pos
+        left: auto
 
-    &.bg3
-      background: $yellow
-      +box-shadow(#FFD892 0px 0px 0px 20px inset)
+=section-responsive($multiplier)
+  section.primary-info
+    padding: 20px * $multiplier 40px
 
-  #landing-content
-    position: relative
+    p
+      font-size:  48px * $multiplier
+      line-height:  83px * $multiplier
 
-    header
-      border-bottom: 1px solid $light-border-gray
-      width: if($mobile-portrait, auto, 1120px)
+  .secondary-text
+    font-size:  34px * $multiplier
+    line-height:  61px * $multiplier
 
-  .index-page #landing-content
-
-    header
-      width: if($mobile-portrait, auto, 1014px)
-
-    section.primary-info
-      padding: 20px 40px
-
+  section.secondary-info
+    &.left-img
+      padding: 20px * $multiplier
+      img
+        margin-top:  110px * $multiplier
+        margin-left: 30px * $multiplier
+        margin-right: 40px * $multiplier
       p
-        font-family: "Quicksand"
-        font-size: if($mobile-portrait, 20px, 48px)
-        line-height: if($mobile-portrait, 50px, 83px)
+        width:  670px * $multiplier
+        margin-top:  135px * $multiplier
+        margin-right: 15px * $multiplier
 
-      strong
-        font-weight: 700
+    &.right-img
+      padding: 20px * $multiplier
 
       img
-        position: absolute
-        top: if($mobile-portrait, 217px, 50px)
-        left: if($mobile-portrait, 221px, 650px)
-        width: if($mobile-portrait, 247px, 550px)
-
-    section.secondary-info
-      @extend .section-block
-      @extend .secondary-text
-
-      &.left-img
-        color: white
-        padding: 20px
-        @if $mobile-portrait
-          text-align: center
-
-        img
-          margin-top: if($mobile-portrait, 50px, 110px)
-          margin-left: 30px
-          margin-right: 40px
-          opacity: 0.9
-          @if $mobile-portrait
-            width: 230px
-
-        p
-          width: if($mobile-portrait, auto, 670px)
-          float: right
-          margin-top: if($mobile-portrait, 40px, 135px)
-          margin-right: 15px
-
-      &.right-img
-        +clearfix
-        color: darken($gray, 65%)
-        padding: 20px
-
-        img
-          float: right
-          margin-top: 85px
-          margin-right: 40px
-          @if $mobile-portrait
-            width: 335px
-            float: none
-            margin-left: auto
-            margin-right: auto
-            margin-top: 248px
-            display: block
-
-        p
-          float: left
-          width: if($mobile-portrait, auto, 585px)
-          margin: if($mobile-portrait, 15px, 115px) 0 0 40px
-
-    section.contact-cta
-      @extend .secondary-info
-      color: darken($yellow, 50%)
-      text-align: center
-      padding: 40px
+        margin-top: 85px * $multiplier
+        margin-right: 40px * $multiplier
 
       p
-        margin-top: 40px
-        margin-bottom: 80px
+        width:  585px * $multiplier
+        margin:  115px * $multiplier 0 0 40px * $multiplier
 
-        margin: 40px auto 80px
-        width: if($mobile-portrait, auto, 1000px)
+  section.contact-cta
+    padding: 40px * $multiplier
 
-      a
-        text-decoration: none
+    p
+      margin-top: 40px * $multiplier
+      margin-bottom: 80px * $multiplier
+
+      margin: 40px * $multiplier auto 80px * $multiplier
+
+  section.subscribe-cta
+    margin: -60px * $multiplier 0 0 150px * $multiplier
+    p
+      max-width:  900px * $multiplier
+
+    form
+      margin-top: 55px * $multiplier
+      margin-bottom: 50px * $multiplier
+
+      input.email
+        margin-right: 40px * $multiplier
+        padding: 19px * $multiplier
+        width: 535px * $multiplier
+        font-size: 30px * $multiplier
 
       .outline-button
-        background: white
-        font-family: "Merriweather Sans"
-        // font-size: 36px
+        font-size: 30px * $multiplier
 
-        &:hover
-          background-color: rgba(#fff, .9)
 
-    section.subscribe-cta
-      @extend .secondary-text
-      color: $green
-      margin: -60px 0 0 150px
+//*** Base styles ***
+.section-bg
+  &.bg1
+    background: $blue
+  &.bg2
+    background: $gray
+  &.bg3
+    background: $yellow
+    +box-shadow(#FFD892 0px 0px 0px 20px inset)
+
+.index-page header nav
+  right: 150px
+
+#landing-content
+  position: relative
+
+  header
+    border-bottom: 1px solid $light-border-gray
+    width:  1120px
+
+.index-page #landing-content
+  header
+    width:  1014px
+
+  section.primary-info
+    p
+      font-family: "Quicksand"
+    strong
+      font-weight: 700
+
+    img
+      position: absolute
+      
+
+  section.secondary-info
+    @extend .section-block
+    @extend .secondary-text
+
+    &.left-img
+      color: white
+      img
+        opacity: 0.9
 
       p
-        width: if($mobile-portrait, auto, 900px)
+        float: right
 
+    &.right-img
+      +clearfix
+      color: darken($gray, 65%)
+      img
+        float: right
+      p
+        float: left
 
-      form
-        margin-top: 55px
-        margin-bottom: 50px
-
-        input.email
-          margin-right: 40px
-          padding: 19px
-          width: 535px
-          font-size: 30px
-
-
-        .outline-button
-          font-size: 30px
-
-          &:hover
-            background: rgba($green, .05)
-
-+landing(false)
-@media (max-width : 800px)
-  +landing(true) 
   section.contact-cta
+    @extend .secondary-info
+    color: darken($yellow, 50%)
+    text-align: center
+
+    a
+      text-decoration: none
+
     p
+      max-width:  1000px
+
+    .outline-button
+      background: white
+      font-family: "Merriweather Sans"
+
+      &:hover
+        background-color: rgba(#fff, .9)
+
+  section.subscribe-cta
+    @extend .secondary-text
+    color: $green
+    form .outline-button
+      &:hover
+        background: rgba($green, .05)
+
+
+// *** Desktop-specific styles ***
++bg-responsive(720px, 600px)
++section-responsive(1.0)
++primary-img-responsive(550px, 50px, 650px, true)
+
+// *** Media-query styles ***
+@media (max-width : 800px)
+  html.js body.index-page 
+    visibility: hidden
+
+  body.index-page #landing-content 
+    header 
       width: auto
-  .section-bg
-    &.bg1
-      height: 558px
-  .index-page
-    #landing-content
-      section.contact-cta
-        span
-          font-size: 20px
-      section.subscribe-cta
-        margin-left: 0
-        width: auto
-        padding: 30px
-        form
-          text-align: center
-          input.email
-            width: 90%
-            margin-bottom: 15px
+  
+    section
 
-@media (max-width : 645px)
-  .section-bg
-    &.bg1
-      height: 605px
+      &.secondary-info
+        padding: 0
+        &.left-img 
+          margin-top: 5%
+          > img 
+            width: 28%
+            margin-top: 9%
+            margin-left: 5%
+            margin-right: 5%
 
+          > p 
+            width: 56%
+            margin-top: 11%
+            margin-right: 5%
+
+        &.right-img 
+          > img 
+            width: 30%
+            margin-top: 12%
+            margin-left: 1%
+            margin-right: 6%
+
+          > p 
+            width: 55%
+            margin-top: 14%
+            margin-right: 2%
+            margin-left: 5%
       
-@media (max-width : 556px)
-  .section-bg
-    &.bg1
-      height: 663px
-  .index-page
-    #landing-content
-      section.contact-cta
-        span
-          font-size: 18px
+      &.contact-cta
+        > p 
+          width: 80%
+          margin-top: 10%
+
+      &.subscribe-cta
+        margin: 0
+        text-align: center
+        > p 
+          width: 80%
+          text-align: left
+          margin: auto
+
+          &:first-of-type
+            margin-bottom: 4%
+
+        input.email 
+          width: 45%
+          margin-right: 4%
+
+        .outline-button 
+          padding: 2% 3%
+          border-width: 3px
+          border-radius: 12px
+
+
+  +bg-responsive(600px, 420px)
+  +section-responsive(0.7)
+  +primary-img-responsive(40%, 180px, 20px, false)
+  
+
+@media (max-width : 600px)
+  body.index-page #landing-content
+    section.subscribe-cta 
+      input.email 
+        border-width: 2px
+        border-radius: 9px
+
