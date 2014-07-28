@@ -9,6 +9,8 @@ LINE_HEIGHT_PCT = 1.73
 BG_HEIGHT_PCT = 0.525
 BG_START_PADDING_PCT = 0.07625
 
+PRIMARY_IMG_HEIGHT_PCT = 1.17299
+
 $primaryText = $("#landing-content .primary-info > p")
 $secondarySections = $("#landing-content section").not(".primary-info")
 $secondaryText = $secondarySections.find("> p")
@@ -55,12 +57,22 @@ clearLandingBg = ->
 
   $secondarySections.css height: ""
 
+setPrimaryImgHeight = ->
+  w = $primaryImg.width()
+  h = w * PRIMARY_IMG_HEIGHT_PCT
+  $primaryImg.height(h)
+
+clearPrimaryImgHeight = ->
+  $primaryImg.css height: ""
+
 setResponsive = (w)->
   setLandingText(w)
+  setPrimaryImgHeight()
   setLandingBg(w)
 
 clearResponsive = ->
   clearLandingText()
+  clearPrimaryImgHeight()
   clearLandingBg()
 
 landingResponsive = -> 
