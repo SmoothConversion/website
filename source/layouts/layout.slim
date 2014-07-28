@@ -14,7 +14,10 @@ html
     meta charset="utf-8"
     meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
     title= current_page.data.title || "Smooth Conversion"
-    meta name="description" content="Our combined expertise in software engineering, user interface design, and customer analytics serves a primary focus: making your business more efficient and more profitable."
+    - if current_page.metadata[:page].try(:[], 'seo_meta_description')
+  		meta property="description" content="#{current_page.metadata[:page]['seo_meta_description']}"
+  	- else
+    	meta name="description" content="Our combined expertise in software engineering, user interface design, and customer analytics serves a primary focus: making your business more efficient and more profitable."
     meta name="viewport" content="width=device-width"
 
     / Place favicon.ico and apple-touch-icon.png in the root directory
