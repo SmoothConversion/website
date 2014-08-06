@@ -18,7 +18,7 @@ html
   		meta property="description" content="#{current_page.metadata[:page]['seo_meta_description']}"
   	- else
     	meta name="description" content="Our combined expertise in software engineering, user interface design, and customer analytics serves a primary focus: making your business more efficient and more profitable."
-    meta name="viewport" content="width=device-width; initial-scale=1.0;"
+    meta name="viewport" content="initial-scale=1; maximum-scale=1; minimum-scale=1; user-scalable=no;"
 
     / Place favicon.ico and apple-touch-icon.png in the root directory
     link rel="stylesheet" href="/css/normalize.css"
@@ -49,6 +49,19 @@ html
     script src="/js/vendor/jquery.lazylinepainter-1.4.1.min.js"
     script src="/js/draw.js"
 
+    / Viewport js mult-device fix
+    javascript:
+      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+        var ww = ( $(window).width() < window.screen.width ) ? $(window).width() : window.screen.width; //get proper width
+        var mw = 480; // min width of site
+        var ratio =  ww / mw; //calculate ratio
+        if( ww < mw){ //smaller than minimum size
+         $('#Viewport').attr('content', 'initial-scale=' + ratio + ', maximum-scale=' + ratio + ', minimum-scale=' + ratio + ', user-scalable=yes, width=' + ww);
+        }else{ //regular size
+         $('#Viewport').attr('content', 'initial-scale=1.0, maximum-scale=2, minimum-scale=1.0, user-scalable=yes, width=' + ww);
+        }
+      }
+
     = yield_content :bottom
 
     / Google Analytics tracking
@@ -63,6 +76,8 @@ html
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
+
+    
 
 
 
