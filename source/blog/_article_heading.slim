@@ -1,6 +1,6 @@
 .article-heading
   h1 
-    / = link_to("«","/blog", class: "back") unless summary
+    = link_to("«","/blog", class: "back") unless summary
     span.title
       = summary ? link_to(article.title, article.url) : article.title
 
