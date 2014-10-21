@@ -27,7 +27,7 @@ var pathObj = {
  */ 
 
  
-$(".newsletter-signup").click(function(e){
+$(".newsletter-signup, .inline-newsletter-signup").click(function(e){
 	 e.preventDefault()
 
      $("form.subscribe input.email").focus();

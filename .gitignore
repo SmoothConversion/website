@@ -18,3 +18,5 @@
 
 # Ignore sublime text stuff
 *.sublime-*
+
+.project

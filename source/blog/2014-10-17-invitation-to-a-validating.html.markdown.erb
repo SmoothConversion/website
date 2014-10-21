@@ -1,0 +1,139 @@
+---
+title: Invitation To A Validating
+date: 2014-10-17
+tags: Lean, Validation, New Products, Case Studies
+author: Lennon Rubin
+image: bNwBlueprint.jpg
+---
+
+In a <%= link_to "previous blog post", "/blog/why-you-don-t-validate-your-product-idea/", {:target => "_blank"} %>, I wrote about the psychological reasons people don’t validate their product ideas.  I also gave a high level blueprint on how to test a business idea once you’ve overcome those hurdles and are ready to dive in.  In order to give you an even greater window into the product validation process, I’m writing a series of blog posts covering, step by step, every aspect of <%= link_to "Smooth Conversion’s", "/", {:target => "_blank"} %> latest product launch.
+
+Look over our shoulder at all the nitty gritty details of exactly how to go from concept, to validation, to implementation, to optimization and beyond.  You'll get a front row seat as our fledgling product becomes a stunning success or a spectacular failure.
+
+## Goals
+
+There are many reasons to launch a new product.  You might be looking to add some monthly recurring revenue to your wallet.  Or you could want a lifestyle business that will become your primary source of income.  Perhaps you want to create something that scales to millions of users and eventually IPO’s.  Depending on your goals, different products will have a better chance of achieving them than others.  It’s important to know what you want.
+
+For this product, our goals were:
+
+* **A fun and exciting project to work on.**  We find product creation an enjoyable balance to client work.
+* **A case study for our <%= link_to "company homepage", "/", {:target => "_blank"} %>.**  Cases studies are a fantastic way to showcase your skills and build trust with prospective clients.
+* **Diversifying our income streams.**  Just like in investing, putting all your eggs in one basket, in our case client work, increases volatility.
+* **Recurring revenue.**  Having consistent revenue coming in every month will allow us to plan more confidently for the future and make bolder moves.
+* **Practice validating products.**  We are big proponents of <%= link_to "Lean Startup product validation philosophies", "http://leananalyticsbook.com/", {:target => "_blank"} %> and we gain valuable insights with every product validation we do.
+* **Have a flagship product to bring attention to us and our company.**  Companies like <%= link_to "37Signals", "http://37signals.com/", {:target => "_blank"} %> (<%= link_to "Basecamp", "https://basecamp.com/", {:target => "_blank"} %>), <%= link_to "Pivotal Labs", "http://pivotallabs.com/", {:target => "_blank"} %> (<%= link_to "Pivotal Tracker", "http://www.pivotaltracker.com/", {:target => "_blank"} %>), and <%= link_to "Fog Creek Software", "http://www.fogcreek.com/", {:target => "_blank"} %> (<%= link_to "Trello", "https://trello.com/", {:target => "_blank"} %>) have gained enormous visibility from the success of their flagship products.
+* **Blog material.**  The benefits of consistent blogging are <%= link_to "large", "http://www.quicksprout.com/2012/10/22/why-content-marketing-is-the-new-seo/", {:target => "_blank"} %> and I find writing first hand accounts of experiences to be an easier blog post to write than more abstract essays.   We’re going to chronicle this entire product development process from idea to validation and on to, assuming it validates positively, implementation to launch to success or failure.
+
+## So, what product should we embark on?
+
+<%= image_tag (current_page.path.gsub(".html", "/") + "paint-samples.jpg"), class: "full-width" %>
+
+Well it just so happens that <%= link_to "Dane", "/team", {:target => "_blank"} %> is an idea generation dynamo.  Every week or so he comes to me with a new idea for a product or service.  Sometimes he’s even gone ahead and created a possible landing page for what the product might be.  We’ll spend an entire lunch having fun imagining the possibilities, poking holes in the potential merits, and thinking out the implementation architectures.  Finally the idea is duly noted somewhere and usually forgotten.
+
+Now we have the perfect opportunity to take one of those gems and bring it to life.  Our criteria for choosing which product to try was as follows:
+
+* **It solves a problem we currently have.**  It’s much easier to build and market a product when you yourself are in the target market.  Working on something <%= link_to "we want to exist", "http://paulgraham.com/startupideas.html", {:target => "_blank"} %> will give us added motivation to get through to completion.
+* **Small MVP.**  We wanted a product that we could get off the ground in a short amount of time.  The goal here was not to create the next Facebook.  It was simply to make a financially successful product while still having enough time to continue working with clients and building our company infrastructure.  Something that could be done without a large up front financial or time investment was critical.
+* **A proven, existing market.**  <%= link_to "It’s much harder to create a market than to enter into an existing market.", "http://techstartupgame.com/2011/08/03/5-reasons-to-launch-your-startup-in-an-existing-market/", {:target => "_blank"} %>  This is because existing companies have already done the work of finding a painful enough problem and creating a solution that people are proven to pay for.  All you need to do is beat the incumbents in at least one of a variety of potential vectors such as price, quality, functionality or ease of use.  There are also plenty of successful businesses that are simply complete copycats with a different marketing campaign.
+* **An obvious, straight forward, and quickly monetized business model.**  To meet our goals we wanted something that had a business model built right in where we could be making money from day one.  We weren’t interested in doing a “get lots of users and figure out how to monetize someday down the line” type of product.
+
+## What We’re Choosing
+
+Dane’s product idea that fit every single one of these criteria was a high-end, curated web template marketplace.
+
+### It solves a problem we currently have
+
+We’ve bought templates before but have been disappointed by the visual and code quality of the vast majority of templates.  Slogging through hundreds or thousands of templates just to find the decent ones is time consuming and tedious which is exacerbated by the poor quality of browsing experiences in the major marketplaces.  And when we finally found one we liked, the code quality of the template was frequently subpar causing large, painful delays in development, negating much of the value the time-saving nature of templates were supposed to provide.
+
+Even the best templates aren’t as beautiful and well developed as they could be.  Our hypothesis is that the best designers don’t enter the template market due to the race to the bottom nature of template marketplace pricing as well as less than amenable payout terms.
+
+### Small MVP
+
+A simple marketplace with template listings, live previews, and e-commerce with Stripe felt like a good size for us to tackle quickly.  From a technological standpoint, we’ve done pretty much every aspect of a marketplace before in other projects and we think we could build it part time in a month or two.
+
+### Proven, existing market
+
+Incumbent sites like ThemeForest, TemplateMonster and Wrapbootstrap publish the number of templates sold for each item right on their websites.  From those numbers it’s clear that web templates are a millions of dollars per month industry.
+
+<%= image_tag (current_page.path.gsub(".html", "/") + "template-logos.png"), class: "full-width" %>
+
+
+### An obvious, straight forward, and quickly monetized business model
+
+One of the oldest business models of all time, sellin’ stuff.  From the day we launch we can be generating revenue.  The easy scalability of selling digital goods is a nice added bonus that helps us dream big while starting small.
+
+## Potential Problem: The Marketplace
+
+One blemish in this product idea is that it is a marketplace.  Marketplaces are inherently more difficult to start because you need to succeed twice, both on the supply and demand side.  If we don’t have a great supply of templates or if there are no customers ready to buy, we’ll fail.  The chicken or the egg problem comes into play here as well.  If there are no templates, why would customers come?  And if there are no customers, why would designers submit to our marketplace?
+
+We came up with two different ways to attempt to mitigate this problem.
+
+As I mentioned before, the terms that the major template marketplaces give to designers aren’t good.  For a non-exclusive deal the average designer cut is 33% and the majority of designers get around 50-55% for an exclusive deal.  The highest earners can make up to 70% but that only applies to a small minority of top sellers.  There is either no price floor or the marketplace sets the price, removing the ability of a designer to sell a template for what it’s worth.
+
+We decided to make all of our deals non-exclusive and to always give designers a 70% cut.  And because we’re going after the higher end market, we’ll set a price floor to prevent race to the bottom conditions while still allowing designers to choose their own pricing.  These numbers aren’t finalized yet but we believe our terms will attract the attention of great designers who might not usually be interested in template marketplaces.  We also hope it will inspire designers to take a chance at submitting templates even before the customer base is established.
+
+If it all else fails, we can create the first batch of templates ourselves.  Seeding the market/community is a technique that’s been used successfully by many successful startups like Reddit, Yelp and Etsy.
+
+## Vetting an idea in the real world
+
+Now that we were settled on our idea, it was time to build it right?  In the past that would have been my initial impulse but I’ve had multiple experiences with personal and client projects where months of effort and thousands of dollars were poured into a project idea that nobody ended up wanting.  Even when the entrepreneur knows they should validate their design, it frequently doesn’t happen.  I’ve previously chronicled the various <%= link_to "psychological factors", "/blog/why-you-don-t-validate-your-product-idea/", {:target => "_blank"} %> that get in the way of properly validating an idea.
+
+Instead of diving right in, we spent some time examining the idea and <%= link_to "listing out our assumptions.", "http://ryanhoover.me/post/45112508553/there-will-be-wrong-assumptions", {:target => "_blank"} %>
+
+1. We can build the marketplace part time in one to two months
+2. We can reach our potential customers and bring them to the marketplace
+3. People will pay a premium for better templates and a better browsing experience
+4. Quality designers will be willing to submit templates to a curated, premium template marketplace.
+
+Which of these are our <%= link_to "riskiest assumptions", "http://practicetrumpstheory.com/2014/05/on-identifying-riskiest-assumptions/", {:target => "_blank"} %>?
+
+We can build marketplace websites in our sleep so assumption number one is a safe bet.
+
+As for reaching potential customers, we were planning on charging a premium for each template.  We also know that people who purchase templates usually buy more than one template over the lifetime relationship with their preferred template marketplace.  This fact combined with our low overhead per purchase (templates being digital goods), we should have pretty good headroom to run online ad campaigns with a positive ROI.
+
+But we weren’t really sure if people would actually pay a premium for high quality templates.  Was our target problem painful enough for people to pay more for quality and not having to sift through thousands of low-quality templates?  And would quality designers be willing to spend the time to craft templates that were of higher quality than existing ones in exchange for better terms and the exclusivity of being in a curated marketplace?
+
+We want to find out before wasting time building something nobody wanted.  Here’s our plan:
+
+## Qualitative Validation
+
+First, we’re going to make a list of all the people we know who might be potential customers of our idea.  They’ll be the easiest to reach and will be be more responsive to our inquiries.  Then we’ll use google, linkedin and twitter to find people we don’t know who might be potential customers.  It’s important to get feedback from people we don’t know because they’ll be less likely to humor us about the idea.  It’ll also build our potential early adopter list if we find people whose problems our product is a solution to.
+
+We’ll then write an email with the goal of uncovering what problems these people face when dealing with design.  We’ll also ask them about their current experiences with templates sites.  Have they ever purchased a template.  If so, how was their experience?  If not, why not?
+
+From their responses we’ll have qualitative data on whether our target problems are actually painful enough to pay a premium to solve.
+
+Next, we’ll make a list of all the designers we know and send them an email telling them about the product idea.  We’ll also browse design showcase sites like <%= link_to "behance.net", "https://www.behance.net/", {:target => "_blank"} %> and <%= link_to "unmatchedstyle.com", "http://unmatchedstyle.com/gallery", {:target => "_blank"} %> to find great designers we don’t know who we’d love to be a part of the marketplace.  The idea is to vet whether or not our marketplace’s concept and terms would be good enough to attract top quality design talent.  As an added bonus, these same designers we’re contacting to vet the idea might become our first wave of template creators if they like the concept.  And we’re networking with top tier design talent which will come in handy for our consulting company.
+
+## Quantitative Validation
+
+<%= image_tag (current_page.path.gsub(".html", "/") + "data.png"), class: "full-width" %>
+
+<%= link_to "Getting out of the building", "http://steveblank.com/2013/09/05/why-real-learning-is-outside-the-building-not-demo-day/", {:target => "_blank"} %> and speaking with prospective customers and suppliers is extremely valuable but it would be great to also get some quantitative data as well.  We’re accomplishing this by creating a well-designed landing page that explains the idea with obvious calls to action for potential customers and designers to enter their email addresses and get notified when we launch.
+
+To see exactly how we implemented this, <%= link_to "take a look at the landing page.", "http://www.greatdesign.io/", {:target => "_blank"} %>
+
+In order to entice our potential customers we’ve added a lifetime 10% discount to sweeten the deal.  We’re then going to run Facebook ads targeted at people who liked our potential competitors’ Facebook pages as well as people who liked the Facebook pages of quality design publications.  Facebook estimates these ads to run at around $.40 a click so for around $400 we should be able to get something close to 1,000 targeted visitors to the site.
+
+## Lines in the sand
+
+It’s important to <%= link_to "pick lines in the sand", "http://leananalyticsbook.com/1000-how-were-validating-the-opportunity-for-lean-analytics-book/", {:target => "_blank"} %> to keep ourselves honest about the success of our landing page. But how do we decide if we succeeded or not?  What is our line in the sand number?
+
+From <%= link_to "this blog post", "http://www.wordstream.com/blog/ws/2014/03/17/what-is-a-good-conversion-rate#what-is-a-good-conversion-rate", {:target => "_blank"} %> we can see that the average conversion rate for paid ad campaigns is 2.35%, the top 25% convert at 5.31%, and the top 10% convert at 11.45%.  However those are general statistics for all campaigns and include all manner of conversion types.
+
+How about just for coming soon landing pages?  This <%= link_to "Quora thread", "http://www.quora.com/Whats-a-good-conversion-rate-for-landing-page-testing-a-B2B-product", {:target => "_blank"} %> has numbers being mentioned between 15% - 40% as a good conversion rate.  This makes sense given that there is a smaller barrier to entry to giving just your email address than actually purchasing something or making an account.
+
+Given that research, we’ve decided that if we get a signup rate of 15% combined with strong qualitative feedback, we’ll proceed with building the product.  If we fall short, we’ll take a long hard look at our assumptions and try to understand what happened and whether or not it was a failure in branding/targeting or simply that the problem isn’t painful enough for our target market.
+
+But if we fail it’s not the end of the world.  In fact, it might just be the beginning of a beautiful, cheap pivot.
+
+## Going Forward
+
+In future posts we'll be publishing the results of our outreach to potential customers and designers as well as the numbers on the Facebook ad campaign we'll be running.  We'll use these numbers to decide whether or not to proceed with this product or instead pivot to a new idea.
+
+If you'd like to find out how it goes, <%= link_to "sign up for updates", "#", {:class => "inline-newsletter-signup"} %>.  We promise we won't spam you or give your email address to anyone else.
+
+
+
+
+
