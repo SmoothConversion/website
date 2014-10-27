@@ -21,11 +21,11 @@
       p.copy
         margin-bottom: 55px * $multiplier
 
-      p.email 
+      p.email
         margin-bottom: 40px * $multiplier
         font-size: 23px * $multiplier
 
-      .email .tablet.mobile 
+      .email .tablet.mobile
         font-size: if($mobile-portrait, 14.5px, 16.5px * $multiplier)
 
     .register
@@ -39,31 +39,36 @@
       border: if($mobile-portrait or $mobile-landscape, 4px, 3px) * $multiplier solid $bg
 
       .copy
-        float: left 
+        float: left
         background: $bg
         color: $dark-gray
         padding: 30px * $multiplier
         display: inline-block
         +box-sizing(border-box)
-        
+
       .copy.mobile
         width: 100%
         float: none
         text-align: center
         margin-bottom: 35px
-        
+
       .mobile-subscribe
         text-align: center
         input
           margin-bottom: 35px
         input[type=email]
           width: 80%
-          @if $mobile-portrait or $mobile-landscape 
+          @if $mobile-portrait or $mobile-landscape
             font-size: 18px
         input[type=submit]
           border-width: 2px
           font-size: 80%
           color: $green
+          margin-bottom: 20px
+        .spam
+          font-size: 16px
+          margin-top: 0
+          color: darken($lightest-gray, 43%)
 
       .signup
         float: right
@@ -72,7 +77,7 @@
           color: $green
           font-size: 40px * $multiplier
           margin-right: 20px * $multiplier
-          position: relative 
+          position: relative
           top: 30px * $multiplier
           left: -50px * $multiplier
           float: left
@@ -83,7 +88,7 @@
         border-bottom: 2px * $multiplier solid $green
         padding-bottom: 5px * $multiplier
         font-weight: normal
-        position: relative 
+        position: relative
         top: 25px * $multiplier
         left: -67.5px * $multiplier
 
@@ -96,7 +101,7 @@
       padding: 20px 30px
       color: $dark-blue
 
-      @if $mobile-portrait 
+      @if $mobile-portrait
         font-size: 14px
         font-weight: bold
       @else if $mobile-landscape
@@ -113,7 +118,7 @@
 
 
 @media (max-width : 680px)
-  +article-cta(true, false) 
+  +article-cta(true, false)
 
   body .article-cta .twitter
     padding: 2% 4%
@@ -124,4 +129,3 @@
 @media (max-width : 480px)
   +article-cta(false,true)
 
-    
