@@ -19,17 +19,17 @@
       width: 100%
       height: auto
 
-    &.right, &.left 
+    &.right, &.left
       max-width: 100%
 
   a, a:visited
     color: $green
-    text-decoration: none 
+    text-decoration: none
     font-weight: bold
-  
+
   h2
     font-family: "Quicksand"
-    font-size: 28px 
+    font-size: 28px
     // border: 2px solid $medium-gray
     margin: 60px 0 30px
     background: $very-light-gray
@@ -44,7 +44,7 @@
     //   font-size: 30px
     //   margin-left: 10px
     //   font-weight: 600
-    //   position: relative 
+    //   position: relative
     //   top: 4px
 
     &.split
@@ -52,7 +52,7 @@
       background: $very-light-gray
       color: darken($very-light-gray, 50%)
       font-weight: 600
-      font-size:  28px 
+      font-size:  28px
 
     span.left-em
       background: $dark-blue
@@ -90,10 +90,10 @@
     box-align: center
 
     p
-      position: relative 
+      position: relative
       z-index: 2
       text-shadow: 1px 1px darken($very-light-gray, 3%)
-      width: 75% 
+      width: 75%
       padding: 5px 30px
       text-align: left
       margin: auto
@@ -113,37 +113,37 @@
       right: 16px
       bottom: 15px
 
-        
-@media (max-width : 800px)
-  body.blog-layout .article 
-    > p
-      font-size: 18px 
-      line-height: 30px 
 
-    img.right, img.left 
+@media (max-width : 800px)
+  body.blog-layout .article
+    > p, li, li > p
+      font-size: 18px
+      line-height: 34px
+
+    img.right, img.left
       clear: both
       width: 50%
       height: auto
       margin: 4%
 
     h2
-      font-size: 24px
+      font-size: 26px
       margin: 10% 0 5%
-      
+
       &.split
-        span 
+        span
           +box-sizing(border-box)
         span.left-em
           display: block
           width: 100%
         span.split-right
-          display: block 
+          display: block
           padding: 15px
           width: 100%
 
     h3
-      font-size: 20px
-      margin: 8% 0 4%
+      font-size: 23px
+      margin: 5% 0 4%
 
       &::before
         font-size: 24px
@@ -156,12 +156,12 @@
         font-size: 80px
 
 
-      &::before 
+      &::before
         top: 30px
         left: 10px
-      &::after 
+      &::after
         bottom: 5px
         right: 10px
 
-  
-  
+
+

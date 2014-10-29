@@ -10,7 +10,7 @@
   #newsletter-circle
     z-index: 3
     position: absolute
-    bottom: 2px
+    bottom: 1px
     left: 15px
     color: $green
     pointer-events: none
@@ -38,13 +38,13 @@
     background: hsla(0,0%,98%,0.7)
     position: absolute
     left: 0
-    bottom: 80px
+    bottom: 57px
     z-index: 2
 
     p
       text-align: center
       color: $dark-gray
-      margin: 35px 0 18px 0
+      margin: 35px 0 17px 0
       font-size: 14px
 
     form.subscribe
@@ -54,23 +54,24 @@
         width: 220px
         font-size: 13px
         padding: 9px
-        margin: 0 0 23px 0
+        margin: 0 0 21px 0
         display: inline-block
       .spam
         font-size: 55%
-        margin: 10px 1px 1px 1px
+        margin: 10px 1px 1px 0
         color: darken($lightest-gray, 43%)
+        position: relative
 
       .outline-button
         border: none
-        background: $medium-gray
+        background: rgba($green, 0.8)
         font-weight: normal
         color: white
         +border-radius(7px)
-        padding: 8px 18px
-        font-size: 14px
+        padding: 7px 17px
+        font-size: 13px
         &:hover
-          background: darken($medium-gray, 15%)
+          background: rgba($green, 1)
 
 .sidebar nav.site-nav li a,
 .mobile-header nav.site-nav li a,
