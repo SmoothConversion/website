@@ -1,12 +1,12 @@
-/* 
- * Lazy Line Painter - Path Object 
+/*
+ * Lazy Line Painter - Path Object
  * Generated using 'SVG to Lazy Line Converter'
- * 
- * http://lazylinepainter.info 
- * Copyright 2013, Cam O'Connell  
- *  
- */ 
- 
+ *
+ * http://lazylinepainter.info
+ * Copyright 2013, Cam O'Connell
+ *
+ */
+
 var pathObj = {
     "newsletter-circle": {
         "strokepath": [
@@ -20,24 +20,26 @@ var pathObj = {
             "height": 276
         }
     }
-}; 
- 
-/* 
- Setup and Paint your lazyline! 
- */ 
+};
 
- 
+/*
+ Setup and Paint your lazyline!
+ */
+
+
 $(".newsletter-signup, .inline-newsletter-signup").click(function(e){
 	 e.preventDefault()
 
      $("form.subscribe input.email").focus();
      if ($(window).scrollLeft() != 0) $(window).animate({scrollLeft: 0}, 400);
 
+     $(".sidebar .spam").animate({"top": "15px"}, 150);
+
 	 var strokeColor = $("#newsletter-circle").css("color")
-	 $('#newsletter-circle').lazylinepainter( 
+	 $('#newsletter-circle').lazylinepainter(
 	 {
 	    "svgData": pathObj,
 	    "strokeWidth": 3,
 	    "strokeColor": strokeColor
-	}).lazylinepainter('paint'); 
+	}).lazylinepainter('paint');
  });

@@ -22,7 +22,7 @@
         margin-bottom: 55px * $multiplier
 
       p.email
-        margin-bottom: 40px * $multiplier
+        margin-top: 40px * $multiplier
         font-size: 23px * $multiplier
 
       .email .tablet.mobile
@@ -32,9 +32,9 @@
       $bg: if($mobile-portrait or $mobile-landscape, darken($gray, 4%), darken($gray, 2%))
 
       +clearfix
-      margin-top: 65px * $multiplier
       font-size: 27px * $multiplier
       +box-sizing(border-box)
+      margin-bottom: 65px * $multiplier
       width: 100%
       border: if($mobile-portrait or $mobile-landscape, 4px, 3px) * $multiplier solid $bg
 
@@ -96,7 +96,7 @@
       +box-sizing(border-box)
       position: relative
       width: 100%
-      margin-top: 65px * $multiplier
+      margin-bottom: 65px * $multiplier
       border: 2px solid $dark-blue
       padding: 20px 30px
       color: $dark-blue

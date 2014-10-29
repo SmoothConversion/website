@@ -1,24 +1,14 @@
 
 .article-cta
-  .contact-us
-    p.copy
-      = article.data.contact_cta || "Need help with product strategy, design, or development?"
-      = " Get in touch:"
-    p.email = partial "contact_email"
+  .social.split-cta
 
 
-  .register.split-cta
+  .register.mobile
 
-    span.copy.desktop Loved what you read?
-    
-    span.signup.desktop = link_to article.data.register_cta || "Get notified of future posts", 
-                        "#", 
-                        class: "newsletter-signup"
-                        
-    span.mobile.copy Loved what you read?
-    
-    .mobile-subscribe.mobile
-      = partial "email_subscribe", locals: {subscribe_button: "Get New Posts By Email"} 
+    span.mobile.copy Get notified of future posts
+
+    .mobile-subscribe
+      = partial "email_subscribe", locals: {subscribe_button: "Get New Posts By Email"}
 
   .twitter
     - author = article.data.author.split(" ").first
@@ -27,3 +17,9 @@
     span.copy.mobile ="More from #{author}"
     a href="https://twitter.com/#{twitter}" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large"
       = "Follow @#{twitter}"
+
+  .contact-us
+    p.copy
+      = article.data.contact_cta || "Need help with product strategy, design, or development?"
+      = " Get in touch:"
+    p.email = partial "contact_email"
