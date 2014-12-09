@@ -118,7 +118,7 @@ Now that you've mapped and quantified your website's funnel, you can start to di
 
 There are still a number of key steps you need to follow to get from model to diagnosis. If you want to learn where your site is leaving tons of value on the table, you should sign up for our free 7-day email course: **How To Diagnose Your Site's Leaky Funnel**.
 
-The course picks up where this blog post leaves off. You'll get one email per day for 7 days. Each one will take 10 or 15 minutes to read. By the end, you'll have the knowledge and tools you need to make targeted improvements that will take your site to new heights.
+The course picks up where this blog post leaves off. You'll get one email per day for 7 days. Each one will take 10-15 minutes to read. By the end, you'll have the knowledge and tools you need to make targeted improvements that will take your site to new heights.
 
 We won't send you **any additional emails** without your permission and we'll never send spam or share your email with anyone else.
 
