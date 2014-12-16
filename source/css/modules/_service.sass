@@ -3,6 +3,9 @@
     min-width: 100%
     width: 100%
 
+    #service
+      position: relative
+
   header
     border-bottom: 1px solid $light-border-gray
     width:  100%
@@ -42,12 +45,14 @@
   .header-divider
     position: absolute
     left: 0
+    right: 0
     width: 100%
     border-bottom: 1px solid $light-border-gray
 
   .divider
     position: absolute
     left: 0
+    right: 0
     width: 100%
     border-bottom: 380px solid #F0F0F0
     z-index: -5
@@ -84,3 +89,27 @@
 
   .footer
     min-width: 100%
+
+@media (max-width : 730px)
+  .service-layout
+    .service-content
+      .divider
+        border-bottom-width: 420px
+
+@media (max-width : 615px)
+  .service-layout
+    .service-content
+      .divider
+        border-bottom-width: 450px
+
+@media (max-width : 550px)
+  .service-layout
+    .service-content
+      .divider
+        border-bottom-width: 480px
+
+@media (max-width : 508px)
+  .service-layout
+    .service-content
+      .divider
+        border-bottom-width: 515px
