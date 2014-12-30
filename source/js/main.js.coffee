@@ -84,3 +84,5 @@ if $(".index-page").length
   $("body").css visibility: "visible"
   $(window).resize landingResponsive
 
+$ ->
+  $(".utm-input").attr("value", getParameterByName("utm"))

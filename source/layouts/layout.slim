@@ -25,11 +25,11 @@ html
     link rel="stylesheet" href="/css/boilerplate.css"
     link rel="stylesheet" href="/css/main.css"
     script src="/js/vendor/modernizr-2.6.1.min.js"
-    
+
     script src="/js/vendor/raphael-min.js"
 
     = yield_content :head
-    
+
     meta name="google-site-verification" content="8SxdrSC81H9zBH4HstplzWc9GKgcaoz7f8XWRpGqFZs"
 
   body class="#{yield_content :page_class}"
@@ -48,6 +48,7 @@ html
     script src="/js/main.js"
     script src="/js/vendor/jquery.lazylinepainter-1.4.1.min.js"
     script src="/js/draw.js"
+    script src="/js/utils.js"
 
     = yield_content :bottom
 
@@ -64,7 +65,7 @@ html
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
 
-    
+
 
 
 
