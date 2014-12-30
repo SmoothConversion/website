@@ -20,38 +20,38 @@ $bg = $(".index-page .bg-wrap .section-bg")
 $primaryImg = $("#landing-content .primary-info > img")
 
 setFontCss = ($el, fontSize)->
-  $el.css 
+  $el.css
     "font-size": "#{fontSize}px"
     "line-height": "#{fontSize * LINE_HEIGHT_PCT}px"
 
 clearFontCss = ($el)->
-  $el.css 
+  $el.css
     "font-size": ""
     "line-height": ""
 
 setLandingText = (w)->
-  for [$el, fontPct] in [[$primaryText, PRIMARY_FONT_PCT], 
+  for [$el, fontPct] in [[$primaryText, PRIMARY_FONT_PCT],
                          [$secondaryText, SECONDARY_FONT_PCT]]
     setFontCss($el, fontPct * w)
-      
+
 clearLandingText = ->
   clearFontCss($el) for $el in [$primaryText, $secondaryText]
 
 bgStart = (w)->
-  top = parseInt($primaryImg.css("top")) 
+  top = parseInt($primaryImg.css("top"))
   h = $primaryImg.height()
-  pad = BG_START_PADDING_PCT * w 
+  pad = BG_START_PADDING_PCT * w
   top + h + pad
 
 setLandingBg = (w)->
   h = w * BG_HEIGHT_PCT
   $bg.height(h)
   $secondarySections.height(h)
-  $bg.first().css 
+  $bg.first().css
     "margin-top": "#{bgStart(w)}px"
 
 clearLandingBg = ->
-  $bg.css 
+  $bg.css
     "height": ""
     "margin-top": ""
 
@@ -75,11 +75,11 @@ clearResponsive = ->
   clearPrimaryImgHeight()
   clearLandingBg()
 
-landingResponsive = -> 
+landingResponsive = ->
   w = Math.max $(window).width(), 480
   if w < 780 then setResponsive(w) else clearResponsive()
-  
-if $(".index-page").length  
+
+if $(".index-page").length
   landingResponsive()
   $("body").css visibility: "visible"
   $(window).resize landingResponsive

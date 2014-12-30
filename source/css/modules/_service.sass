@@ -1,35 +1,154 @@
 .service-layout
+  .article
+    margin-bottom: 0
+
   #wrap
-    min-width: 100%
-    width: 100%
+    margin: 0 auto
+    max-width: 1160px
 
     #service
       position: relative
 
   header
     border-bottom: 1px solid $light-border-gray
-    width:  100%
+    width:  90%
     padding-bottom: 0
-    margin-right: 0
-    margin-left: 0
+    margin-right: 5%
+    margin-left: 5%
+    position: relative
 
     logo
       margin-left: 40px
 
-    nav
-      right: 150px
-      top: 33px
+  .audit-heading
+    background-image: image-url('funnel-bg.jpg')
+    width: 90%
+    max-height: 290px
+    margin: 30px 5%
+    font-family: Quicksand, sans-serif
+    padding: 7% 0 21% 0
+
+    .content
+      border: 2px solid white
+      text-align: center
+      width: 81.5%
+      margin: 0 auto
+      color: white
+      padding: 0 3%
+
+      h2
+        font-size: 4.5em
+        margin-bottom: 11%
+        line-height: 100%
+
+      h3
+        font-size: 2.3em
+        font-family: "Merriweather", Georgia, serif
+        font-weight: 200
+        margin-bottom: 7%
+        line-height: 130%
 
   img.footer
     width: 100%
     min-width: 100%
     height: auto
 
+  .service-bottom
+    position: relative
+    bottom: 65px
+
+  .testimonial
+    margin: 0 auto
+    padding: 7% 25px
+    max-width: 1000px
+    border-top: 1px solid $light-border-gray
+    border-bottom: 1px solid $light-border-gray
+
+    img
+      float: left
+      margin-right: 70px
+
+    p
+      font-size: 1.23em
+      line-height: 175%
+      margin-top: 0
+      margin-bottom: 2.7%
+
+    a
+      text-decoration: none
+
+    span.name
+      color: $blue
+      font-family: Quicksand, sans-serif
+      font-size: 1.6em
+      font-weight: bold
+      margin-right: 25px
+
+    span.title
+      color: lighten($dark-gray, 30%)
+      font-family: Quicksand, sans-serif
+      font-size: 1.3em
+
+  .begin
+    background-color: lighten($yellow, 5%)
+    margin: 7% 0 4% 0
+
+    .content
+      max-width: 600px
+      margin: 0 auto
+      padding: 3.5% 0
+
+      h3
+        color: #523500
+        font-size: 25px
+        font-weight: bold
+        margin: 20px 0 30px 0
+        &::before
+          content: "✣"
+          font-size: 28px
+          margin: 0 10px 0 5px
+
+      p
+        color: #523500
+        font-size: 1.25em
+        line-height: 175%
+        font-size: 21px
+
+  .funnel-audit-signup
+    max-width: 600px
+    margin: 0 auto
+
+    h5
+      color: $green
+      text-align: center
+      font-size: 22px
+
+    form
+      text-align: center
+
+      input[type=submit]
+        border-color: $green
+        color: $green
+        width: 50%
+        margin-top: 20px
+        font-size: 20px
+
+
+      input[type=text], input[type=email]
+        width: 70%
+        margin-right: 20px
+        margin-bottom: 20px
+        font-size: 18px
+
 .service-content
   width: 80%
   max-width: 600px
   margin-left: auto
   margin-right: auto
+  background-color: white
+  position: relative
+  bottom: 125px
+  padding: 1px 55px 0 55px
 
   h1
     line-height: 50px
@@ -37,79 +156,94 @@
   h1, h2
     text-align: center
 
+  h4
+    color: $blue
+    text-transform: uppercase
+    font-size: 1.5em
+    margin-bottom: 0
+
   h5
     color: $green
     font-size: 30px
     text-align: center
 
-  .header-divider
-    position: absolute
-    left: 0
-    right: 0
-    width: 100%
-    border-bottom: 1px solid $light-border-gray
-
-  .divider
-    position: absolute
-    left: 0
-    right: 0
-    width: 100%
-    border-bottom: 380px solid #F0F0F0
-    z-index: -5
-
-  .separator
-    height: 1px
-
-  .begin-separator
-    height: 13px
-
-  .spacer
-    height: 28px
-
-
-  form
-    input[type=submit]
-      border-color: $green
-      color: $green
-
-    input[type=text], input[type=email]
-      width: 298px
-      margin-right: 20px
-      margin-bottom: 15px
-
-    .spam
-      font-size: 15px
-      color: $medium-gray
-      display: inline-block
-      width: 200px
-      line-height: 26px
-      position: relative
-      top: 10px
-      left: 37px
-
   .footer
     min-width: 100%
 
-@media (max-width : 730px)
-  .service-layout
-    .service-content
-      .divider
-        border-bottom-width: 420px
+.funnel-thank-you
+  text-align: center
+  margin: 100px 0
+  min-width: 480px
 
-@media (max-width : 615px)
+  h1
+    font-size: 50px
+    color: $blue
+
+  h3
+    width: 600px
+    margin: 50px auto
+    color: $green
+
+img.footer
+  width: 100%
+  min-width: 100%
+  height: auto
+
+@media (max-width : 800px)
+  body
+    font-size: 82%
+
+  .breadcrumbs
+    .first, .second
+      margin-top: 13px
+
   .service-layout
-    .service-content
-      .divider
-        border-bottom-width: 450px
+    #service
+      header
+        .logo
+          margin-left: 0
+
+    .audit-heading
+      max-height: 300px
+      padding-bottom: 20%
+
+
+@media (max-width : 730px)
+  body
+    font-size: 65%
+
+@media (max-width : 650px)
+  .service-layout
+    .audit-heading
+      padding-bottom: 23%
 
 @media (max-width : 550px)
   .service-layout
-    .service-content
-      .divider
-        border-bottom-width: 480px
+    .audit-heading
+      padding-bottom: 26%
 
-@media (max-width : 508px)
-  .service-layout
-    .service-content
-      .divider
-        border-bottom-width: 515px
+    .begin
+      .content
+        padding-left: 50px
+        padding-right: 50px
+
+  .testimonial
+    img.arnon
+      margin-right: 30px
+
+  .breadcrumbs
+    font-size: 18px
+
+    .first
+      margin-top: 15px
+    .second
+      margin-top: 13px
+
+    .first
+      margin-right: 117px
+
+@media (max-width : 505px)
+  .testimonial
+    a
+      position: relative
+      top: 10px

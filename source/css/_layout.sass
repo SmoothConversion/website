@@ -1,7 +1,29 @@
+@import "colors"
+
 html, body
   margin: 0
   padding: 0
   width: 100%
+
+.breadcrumbs
+  background-image: image-url('breadcrumbs-bg.png')
+  height: 49px
+  width: 90%
+  max-width: 1160px
+  margin: 30px 5%
+  font-family: Quicksand, sans-serif
+  font-size: 22px
+
+  .first
+    float: left
+    color: $brown
+    margin: 9px 105px 0 42px
+
+  .second
+    color: $dark-gray
+    margin-top: 8px
+    float: left
+
 
 .landing-layout
 
@@ -24,6 +46,7 @@ html, body
     .logo
       float: left
       margin-bottom: 20px
+      margin-left: 40px
     nav
       position: absolute
       top: 8px
@@ -45,7 +68,7 @@ html, body
     .sidebar
       display: none
     header
-      display: block 
+      display: block
   html, body, #wrap, .landing-layout #wrap
     width: 100%
     min-width: 480px
@@ -54,8 +77,8 @@ html, body
     width: 100%
     display: block
 
-  .blog-layout .blog-main 
-    padding: 30px 45px 
+  .blog-layout .blog-main
+    padding: 30px 45px
 
   .landing-layout
     .bg-wrap
@@ -82,7 +105,7 @@ html, body
       position: fixed
       height: 100%
       width: 325px
-  
+
     .blog-main
       width: 900px
       float: left
@@ -91,7 +114,7 @@ html, body
     header
       display: none
 
-.tablet, .mobile 
+.tablet, .mobile
   display: none !important
 
 @media (max-width : 1024px)
@@ -101,5 +124,5 @@ html, body
   .tablet, .mobile
     display: block !important
 
-  
+
 

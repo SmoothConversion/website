@@ -8,6 +8,10 @@
       = partial "logo"
       = partial "nav"
 
+    = partial "breadcrumbs", locals: {first: "SERVICES", second: "Web Funnel Audit"}
+
+    = partial "funnel_audit_header"
+
     .service-content.article
 
       = yield
