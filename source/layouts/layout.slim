@@ -27,6 +27,7 @@ html
     script src="/js/vendor/modernizr-2.6.1.min.js"
 
     script src="/js/vendor/raphael-min.js"
+    script src="/js/vendor/ouibounce.js"
 
     = yield_content :head
 
@@ -40,6 +41,8 @@ html
 
     = yield_content :post_content
 
+    = partial "layouts/funnel_exit_modal"
+
     script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"
 
     javascript:
@@ -49,6 +52,7 @@ html
     script src="/js/vendor/jquery.lazylinepainter-1.4.1.min.js"
     script src="/js/draw.js"
     script src="/js/utils.js"
+    script src="/js/modal.js"
 
     = yield_content :bottom
 
