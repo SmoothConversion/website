@@ -1,0 +1,11 @@
+- url_path = locals[:path].present? ? "/#{locals[:path]}" : ""
+.social
+  p
+    a.social-media.fb.transition href="http://www.facebook.com/share.php?u=http://www.smoothconversion.com#{url_path}"
+      img src="/img/facebook-share.png"
+      span Share on Facebook
+
+  p
+    a.social-media.twitter.transition href="https://twitter.com/intent/tweet?text=#{message}&url=http://smoothconversion.com#{url_path}" class="twitter-share-button" data-url="http://www.smoothconversion.com#{url_path}" data-count="none"
+      img src="/img/twitter-icon.png"
+      span Share on Twitter

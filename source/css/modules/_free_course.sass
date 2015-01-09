@@ -1,0 +1,153 @@
+.free-course
+  width: 950px
+  margin: 20px auto
+  position: relative
+  left: 4%
+
+  .course-body
+    padding: 20px 35px
+    font-size: 0.9em
+
+    .top-left
+      width: 65%
+      float: left
+      margin-bottom: 50px
+      padding-left: 25px
+
+      .copy
+        margin: 38px 0 42px 7px
+
+        h2
+          margin-bottom: 0
+
+        h3
+          margin-top: 1px
+          color: $dark-gray
+
+        p
+          width: 90%
+
+        p.emphasis
+          font-weight: bold
+
+    .top-right
+      width: 30%
+      float: left
+      margin-bottom: 25px
+
+      img
+        margin-left: 33px
+        margin-top: 11px
+
+    .form-container
+      clear: both
+      width: 100%
+
+      form
+        margin-top: 35px
+        margin-left: 6px
+
+        input[type=email]
+          padding: 10px
+          font-size: 1em
+          width: 260px
+          border-radius: 4px
+          border: 2px solid $blue
+          -webkit-font-smoothing: antialiased
+          outline-color: $blue
+
+        input[type=submit]
+          text-transform: uppercase
+          font-weight: bold
+          padding: 12px 20px
+          font-size: 1em
+          border-radius: 4px
+          color: #fff
+          background-color: $blue
+          border: none
+          cursor: pointer
+          -webkit-font-smoothing: antialiased
+          position: relative
+          right: 5px
+
+        p
+          text-align: left
+          margin-left: 35px
+          opacity: 0.8
+          margin-top: 1px
+          padding-top: 1px
+          font-size: 0.9em
+
+        .spam
+          color: darken($gray, 40%)
+          font-size: .7em
+          margin: 9px 0 0 7px
+
+@media (max-width : 800px)
+  .free-course.full-page
+    width: 657px
+
+    .top-right
+      display: none
+
+    .top-left
+      width: 100%
+
+@media (max-width : 730px)
+  .free-course.full-page
+    left: 0%
+
+    .course-body
+      .top-left
+        .copy
+          h2
+            font-size: 24px
+            margin-bottom: 12px
+
+          h3
+            font-size: 18px
+            margin-bottom: 30px
+
+          p
+            font-size: 15px
+            line-height: 25px
+
+      .form-container
+        form
+          input[type=email]
+            font-size: 15px
+
+          input[type=submit]
+            font-size: 15px
+
+          .spam
+            font-size: 10px
+
+@media (max-width : 650px)
+  .free-course.full-page
+    width: 100%
+
+    .course-body
+      .top-left
+        .copy
+          margin-top: 10px
+
+          h3
+            width: 330px
+            line-height: 25px
+
+          p.emphasis
+            width: 325px
+
+      .form-container
+        form
+          input[type=email]
+            margin-bottom: 15px
+
+          input[type=submit]
+            margin-left: 5px
+            margin-bottom: 5px
+            padding: 12px 33px
+
+          .spam
+            margin-left: 31px

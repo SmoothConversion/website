@@ -1,0 +1,94 @@
+.thank-you
+  text-align: center
+  margin: 70px 0
+  min-width: 480px
+
+  h1
+    font-size: 50px
+    color: $blue
+
+  h2
+    width: 600px
+    margin: 50px auto
+
+  h3
+    width: 600px
+    margin: 50px auto
+    color: $green
+    font-size: 1.5em
+
+  .social
+    margin-top: 4%
+    width: 333px
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+
+    @media (max-width : 900px)
+      margin-top: 6%
+
+    p
+      margin-bottom: 2.5%
+    a
+      +clearfix
+      display: block
+      width: 100%
+
+      @media (max-width : 900px)
+        width: 60%
+
+      @media (max-width : 685px)
+        width: 70%
+
+      @media (max-width : 470px)
+        width: 85%
+
+      img
+        height: 2.4rem
+        margin: 0 2rem
+        float: left
+        position: relative
+      span
+        float: right
+        margin: 1rem 0.8rem 1rem 0
+
+      &.social-media
+        background: none
+        cursor: pointer
+        font-size: 17px
+        font-size: 1.4rem
+        font-weight: bold
+        padding: 1.07% 3.41%
+        +border-radius(11px)
+        +border-radius(1.1rem)
+        text-decoration: none
+
+        &.transition
+          +transition(all 0.2s linear)
+
+        @media (max-width : 685px)
+          padding: 2% 5%
+
+      &.twitter
+        img
+          top: 0.65rem
+          left: -1.4rem
+
+        border: 1px solid $twitter-cyan
+        color: $twitter-cyan
+
+        &:hover
+          +box-shadow(rgba($twitter-cyan, 0.4) 0 0 6px 4px)
+          +box-shadow(rgba($twitter-cyan, 0.4) 0 0 0.6rem 0.4rem)
+
+      &.fb
+        img
+          top: 0.7rem
+          left: -0.1rem
+
+        border: 1px solid $fb-blue
+        color: $fb-blue
+
+        &:hover
+          +box-shadow(rgba($fb-blue, 0.4) 0 0 6px 4px)
+          +box-shadow(rgba($fb-blue, 0.4) 0 0 0.6rem 0.4rem)

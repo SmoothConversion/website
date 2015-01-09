@@ -1,0 +1,20 @@
+---
+title: Smooth Conversion - Web Funnel Free Course Thank You
+page: funnel
+seo_meta_description: Thank You!
+---
+
+.funnel-course-thank-you.thank-you
+  h1 Thank You!
+
+  h2 You will receive your first lesson in analyzing your funnel in the next few minutes.
+
+  h3  While you wait, please share this free course with others who would enjoy it.
+
+  = partial "social",
+            locals: { message: "Find out how much money your website is missing out on. Free Funnel Analysis Email Course",
+                    path: "free-funnel-analysis-course.html" }
+
+
+- content_for :post_content do
+  = image_tag "/img/city-sketch.jpg", :class => "footer"
