@@ -20,6 +20,13 @@ html
     	meta name="description" content="Our combined expertise in software engineering, user interface design, and customer analytics serves a primary focus: making your business more efficient and more profitable."
     meta name="viewport" content="width=device-width"
 
+    - if current_page.metadata[:page].try(:[], 'og_title')
+      meta property="og:title" content="#{current_page.metadata[:page]['og_title']}"
+      meta property="og:site_name" content="SmoothConversion.com"
+      meta property="og:description" content="#{current_page.metadata[:page]['og_description']}"
+      meta property="og:image" content="http://www.smoothconversion.com/#{current_page.metadata[:page]['og_image']}"
+      meta property="og:url" content="http://www.smoothconversion.com/#{current_page.metadata[:page]['og_url']}"
+
     / Place favicon.ico and apple-touch-icon.png in the root directory
     link rel="stylesheet" href="/css/normalize.css"
     link rel="stylesheet" href="/css/boilerplate.css"
