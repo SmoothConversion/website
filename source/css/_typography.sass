@@ -2,8 +2,12 @@ $mobile-font-multiplier: 0.9
 $mobile-landscape-blog-font-multiplier: 0.9
 $mobile-blog-font-multiplier: 0.9
 
+$body-font: "Merriweather", Georgia, serif
+$heading-font: "Quicksand", Tahoma, sans-serif
+$cta-font: "Merriweather Sans", Tahoma, sans-serif
+
 body
-  font-family: "Merriweather", Georgia, serif
+  font-family: $body-font
   font-size: 17px
   line-height: 185%
 
@@ -11,8 +15,16 @@ body
     font-weight: bold
 
   nav
-    font-family: "Quicksand", sans-serif
+    font-family: $heading-font
     font-size: 18px
+
+
+  input[type=text],input[type=email]
+    font-family: $body-font
+
+  input[type=submit]
+    font-family: $cta-font
+
 
 .blue
   color: $blue

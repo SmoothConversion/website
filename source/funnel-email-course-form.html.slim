@@ -1,5 +1,4 @@
 .form-container
-  form action="http://smoothconversion.createsend.com/t/d/s/thlldk/" method="post"
-    input id="fieldEmail" name="cm-thlldk-thlldk" type="email" placeholder="Enter your email address" required="true"
-    input type="submit" value="Understand Your Funnel"
-    .spam &#42;We'll never share your email address
+  form.funnel-course action="http://smoothconversion.createsend.com/t/d/s/thlldk/" method="post"
+    input id="fieldEmail" name="cm-thlldk-thlldk" type="email" placeholder="Your email" required="true"
+    input type="submit" value=(locals[:submit_lbl] || "Understand Your Funnel")
