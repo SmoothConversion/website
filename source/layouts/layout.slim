@@ -22,6 +22,13 @@ html
 
     link rel="alternate" type="application/atom+xml" title="Atom feed for smoothconversion.com - Software, Design, Strategy, Growth" href="/feed.xml"
 
+    - if current_page.metadata[:page].try(:[], 'og_title')
+      meta property="og:title" content="#{current_page.metadata[:page]['og_title']}"
+      meta property="og:site_name" content="SmoothConversion.com"
+      meta property="og:description" content="#{current_page.metadata[:page]['og_description']}"
+      meta property="og:image" content="http://www.smoothconversion.com/#{current_page.metadata[:page]['og_image']}"
+      meta property="og:url" content="http://www.smoothconversion.com/#{current_page.metadata[:page]['og_url']}"
+
     / Place favicon.ico and apple-touch-icon.png in the root directory
     link rel="stylesheet" href="/css/normalize.css"
     link rel="stylesheet" href="/css/boilerplate.css"
@@ -29,6 +36,7 @@ html
     script src="/js/vendor/modernizr-2.6.1.min.js"
 
     script src="/js/vendor/raphael-min.js"
+    script src="/js/vendor/ouibounce.js"
 
     = yield_content :head
 
@@ -42,6 +50,8 @@ html
 
     = yield_content :post_content
 
+    = partial "layouts/funnel_exit_modal"
+
     script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"
 
     javascript:
@@ -51,6 +61,7 @@ html
     script src="/js/vendor/jquery.lazylinepainter-1.4.1.min.js"
     script src="/js/draw.js"
     script src="/js/utils.js"
+    script src="/js/modal.js"
 
     = yield_content :bottom
 

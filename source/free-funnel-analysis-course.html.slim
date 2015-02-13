@@ -1,0 +1,14 @@
+---
+title: Free Funnel Analysis Course - Smooth Conversion
+page: index
+og_title: Find the leaks in your website's revenue with our free Funnel Analysis Email Course.
+og_description: Not taking the time to analyze your website's funnel is like running a marathon and then not crossing the finish line. Doubling and even tripling your revenue is possible. Find out how much money you're leaving on the table.
+og_image: img/funnel-example-small.png
+og_url: free-funnel-analysis-course
+---
+
+.free-funnel-course.free-course.full-page
+  = partial "funnel-email-course-signup", locals: { close: false }
+
+- content_for :post_content do
+  = image_tag "/img/city-sketch.jpg", :class => "footer"
