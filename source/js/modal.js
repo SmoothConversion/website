@@ -14,3 +14,29 @@ $('#funnel-modal .modal-footer').on('click', function() {
 $('#funnel-modal .modal').on('click', function(e) {
   e.stopPropagation();
 });
+
+// To stop exit intent on blog post if you've already seen the post's CTA:
+
+function isScrolledIntoView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
+if($(".blog-layout").length){
+  var $signup = $(".blog-signup"),
+      top = $signup.offset().top,
+      disabled = false;
+
+  $(window).scroll(function(){
+    if (!disabled && isScrolledIntoView($signup)){
+      _ouibounce.disable();
+      disabled = true;
+    }
+  });
+}
