@@ -1,5 +1,5 @@
 var _ouibounce = ouibounce(document.getElementById('funnel-modal'), {
-  aggressive: true,
+  aggressive: false,
   callback: function() { console.log('ouibounce fired!'); }
 });
 
