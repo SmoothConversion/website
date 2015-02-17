@@ -26,7 +26,7 @@ html
       meta property="og:title" content="#{current_page.metadata[:page]['og_title']}"
       meta property="og:site_name" content="SmoothConversion.com"
       meta property="og:description" content="#{current_page.metadata[:page]['og_description']}"
-      meta property="og:image" content="http://www.smoothconversion.com/#{current_page.metadata[:page]['og_image']}"
+      meta property="og:image" content="http://www.smoothconversion.com#{asset_path(:images, current_page.metadata[:page]['og_image'])}"
       meta property="og:url" content="http://www.smoothconversion.com/#{current_page.metadata[:page]['og_url']}"
 
     / Place favicon.ico and apple-touch-icon.png in the root directory
