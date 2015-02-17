@@ -29,7 +29,7 @@ if ($(".free-funnel-course.free-course.full-page, .funnel-course-thank-you").len
       return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
   }
 
-  if($(".blog-layout").length){
+  if($(".blog-layout #map-out-your-funnel").length){
     var $signup = $(".blog-signup"),
         top = $signup.offset().top,
         disabled = false;
