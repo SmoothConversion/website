@@ -5,11 +5,11 @@
   left: 4%
 
   .course-body
-    padding: 20px 35px
-    font-size: 0.9em
+    padding: 10px 35px
+    font-size: 0.95em
 
     .top-left
-      width: 65%
+      width: 67%
       float: left
       margin-bottom: 50px
       padding-left: 25px
@@ -18,11 +18,23 @@
         margin: 38px 0 42px 7px
 
         h2
-          margin-bottom: 0
+          margin-bottom: 1.5rem
+          font-family: $heading-font
+          font-size: 2.45rem
+          font-weight: 400
 
         h3
           margin-top: 1px
-          color: $dark-gray
+          color: lighten($dark-gray, 25%)
+          font-size: 1rem
+          font-weight: 100
+          font-style: italic
+          em
+            font-size: 1.4rem
+            font-style: normal
+            color: $dark-yellow
+            font-weight: 600
+            margin-right: 3px
 
         p
           width: 90%
@@ -31,13 +43,14 @@
           font-weight: bold
 
     .top-right
-      width: 30%
-      float: left
-      margin-bottom: 25px
+      position: absolute
+      right: 50px
+      top: 42px
 
       img
-        margin-left: 33px
-        margin-top: 28px
+        width: 300px
+        height: auto
+        opacity: 0.9
 
     .form-container
       clear: both
@@ -108,15 +121,70 @@ form.funnel-course
       width: 75.5%
       width: calc(70% + 45px)
 
+
+.free-course.full-page
+  left: 0
+  .course-body
+    +clearfix
+  .course-body, .top-left, .content
+    padding-left: 0
+    margin-left: 0
+    padding-right: 0
+
+    .copy ul > li
+      font-size: 1rem
+      margin-bottom: 0.5rem
+
+
+  .top-right
+    right: 0
+
+
 @media (max-width : 800px)
   .free-course.full-page
-    width: 657px
+    width: auto
+    margin-left: auto
+    margin-right: auto
+    line-height: 160%
 
-    .top-right
-      display: none
+    .course-body
+      padding-top: 0
 
-    .top-left
-      width: 100%
+      .top-right
+        display: none
+
+      .top-left
+        float: none
+        width: 75%
+        margin: 0 auto
+        .copy
+
+          h2
+            margin-bottom: 1.5rem
+            line-height: 120%
+          h3
+            line-height: 220%
+            em
+              display: block
+              font-size: 1.6rem
+
+          p, ul > li
+            font-size: 1.1rem
+            line-height: 170%
+            margin-bottom: 1rem
+
+
+      .spam
+        font-size: 0.7rem
+        margin-top: 1rem
+        text-align: center
+
+    form.funnel-course
+      text-align: center
+
+      input[type=submit]
+        top: 0
+        padding: 12.5px 20px
 
   .blog-signup form.funnel-course
 
@@ -133,33 +201,10 @@ form.funnel-course
       width: 100%
 
 @media (max-width : 730px)
-  .free-course.full-page
-    left: 0%
-
-    .course-body
-      .top-left
-        .copy
-          h2
-            font-size: 24px
-            margin-bottom: 12px
-
-          h3
-            font-size: 18px
-            margin-bottom: 30px
-
-          p, ul
-            font-size: 15px
-            line-height: 25px
-
-          ul
-            line-height: 35px
-
-    .spam
-      font-size: 10px
-
   form.funnel-course
     input[type=email]
       font-size: 15px
+      margin-bottom: 1rem
 
     input[type=submit]
       font-size: 15px
@@ -168,20 +213,6 @@ form.funnel-course
   .free-course.full-page
     width: 100%
 
-    .spam
-      margin-left: 31px
-
-    .course-body
-      .top-left
-        .copy
-          margin-top: 10px
-
-          h3
-            width: 330px
-            line-height: 25px
-
-          p.emphasis
-            width: 325px
 
   form.funnel-course
     input[type=email]

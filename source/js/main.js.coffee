@@ -1,3 +1,5 @@
+window.DEV_MODE = window.location.toString().indexOf("//localhost:") != -1
+
 #scroll sidebar horizontal rather than pushing content behind
 $(window).scroll -> $('.sidebar').css('left',-$(window).scrollLeft())
 
