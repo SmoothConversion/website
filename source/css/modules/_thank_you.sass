@@ -1,47 +1,63 @@
 .thank-you
+  margin: 10% 0
   text-align: center
-  margin: 70px 0
-  min-width: 480px
 
   h1
-    font-size: 50px
+    font-size: 7rem
+    font-family: $heading-font
+    font-weight: 100
     color: $blue
+    margin-bottom: 5rem
+    text-align: center
+    @media (max-width : 800px)
+      margin: 5.5rem 0
 
   h2
-    width: 600px
-    margin: 50px auto
+    margin: 3rem auto
+    margin-bottom: 2rem
+    font-size: 1.8rem
+    font-weight: 200
+    color: $dark-gray
+
+  h2, h3
+    width: 54%
+    line-height: 150%
+
+    @media (max-width : 800px)
+      width: 70%
 
   h3
-    width: 600px
-    margin: 50px auto
-    color: $green
-    font-size: 1.5em
+    line-height: 170%
+    font-size: 1.35rem
+    margin: 2rem auto
+    font-weight: 100
+
+    &.share
+      color: $blue
+      font-weight: 600
+
+    &.gmail
+      color: $dark-gray
+      strong
+        display: block
+        color: $dark-yellow
+        margin-bottom: 0.2rem
+
 
   .social
-    margin-top: 4%
-    width: 333px
-    margin-left: auto
-    margin-right: auto
+    margin: 3rem auto
     text-align: center
 
-    @media (max-width : 900px)
-      margin-top: 6%
-
     p
-      margin-bottom: 2.5%
+      margin-bottom: 2rem
+      text-align: center
     a
       +clearfix
       display: block
-      width: 100%
-
-      @media (max-width : 900px)
-        width: 60%
-
-      @media (max-width : 685px)
-        width: 70%
-
-      @media (max-width : 470px)
-        width: 85%
+      width: 80%
+      max-width: 380px
+      min-width: 320px
+      margin: 0 auto
 
       img
         height: 2.4rem
