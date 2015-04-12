@@ -2,6 +2,7 @@ if ($(".free-funnel-course.free-course.full-page, .funnel-course-thank-you").len
 
   var _ouibounce = ouibounce(document.getElementById('funnel-modal'), {
     aggressive: window.DEV_MODE,
+    cookieExpire: 60,
     callback: function() { console.log('ouibounce fired!'); }
   });
 
