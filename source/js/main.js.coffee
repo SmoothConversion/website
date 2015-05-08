@@ -94,7 +94,7 @@ $ ->
 
 # funnel analysis font resizing
 
-if $(".funnel-analysis").length
+if $(".funnel-analysis").length or $(".funnel-thank-you").length
   scaleFn = ->
     wrapW = $("#wrap").width()
 
@@ -104,14 +104,8 @@ if $(".funnel-analysis").length
       pct = wrapW / 1200
       $("html").css("font-size", "#{62.5 * pct}%")
 
-    setTimeout(fitTestimonialImage, 50)
     setTimeout(verticallyCenterCtaContent, 52)
 
-
-  fitTestimonialImage = ->
-    $testimonialImg = $(".testimonial img")
-    $testimonialImg.height( $(".testimonial > div").height())
-    $testimonialImg.width("auto")
 
   verticallyCenterCtaContent = ->
     for cta in $("section.cta")
@@ -125,6 +119,5 @@ if $(".funnel-analysis").length
   $ ->
     $("body").show()
     scaleFn()
-    setTimeout(fitTestimonialImage, 150)
     setTimeout(verticallyCenterCtaContent, 152)
 

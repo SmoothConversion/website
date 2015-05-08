@@ -1,6 +1,26 @@
 section.testimonials
 
   .testimonial.first
+    - gretchen_url = "http://www.bobvila.com/"
+
+
+    a href=gretchen_url target="_blank"
+      img src="/img/gretchen.jpg" alt="Gretchen Grant"
+    .text
+      | Lennon and Dane brought great value to BobVila.com with the funnel audit. They put several areas of the site under a microscope, including slideshows, email, and mobile performance, out of which flowed recommendations that could add up to
+      strong= " more dollars to the site's bottom line. "
+      | I would work with Lennon and Dane again in a snap.
+
+      .row
+        a href=gretchen_url target="_blank"
+          span.name
+            | Gretchen Grant
+
+          span.title
+            = "CEO, "
+            span.company BobVila.com
+
+  .testimonial
     - adrian_url = "http://www.reserbus.mx/"
     a href=adrian_url target="_blank"
       img src="/img/adrian.jpg"
@@ -10,16 +30,17 @@ section.testimonials
       | We’re really confident on their strength as an analysis and execution team.
 
       .row
-        a href=adrian_url target="_blank"
+        a href=adrian_url target="_blank" alt="Adrian Cuadros Zegarra"
           span.name
             | Adrian Cuadros Zegarra
 
           span.title
-            | CTO, Reserbus.mx
+            = "CTO, "
+            span.company Reserbus.mx
 
 
   .testimonial.last
-    - arnon_url = "https://www.linkedin.com/profile/view?id=3852449"
+    - arnon_url = "http://mishkinconsulting.com/"
     a href=arnon_url target="_blank"
       img src="/img/arnon-pic.jpg"
     .text
@@ -27,9 +48,10 @@ section.testimonials
       strong = " over $1 million in lost sales. "
       | The client is using the findings to improve user experience and capture the money they were leaving behind.
       .row
-        a href=arnon_url target="_blank"
+        a href=arnon_url target="_blank" alt="Arnon Mishkin"
           span.name
             | Arnon Mishkin
 
           span.title
-            | Director, Mishkin Associates
+            = "Director, "
+            span.company Mishkin Associates

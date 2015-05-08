@@ -4,10 +4,12 @@ page: funnel
 seo_meta_description: Thank You!
 ---
 
+- content_for :page_class, " web-funnel-thank-you"
+
 .funnel-thank-you.thank-you
   h1 Thank You!
 
-  h2 We'll be contacting you soon.
+  h2 We'll contact you soon.
 
 - content_for :post_content do
   = image_tag "/img/city-sketch.jpg", :class => "footer"

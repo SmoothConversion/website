@@ -1,0 +1,75 @@
+---
+title: Smooth Conversion - Home
+page: index
+---
+
+- content_for :page_class, "index-page"
+
+- content_for :head do
+  link rel="canonical" href="http://www.smoothconversion.com"
+
+- content_for :pre_content do
+  .bg-wrap
+    .section-bg.bg1
+    .section-bg.bg2
+    .section-bg.bg3
+
+section.primary-info
+  p
+    = "We start with "
+    strong.blue
+      ="understanding "
+    br
+    = "your business, then design "
+    br
+    = "a "
+    strong.yellow
+      ="data-driven strategy "
+    br
+    = "that will "
+    strong.green
+      = "increase"
+      br
+      = "your revenues."
+
+  img src="/img/landing-building-sketch.png"
+
+section.secondary-info.left-img
+  img src="/img/dev-icon.png"
+
+  p
+    = "Our combined expertise in software engineering, user interface design, customer analytics, and project management serves a primary focus: "
+    strong
+      = "making your business more efficient and more profitable."
+
+section.secondary-info.right-img
+
+  p
+    = "Whether you're founding a startup or you've been in business for 50 years, we can help you gain new customers, re-engage old ones, and "
+
+    strong understand your data.
+
+  img src="/img/customer-growth.png"
+
+section.contact-cta
+  p
+    = "Are you serious about growing your business? "
+    strong = "Schedule a free consultation "
+    = "and we'll show you how. Send us an email to get the ball rolling:"
+
+  p
+    = partial "contact_email"
+
+  / a.outline-button href="/contact.html" Get In Touch
+
+section.subscribe-cta
+  p We constantly research the theory and technique of building powerful, intuitive, profitable software. Want to stay up to date?
+
+  p
+    strong Learn how to optimize your business for growth:
+
+  = partial "email_subscribe"
+
+
+- content_for :post_content do
+  img.footer src="/img/city-sketch.jpg"

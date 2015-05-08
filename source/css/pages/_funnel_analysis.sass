@@ -56,15 +56,25 @@ html.funnel-analysis
 
 
     section.primary-info
-      padding-left: 2rem
+      padding-top: 0
+      padding-left: 2%
       padding-right: 0
-      margin-bottom: 17%
+      margin-bottom: 15%
 
       @media (max-width : 800px)
-        margin-bottom: 15%
+        margin-bottom: 10%
+        position: relative
+
+        img
+          top: -12%
+          right: 0
+
+
 
       h1
-        margin-top: 8%
+        margin-top: 10%
+
+
 
         p
           font-size: 5rem
@@ -93,18 +103,6 @@ html.funnel-analysis
 
         @media (max-width : 520px)
           margin-top: 12.5%
-
-        @media (max-width : 470px)
-          margin-top: 14%
-
-        @media (max-width : 420px)
-          margin-top: 15%
-
-        @media (max-width : 400px)
-          margin-top: 18%
-
-
-
 
 
     section.diagram
@@ -153,6 +151,7 @@ html.funnel-analysis
             @media (max-width : 800px)
               font-size: 18px
               width: 28px
+              margin-right: 3rem
 
           em
             font-style: normal
@@ -185,6 +184,17 @@ html.funnel-analysis
         @media (max-width : 800px)
           font-size: 2.8rem
 
+        @media (max-width : 620px)
+          font-size: 3.2rem
+
+        @media (max-width : 520px)
+          font-size: 3.5rem
+
+        @media (max-width : 450px)
+          font-size: 3.8rem
+
+        @media (max-width : 420px)
+          font-size: 4rem
 
     section.bullets
       margin-bottom: 5%
@@ -206,11 +216,15 @@ html.funnel-analysis
           font-size: 25px
           font-size: 2.5rem
           color: $blue
-          width: 70%
+          width: 73%
           margin: 0 auto 2.5%
           @media (max-width : 800px)
             font-size: 3rem
             width: 90%
+            margin-bottom: 5%
+          @media (max-width : 800px)
+            font-size: 3.5rem
+
 
           em
             text-transform: uppercase
@@ -232,15 +246,16 @@ html.funnel-analysis
           width: 70%
           margin: 0 auto
           @media (max-width : 800px)
-            font-size: 2.1rem
+            font-size: 2.5rem
             width: 90%
 
           @media (max-width : 600px)
-            font-size: 2.3rem
+            font-size: 3.4rem
 
 
         a
           text-decoration: underline
+          color: $dark-gray
 
         &.odd
           background: lighten($light-medium-gray, 6.5%)
@@ -254,6 +269,16 @@ html.funnel-analysis
             font-size: 24px
             font-size: 2.4rem
             margin-right: 1.25%
+            position: relative
+            top: -1px
+
+            @media (max-width : 800px)
+              top: -1.5px
+              font-size: 2.8rem
+
+            @media (max-width : 800px)
+              top: -1px
+              font-size: 3.5rem
 
     section.why-us
       margin-bottom: 7.5%
@@ -341,9 +366,9 @@ html.funnel-analysis
 
 
           p
-            font-size: 13px
-            font-size: 1.3rem
-            line-height: 150%
+            font-size: 14px
+            font-size: 1.4rem
+            line-height: 160%
             margin: 0 20px
             margin: 0 2rem
 
@@ -368,6 +393,7 @@ html.funnel-analysis
               text-align: center
               right: inherit
               left: inherit
+              padding-bottom: 4%
 
               strong
                 font-size: 2.5rem
@@ -380,7 +406,7 @@ html.funnel-analysis
             img
               width: 18%
               position: relative
-              top: -1.5rem
+              margin-top: -8%
 
             h6
               font-size: 3.5rem
@@ -392,6 +418,18 @@ html.funnel-analysis
               font-size: 2.4rem
               margin-top: 4%
               line-height: 160%
+
+      @media (max-width : 600px)
+        .row
+          .numbers, .design, .tech
+            img
+            h6
+              font-size: 3.8rem
+            p
+              font-size: 3.2rem
+              margin-top: 4%
+              line-height: 160%
+
 
       .numbers
         background: lighten($darkest-blue, 12%)
@@ -441,7 +479,11 @@ html.funnel-analysis
         margin-top: 0
 
         @media (max-width : 800px)
-          font-size: 3.5rem
+          font-size: 4rem
+          margin-bottom: 2%
+
+        @media (max-width : 600px)
+          margin-bottom: 0
 
       h4
         font-size: 22px
@@ -449,7 +491,24 @@ html.funnel-analysis
         font-weight: 300
 
         @media (max-width : 800px)
-          font-size: 2.4rem
+          font-size: 3rem
+          margin: 3% 0 6%
+
+        @media (max-width : 600px)
+          font-size: 3.2rem
+
+        @media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape)
+          margin: 8% 0 10%
+
+        @media only screen and (min-device-width : 320px) and (max-device-width : 568px)  and (orientation : portrait)
+          margin: 8% 0 10%
+
+        @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait)
+          margin: 8% 0 10%
+
+
+        @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape)
+          margin: 8% 0 10%
 
       form
         text-align: center
@@ -467,11 +526,29 @@ html.funnel-analysis
           padding: 2%
           color: white
           outline-color: rgba(white, 0.2)
+          font-weight: bold
+
+          @media (max-width : 800px)
+            font-size: 2rem
+
+          @media (max-width : 600px)
+            font-size: 2.8rem
+            margin-bottom: 4%
+
+
+
+
           +placeholder
             color: rgba(white, 0.8)
+            font-weight: normal
+
+            @media (max-width : 600px)
+              font-weight: 600
+              color: rgba(white, 0.7)
 
           &[type=text], &[type=email]
             background: rgba(black, 0.2)
+            +border-radius(0px)
 
           &[type=submit]
             font-weight: bold
@@ -479,6 +556,13 @@ html.funnel-analysis
             width: 80%
             margin: 6% auto 0
             font-size: 2rem
+            padding: 2.75% 1% 3.25%
+
+            @media (max-width : 800px)
+              font-size: 2.8rem
+
+
+
 
     &.upper
       .cta-content

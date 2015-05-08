@@ -1,75 +1,210 @@
 ---
-title: Smooth Conversion - Home
-page: index
+title: Smooth Conversion - Web Funnel Analysis
+page: funnel
+layout: service
+service: Website Funnel Analysis
+seo_meta_description: If you generate significant revenue from your website, you're likely leaving money on the table every day.  We'll help you get it back.
 ---
 
-- content_for :page_class, "index-page"
-
-- content_for :head do
-  link rel="canonical" href="http://www.smoothconversion.com"
-
-- content_for :pre_content do
-  .bg-wrap
-    .section-bg.bg1
-    .section-bg.bg2
-    .section-bg.bg3
+- content_for :page_class, " landing-layout funnel-analysis"
 
 section.primary-info
-  p
-    = "We start with "
-    strong.blue
-      ="understanding "
-    br
-    = "your business, then design "
-    br
-    = "a "
-    strong.yellow
-      ="data-driven strategy "
-    br
-    = "that will "
-    strong.green
-      = "increase"
+  h1
+    p
+      | We
+      strong.blue =" find the leaks "
+      | in your
       br
-      = "your revenues."
+      strong.yellow =" web funnel "
+      | that cost
+      br
+      =" you the most "
+      br
+      strong.green
+        =" revenue."
+
 
   img src="/img/landing-building-sketch.png"
 
-section.secondary-info.left-img
-  img src="/img/dev-icon.png"
+section.diagram
+  h2
+    | What's
+    strong = " funnel analysis?"
+
+  .step.first
+    h5
+      span.number ="1."
+      span.text
+        = "Visitors move through your website toward a "
+        em = "conversion goal"
+        | .
+    img src="/img/diagram-step1.png"
+
+  .step.second
+    h5
+      span.number ="2."
+      span.text
+        = "We examine your site's user experience and mine your analytics data to "
+        em ="identify weak spots"
+        = " where visitors drop off unnecessarily."
+    img src="/img/diagram-step2.png"
+
+  .step.third
+    h5
+      span.number ="3."
+      span.text
+        = "We help you fix these problems and optimize conversion rates through user experience design and AB testing, "
+        em = "increasing revenues"
+        = " for your business."
+    img src="/img/diagram-step3.png"
+
+section.who-for
+  h2.blue-heading
+    | Who is this
+    strong = " for?"
 
   p
-    = "Our combined expertise in software engineering, user interface design, customer analytics, and project management serves a primary focus: "
-    strong
-      = "making your business more efficient and more profitable."
+    | While we believe that funnel analysis can benefit just about any company, we specialize in working with web-based
+    strong = " software-as-a-service, ecommerce"
+    | , and
+    strong = " media "
+    | businesses that have at least
+    strong =" $20,000 "
+    | in monthly revenue.
 
-section.secondary-info.right-img
+section.cta.upper
+  img.cta-bg src="/img/poker-table.jpg"
+  .cta-content.text-left
+    h3 Your website is leaving money on the table.
+    h4 Find out where:
 
-  p
-    = "Whether you're founding a startup or you've been in business for 50 years, we can help you gain new customers, re-engage old ones, and "
+    = partial "funnel_audit_form", locals: {subscribe_button: "Get A Free Consultation"}
 
-    strong understand your data.
+= partial "testimonial"
 
-  img src="/img/customer-growth.png"
+section.bullets.benefits
+  h2
+    | What are the
+    strong = " benefits?"
 
-section.contact-cta
-  p
-    = "Are you serious about growing your business? "
-    strong = "Schedule a free consultation "
-    = "and we'll show you how. Send us an email to get the ball rolling:"
+  ul
+    li.even
+      h5
+        em ="Stop wasting "
+        | time and resources.
+      p ="Rather than building new features that are unlikely to make a significant impact on revenues (or might be counterproductive), develop a roadmap that's grounded in data and properly aligned with your business goals."
+    li.odd
+      h5
+        | Get your
+        em =" key metrics "
+        | organized and accessible.
+      p = "Instead of digging through mountains of data in many separate locations, we'll get all your critical stats into a single spreadsheet that gives you high a level overview of your entire funnel, can be easily maintained, and provides the perfect canvas for exploratory calculations and setting concrete goals."
+    li.even
+      h5
+        em =" TRACK "
+        | the right things.
+        em =" TAME "
+        | your analytics.
+      p = "How can you optimize a key conversion rate if you don't know how many users click on the call to action? Or perhaps you do track those clicks, but your analytics platforms are such Byzantine messes that it takes hours of digging to find anything. We'll ensure you collect the data you need and leverage your analytics tools to their maximum potential."
 
-  p
-    = partial "contact_email"
+    li.odd
+      h5
+        | Establish a
+        em = " TESTING CULTURE. "
+      p= "One of the largest benefits of tying feature development to specific quantitative goals is the ability to test your assumptions, then definitively declare victory or defeat. Rather than having long, soul-sucking meetings to determine implementation details, let your users make the call."
 
-  / a.outline-button href="/contact.html" Get In Touch
+section.bullets.deliverables
+  h2
+    | What do you
+    strong = " get?"
 
-section.subscribe-cta
-  p We constantly research the theory and technique of building powerful, intuitive, profitable software. Want to stay up to date?
+  ul
+    li.even
+        h5 A high level report that summarizes our findings and suggests steps for improvement.
+        a href="https://docs.google.com/presentation/d/1JkexPIxPppmVElTauzTdCEm04Rcg2HbE6EUY0RojTfg/pub?start=false&loop=false&delayms=60000" target="_blank"
+          = "See an example presentation."
 
-  p
-    strong Learn how to optimize your business for growth:
+    li.odd
+      h5 A funnel diagram that highlights critical areas to focus on.
+      a href="/img/ExampleFunnelDiagram.png" target="_blank"
+        = "See an example diagram."
 
-  = partial "email_subscribe"
+    li.even
+      h5 An excel spreadsheet containing key stats, quantitative relationships, and realistic goals.
+      a href="/resources/ExampleFunnelOptimizationpSpreadsheet.xls" download=true
+        = "Download an example spreadsheet."
+
+    li.odd
+      h5 Ongoing analytics monitoring, funnel analysis, user experience design, and AB test recommendations.
+      / a
+        / = "See an example AB test recommendation."
 
 
-- content_for :post_content do
-  img.footer src="/img/city-sketch.jpg"
+
+section.why-us
+  h2.blue-heading
+    | Why
+    strong = " us?"
+
+  .team-images
+    .dane
+      a href="/team#dane" target="_blank"
+        img src="/img/dane-banner.jpg"
+      span.email
+        strong dane
+        = "@smoothconversion.com"
+
+    .lennon
+      a href="/team#lennon" target="_blank"
+        img src="/img/lennon-banner.jpg"
+      span.email
+        strong lennon
+        = "@smoothconversion.com"
+
+  .logo-row
+    = partial "logo"
+
+  .row
+    .numbers
+      img src="/img/numbers-icon.png"
+      h6
+        | We know
+        br
+        | the numbers
+      p We'll ensure that you collect the analytics data you need,  stay on the right side of statistical significance, and establish reasonable goals for improvement based on industry benchmarks.
+
+    .design
+      img src="/img/design-icon.png"
+      h6
+        | We know
+        br
+        | design and ux
+      p We’re fanatical about top notch design and user experience. Here are some recent examples of our design work:
+      p.links
+        a href="https://padrush.nyc" target="_blank" padrush.nyc
+        a href="http://greatdesign.io/designers.html" target="_blank" greatdesign.io/designers.html
+
+    .tech
+      img src="/img/tech-icon.png"
+      h6
+        | We know
+        br
+        | technology
+      p We’re experienced software engineers with many web and mobile applications under our belts. We can help you accurately estimate difficulty, solve problems efficiently, and avoid technical pitfalls.
+
+section.cta.lower
+  img.cta-bg src="/img/funnel-bg.jpg"
+  .cta-content.text-center
+    h3 Your web funnel is leaking.
+    h4 Let's plug the holes.
+    = partial "funnel_audit_form", locals: {subscribe_button: "Get A Free Consultation"}
+
+- if build?
+  - content_for :bottom do
+    javascript:
+      var _mfq = _mfq || [];
+        (function() {
+          var mf = document.createElement("script"); mf.type = "text/javascript"; mf.async = true;
+          mf.src = "//cdn.mouseflow.com/projects/27a10a10-bdeb-4483-a613-b4e7e85de52d.js";
+          document.getElementsByTagName("head")[0].appendChild(mf);
+        })();
