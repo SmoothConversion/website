@@ -13,13 +13,13 @@ BG_START_PADDING_PCT = 0.07625
 
 PRIMARY_IMG_HEIGHT_PCT = 1.17299
 
-$primaryText = $("#landing-content .primary-info > p")
+$primaryText = $(".primary-info p")
 $secondarySections = $("#landing-content section").not(".primary-info")
 $secondaryText = $secondarySections.find("> p")
                                    .add("input.email, input.outline-button")
 
 $bg = $(".index-page .bg-wrap .section-bg")
-$primaryImg = $("#landing-content .primary-info > img")
+$primaryImg = $(".primary-info > img")
 
 setFontCss = ($el, fontSize)->
   $el.css
@@ -71,6 +71,7 @@ setResponsive = (w)->
   setLandingText(w)
   setPrimaryImgHeight()
   setLandingBg(w)
+  console.log "set responsive"
 
 clearResponsive = ->
   clearLandingText()
@@ -78,13 +79,52 @@ clearResponsive = ->
   clearLandingBg()
 
 landingResponsive = ->
-  w = Math.max $(window).width(), 480
+  w = Math.max $(window).width(), 360
   if w < 780 then setResponsive(w) else clearResponsive()
 
 if $(".index-page").length
   landingResponsive()
-  $("body").css visibility: "visible"
   $(window).resize landingResponsive
+
+$("body").css visibility: "visible"
 
 $ ->
   $(".utm-input").attr("value", getParameterByName("utm"))
+
+
+# funnel analysis font resizing
+
+if $(".funnel-analysis").length
+  scaleFn = ->
+    wrapW = $("#wrap").width()
+
+    if wrapW >= 1200
+      $("html").css("font-size", "62.5%")
+    else
+      pct = wrapW / 1200
+      $("html").css("font-size", "#{62.5 * pct}%")
+
+    setTimeout(fitTestimonialImage, 50)
+    setTimeout(verticallyCenterCtaContent, 52)
+
+
+  fitTestimonialImage = ->
+    $testimonialImg = $(".testimonial img")
+    $testimonialImg.height( $(".testimonial > div").height())
+    $testimonialImg.width("auto")
+
+  verticallyCenterCtaContent = ->
+    for cta in $("section.cta")
+      $cta = $(cta)
+      $content = $cta.find(".cta-content")
+      $content.css "padding-top", ($cta.height() - $content.height()) / 2 - 2
+      $content.css "padding-bottom", 0
+
+  scaleFn()
+  $(window).resize scaleFn
+  $ ->
+    $("body").show()
+    scaleFn()
+    setTimeout(fitTestimonialImage, 150)
+    setTimeout(verticallyCenterCtaContent, 152)
+

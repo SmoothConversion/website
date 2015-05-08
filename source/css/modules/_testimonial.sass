@@ -1,0 +1,55 @@
+section.testimonials
+  padding: 7% 0
+
+.testimonial
+  +clearfix
+  margin: 0 auto
+  max-width: 900px
+  text-align: left
+  margin-bottom: 6%
+
+  &.first
+    padding-bottom: 4%
+
+  &.last
+    margin-bottom: -2%
+
+  img
+    float: left
+    margin-right: 7%
+    margin-bottom: 2%
+    +box-shadow(0px 0px 1px rgba(black, 0.3))
+    width: 27%
+    max-width: 200px
+    height: auto
+
+  .text
+    font-size: 2.2rem
+    line-height: 175%
+    margin: 0
+    @media (max-width : 800px)
+      font-size: 2.5rem
+
+  a
+    text-decoration: none
+
+  .row
+    margin-top: 2%
+    span.name
+      color: $blue
+      font-family: Quicksand, sans-serif
+      font-size: 2rem
+      font-weight: bold
+      margin-right: 2%
+      @media (max-width : 800px)
+        font-size: 2.2rem
+
+    span.title
+      color: lighten($dark-gray, 30%)
+      font-family: Quicksand, sans-serif
+      font-size: 1.8rem
+      @media (max-width : 800px)
+        font-size: 2rem
+
+  &.first
+    border-bottom: 1px solid $light-medium-gray

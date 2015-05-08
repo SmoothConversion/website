@@ -1,5 +1,5 @@
 // *** Google Fonts ***
-@import "//fonts.googleapis.com/css?family=Merriweather:regular,bold,italic|Merriweather+Sans:regular|Quicksand:regular,bold"
+@import "//fonts.googleapis.com/css?family=Merriweather:light,regular,bold,italic|Merriweather+Sans:regular|Quicksand:regular,bold"
 
 // *** Responsive Functions ***
 =bg-responsive($bg-fill-start, $section-height)
@@ -14,7 +14,7 @@
       margin-top: $bg-fill-start
 
 =primary-img-responsive($width, $top, $pos, $pos-left)
-  .index-page #landing-content section.primary-info
+  section.primary-info
     img
       top:  $top
       width:  $width
@@ -108,19 +108,19 @@
     border-bottom: 1px solid $light-border-gray
     width:  1120px
 
-.index-page #landing-content
+section.primary-info
+  p
+    font-family: "Quicksand"
+  strong
+    font-weight: 700
+
+  img
+    position: absolute
+
+.index-page #landing-content,
+.funnel-analysis
   header
     width:  1014px
-
-  section.primary-info
-    p
-      font-family: "Quicksand"
-    strong
-      font-weight: 700
-
-    img
-      position: absolute
-
 
   section.secondary-info
     @extend .section-block

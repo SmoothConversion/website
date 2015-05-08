@@ -1,0 +1,17 @@
+- content_for :page_class, " longform-service-layout"
+
+- wrap_layout :layout do
+
+  #service
+
+    header
+      = partial "logo"
+      = partial "nav"
+
+    = partial "breadcrumbs", locals: {first: "SERVICES", second: "Web Funnel Audit"}
+
+    = partial "funnel_audit_header"
+
+    .longform-service-content.article
+
+      = yield

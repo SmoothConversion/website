@@ -1,0 +1,497 @@
+html.funnel-analysis
+
+  &, body
+    font-size: 62.5%
+
+  body
+    visibility: hidden
+
+  #wrap
+    margin: 0 auto
+    max-width: 1160px
+
+    #service
+      position: relative
+
+  header
+    border-bottom: 1px solid $light-border-gray
+    width: 1007px
+    padding-bottom: 0
+    margin-right: 5%
+    margin-left: 5%
+    position: relative
+
+    .logo
+      margin-left: 40px
+
+    @media (max-width : 780px)
+      width: 90%
+
+  .service-content
+    max-width: 1080px
+    padding: 0 5%
+    text-align: center
+
+    h2
+      line-height: 160%
+      font-family: $heading-font
+      font-size: 3.5rem
+      font-weight: 400
+      color: $dark-gray
+      background: $light-medium-gray
+      padding: 2%
+      @media (max-width : 800px)
+        font-size: 4rem
+        padding: 3%
+      @media (max-width : 600px)
+        font-size: 5rem
+
+      strong
+        font-weight: 700
+        text-transform: uppercase
+
+      &.blue-heading
+        color: #fff
+        background: $darkest-blue
+
+
+    section.primary-info
+      padding-left: 2rem
+      padding-right: 0
+      margin-bottom: 17%
+
+      @media (max-width : 800px)
+        margin-bottom: 15%
+
+      h1
+        margin-top: 8%
+
+        p
+          font-size: 5rem
+          line-height: 170%
+          margin: 0
+          text-align: left
+          font-weight: 200
+          font-family: $heading-font
+
+          @media (max-width : 800px)
+            font-size: 5.5rem
+
+
+        em
+          font-style: normal
+          text-transform: uppercase
+
+        @media (max-width : 800px)
+          margin-top: 10.5%
+
+        @media (max-width : 620px)
+          margin-top: 11.5%
+
+        @media (max-width : 570px)
+          margin-top: 12%
+
+        @media (max-width : 520px)
+          margin-top: 12.5%
+
+        @media (max-width : 470px)
+          margin-top: 14%
+
+        @media (max-width : 420px)
+          margin-top: 15%
+
+        @media (max-width : 400px)
+          margin-top: 18%
+
+
+
+
+
+    section.diagram
+      background: #fff url(/img/grid-bg.png) repeat
+      background-size: 256px 192px
+      padding-bottom: 8.3%
+
+      .step
+        padding: 0 6%
+        h5
+          font-family: $heading-font
+          font-weight: 700
+          font-size: 18px
+          color: $dark-gray
+          text-align: left
+          max-width: 685px
+          line-height: 150%
+          display: table
+          vertical-align: middle
+          margin: 8.3% auto 4.5% auto
+
+          @media (max-width : 800px)
+            margin: 16% auto 8% auto
+            font-size: 14px
+
+          @media (max-width : 600px)
+            font-size: 13px
+
+          > span
+            display: table-cell
+            vertical-align: middle
+
+          .number
+            float: left
+            text-align: center
+            display: inline-block
+            width: 36px
+            padding: 0.6rem 0
+            padding: 6px 0
+            font-size: 24px
+            margin-right: 15px
+            margin-right: 1.5rem
+            background: $yellow
+            color: $dark-brown
+
+            @media (max-width : 800px)
+              font-size: 18px
+              width: 28px
+
+          em
+            font-style: normal
+            text-decoration: underline
+
+        &.first
+          h5
+            @media (max-width : 800px)
+              margin-top: 10%
+
+
+        &.first, &.third
+          img
+            width: 100%
+            max-width: 617px
+
+
+
+        &.second
+          img
+            width: 70%
+            max-width: 427px
+
+    section.who-for
+      p
+        font-size: 2.2rem
+        margin: 7% 10%
+        line-height: 175%
+
+        @media (max-width : 800px)
+          font-size: 2.8rem
+
+
+    section.bullets
+      margin-bottom: 5%
+      h2
+        margin-top: 0
+        margin-bottom: 1%
+
+      ul
+        list-style: none
+        text-align: center
+        margin: 0
+        padding: 0
+
+      li
+        padding: 4.5% 0
+        margin: 0
+        h5
+          line-height: 175%
+          font-size: 25px
+          font-size: 2.5rem
+          color: $blue
+          width: 70%
+          margin: 0 auto 2.5%
+          @media (max-width : 800px)
+            font-size: 3rem
+            width: 90%
+
+          em
+            text-transform: uppercase
+            display: inline-block
+            border: 1px solid $blue
+            +box-shadow(0 0 1px rgba($blue, 0.5))
+            // border-bottom: 1px solid $blue
+            font-style: normal
+            padding: 1% 2% 0.75%
+            margin: 0 1.5% 0 1.75%
+
+
+
+        p, a
+          text-align: left
+          font-size: 18px
+          font-size: 1.8rem
+          line-height: 175%
+          width: 70%
+          margin: 0 auto
+          @media (max-width : 800px)
+            font-size: 2.1rem
+            width: 90%
+
+          @media (max-width : 600px)
+            font-size: 2.3rem
+
+
+        a
+          text-decoration: underline
+
+        &.odd
+          background: lighten($light-medium-gray, 6.5%)
+
+      &.deliverables
+        h5
+          color: $green
+
+          &::before
+            content: "✣"
+            font-size: 24px
+            font-size: 2.4rem
+            margin-right: 1.25%
+
+    section.why-us
+      margin-bottom: 7.5%
+      +clearfix
+
+      h2
+        margin-bottom: 0
+
+      .team-images
+        width: 100%
+        > div
+          display: inline-block
+          position: relative
+          width: 50%
+        img
+          width: 100%
+          margin: 0
+
+          &:last-of-type
+            position: relative
+            top: -1px
+
+        span.email
+          position: absolute
+          margin: 0 auto
+          display: block
+          text-align: center
+          bottom: 0
+          color: rgba(white,0.9)
+          // color: $dark-brown
+          font-size: 1.5rem
+          padding: 4%
+          // background: rgba($dark-yellow, 0.9)
+
+          strong
+            font-size: 1.7rem
+            position: relative
+            top: 0.1rem
+            color: $yellow
+
+            @media (max-width : 745px)
+              top: 0
+
+        .dane span.email
+          left: 0
+
+        .lennon span.email
+          right: 0
+
+
+      .logo-row
+        padding: 3% 0
+        border-left: 1px solid $light-border-gray
+        border-right: 1px solid $light-border-gray
+        background: white
+        position: relative
+        top: -2px
+        z-index: 2
+
+      .row
+        position: relative
+        top: -2px
+        display: table
+        img
+          width: 30%
+
+        .design img
+          margin-top: -13px
+
+        > div
+          padding: 25px 18px
+          padding: 2.5rem 1.8rem
+          +box-sizing(border-box)
+          display: table-cell
+          width: 33.33%
+          color: #fff
+          margin-top: 0
+          h6
+            font-family: $heading-font
+            font-size: 20px
+            font-size: 2rem
+            text-transform: uppercase
+            margin: 8% auto
+            line-height: 155%
+
+
+          p
+            font-size: 13px
+            font-size: 1.3rem
+            line-height: 150%
+            margin: 0 20px
+            margin: 0 2rem
+
+          .links
+            margin-top: 5%
+            a
+              font-family: $heading-font
+              display: block
+              text-decoration: underline
+              color: white
+              margin-bottom: 1%
+
+      @media (max-width : 800px)
+        .team-images
+          .dane, .lennon
+            display: block
+            width: 100%
+
+            span.email
+              font-size: 2.2rem
+              width: 92%
+              text-align: center
+              right: inherit
+              left: inherit
+
+              strong
+                font-size: 2.5rem
+        .row
+          .numbers, .design, .tech
+            display: block
+            width: 101%
+            padding: 5% 8% 8%
+
+            img
+              width: 18%
+              position: relative
+              top: -1.5rem
+
+            h6
+              font-size: 3.5rem
+              margin: 4% 0
+              display: inline-block
+              margin-left: 6%
+              text-align: left
+            p
+              font-size: 2.4rem
+              margin-top: 4%
+              line-height: 160%
+
+      .numbers
+        background: lighten($darkest-blue, 12%)
+
+      .design
+        background: lighten($darkest-blue, 22%)
+
+      .tech
+        background: lighten($darkest-blue, 32%)
+
+
+
+
+  .cta
+    position: relative
+    overflow: hidden
+    img.cta-bg
+      width: 100%
+
+      @media (max-width : 800px)
+        width: 120%
+
+    .cta-content
+      position: absolute
+      color: white
+      text-align: center
+      top: 0
+      left: 0
+
+      &.text-left
+        padding: 2.5% 10%
+        width: 40%
+
+        @media (max-width : 800px)
+          width: 60%
+
+      &.text-center
+        margin: auto
+        width: 60%
+        left: 20%
+
+
+      h3
+        font-size: 3rem
+        line-height: 150%
+        font-weight: 400
+        margin-top: 0
+
+        @media (max-width : 800px)
+          font-size: 3.5rem
+
+      h4
+        font-size: 22px
+        font-size: 2.2rem
+        font-weight: 300
+
+        @media (max-width : 800px)
+          font-size: 2.4rem
+
+      form
+        text-align: center
+        width: 100%
+        input
+          +box-sizing(border-box)
+          width: 100%
+          display: block
+          margin-bottom: 3%
+          background: none
+          border: 1px solid white
+          font-size: 16px
+          font-size: 1.6rem
+          font-family: $heading-font
+          padding: 2%
+          color: white
+          outline-color: rgba(white, 0.2)
+          +placeholder
+            color: rgba(white, 0.8)
+
+          &[type=text], &[type=email]
+            background: rgba(black, 0.2)
+
+          &[type=submit]
+            font-weight: bold
+            +border-radius(8px)
+            width: 80%
+            margin: 6% auto 0
+            font-size: 2rem
+
+    &.upper
+      .cta-content
+        padding-top: 9.55%
+
+    &.lower
+      .cta-content
+        padding-top: 5.95%
+
+
+
+
+
+
+
+

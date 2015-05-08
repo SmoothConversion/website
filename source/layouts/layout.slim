@@ -8,7 +8,7 @@ doctype html
 /[if IE 9]
   | <html class="ie ie9">
 | <!--[if (gte IE 9)|!(IE)]<!-->
-html
+html class="#{yield_content :page_class}"
   | <!--<![endif]-->
   head
     meta charset="utf-8"

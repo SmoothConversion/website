@@ -1,13 +1,35 @@
-.testimonial
-  = image_tag "arnon-pic.jpg", :class => "arnon"
-  p
-    ' "Dane and Lennon's methodology measuring actual user intervention enabled us to identify over
-    b
-      ' $1 million in lost sales.
-    ' The client is using the findings to improve user experience and capture the money they were leaving behind."
-  a href="https://www.linkedin.com/profile/view?id=3852449" target="_blank"
-    span.name
-      | Arnon Mishkin
-  a href="https://www.linkedin.com/profile/view?id=3852449" target="_blank"
-    span.title
-      | Managing Director, Mishkin Associates
+section.testimonials
+
+  .testimonial.first
+    - adrian_url = "http://www.reserbus.mx/"
+    a href=adrian_url target="_blank"
+      img src="/img/adrian.jpg"
+    .text
+      | Smooth Conversion used all the data we collected to present a solid action plan to
+      strong =" improve our funnel. "
+      | We’re really confident on their strength as an analysis and execution team.
+
+      .row
+        a href=adrian_url target="_blank"
+          span.name
+            | Adrian Cuadros Zegarra
+
+          span.title
+            | CTO, Reserbus.mx
+
+
+  .testimonial.last
+    - arnon_url = "https://www.linkedin.com/profile/view?id=3852449"
+    a href=arnon_url target="_blank"
+      img src="/img/arnon-pic.jpg"
+    .text
+      | Smooth Conversion's methodology enabled us to identify
+      strong = " over $1 million in lost sales. "
+      | The client is using the findings to improve user experience and capture the money they were leaving behind.
+      .row
+        a href=arnon_url target="_blank"
+          span.name
+            | Arnon Mishkin
+
+          span.title
+            | Director, Mishkin Associates

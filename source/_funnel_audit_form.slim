@@ -1,10 +1,6 @@
-.funnel-audit-signup.subscribe
-  h5
-    | Find the holes in your funnel:
-
-  form action="http://smoothconversion.createsend.com/t/d/s/tiiild/" method="post"
-    input type="text" class="name email" name="cm-name" placeholder="Your name" required="true"
-    input type="email" name="cm-tiiild-tiiild" class="email" placeholder="Your email" required="true"
-    input type="text" id="fieldyudhdr" class="name email" name="cm-f-yudhdr" placeholder="Your website url" required="true"
-    input id="fieldyuhldj" name="cm-f-yuhldj" type="hidden" class="utm-input"
-    input type="submit" value="Get Started" class="outline-button"
+form action="http://smoothconversion.createsend.com/t/d/s/tiiild/" method="post"
+  input type="text" class="name email" name="cm-name" placeholder="Your name" required="true"
+  input type="email" name="cm-tiiild-tiiild" class="email" placeholder="Your email" required="true"
+  input type="text" id="fieldyudhdr" class="name email" name="cm-f-yudhdr" placeholder="Your website's url" required="true"
+  input id="fieldyuhldj" name="cm-f-yuhldj" type="hidden" class="utm-input"
+  input type="submit" value=(locals[:subscribe_button] || "Get Started") class="outline-button"

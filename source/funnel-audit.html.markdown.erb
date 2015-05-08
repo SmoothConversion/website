@@ -1,7 +1,7 @@
 ---
 title: Smooth Conversion - Web Funnel Audit
 page: funnel
-layout: service
+layout: longform_service
 seo_meta_description: If you generate significant revenue from your website, you're likely leaving money on the table every day.  We'll help you get it back.
 ---
 
@@ -73,7 +73,9 @@ To find out more about us visit <%= link_to "our team page", "/team", :target =>
   <div class="service-bottom">
 	<%= partial "testimonial" %>
 	<%= partial "how_to_begin_audit" %>
-	<%= partial "funnel_audit_form" %>
+  <div class="funnel-audit-signup subscribe">
+    <h5> Find the holes in your funnel: </h5>
+	   <%= partial "funnel_audit_form" %>
   </div>
   <%= image_tag "/img/city-sketch.jpg", :class => "footer" %>
   <script type="text/javascript">
