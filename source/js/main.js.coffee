@@ -120,4 +120,5 @@ if $(".funnel-analysis").length or $(".funnel-thank-you").length
     $("body").show()
     scaleFn()
     setTimeout(verticallyCenterCtaContent, 152)
+    setTimeout(verticallyCenterCtaContent, 1000)
 

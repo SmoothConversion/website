@@ -1,0 +1,169 @@
+section.ebook
+  +clearfix
+  background: rgba(white, 0.9)
+  +border-bottom-radius(6px)
+  padding-bottom: 2%
+
+  .left-col
+    float: left
+    width: 44%
+    padding-left: 7%
+    padding-right: 0
+    box-sizing: border-box
+    position: relative
+    left: 4.5%
+
+
+
+  .right-col
+    float: right
+    width: 56%
+    text-align: center
+    box-sizing: border-box
+
+  p, li
+    font-size: 2.2rem
+    line-height: 170%
+    text-align: left
+
+  em.ebook
+    color: $blue
+    text-transform: uppercase
+    font-weight: bold
+    font-style: normal
+
+  ul li
+    margin-bottom: 5%
+
+    &:last-of-type
+      margin-bottom: 0
+
+
+  p.final
+    font-weight: bold
+    color: $green
+    font-size: 2.8rem
+    em
+      text-transform: uppercase
+      font-style: normal
+      font-weight: bold
+
+  img.cover
+    width: 58%
+    margin-top: 3em
+
+  form.ebook
+    text-align: center
+    width: 100%
+    margin-top: 3.75%
+    input[type=email]
+      font-size: 1.9rem
+      border: 1px solid rgba($dark-gray, 0.4)
+      padding: 1.8% 2.9%
+      width: 58%
+      font-family: $heading-font
+      outline-color: $blue
+      box-sizing: border-box
+
+    input[type=submit]
+      width: 58%
+      font-size: 2.2rem
+      background: $blue
+      border: none
+      text-transform: uppercase
+      color: white
+      padding: 3% 0
+      font-family: $heading-font
+      margin-top: 3.75%
+      outline-color: $blue
+      +border-radius(6px)
+      box-sizing: border-box
+
+  @media (max-width : 800px)
+    padding-bottom: 7%
+
+    h2
+      margin-bottom: 0
+
+    .left-col
+      float: none
+      width: auto
+      padding: 0 10%
+      left: 1%
+      margin-top: 7%
+
+    .right-col
+      float: none
+      width: 100%
+
+    p
+      text-align: center
+
+    ul
+      width: 85%
+      margin: 3% auto
+      padding: 0
+
+    p, li
+      font-size: 2.8rem
+
+      br
+        display: none
+
+    p.final
+      font-size: 3.8rem
+
+    img.cover, form.ebook input[type=email], form.ebook input[type=submit]
+      width: 65%
+
+    form.ebook input[type=email]
+      font-size: 2.5rem
+
+    form.ebook input[type=submit]
+      font-size: 2.8rem
+
+
+
+  @media (max-width : 620px)
+    .left-col
+      padding: 0 7%
+
+    p, li, form.ebook input[type=submit]
+      font-size: 3.2rem
+
+    p.final
+      font-size: 4.5rem
+
+    form.ebook input[type=email]
+      font-size: 2.9rem
+
+  @media (max-width : 520px)
+    p, li, form.ebook input[type=submit]
+      font-size: 3.5rem
+
+    p.final
+      font-size: 4.8rem
+
+    form.ebook input[type=email]
+      font-size: 3.2rem
+
+  @media (max-width : 450px)
+    p, li, form.ebook input[type=submit]
+      font-size: 3.8rem
+
+    p.final
+      font-size: 5.1rem
+
+    form.ebook input[type=email]
+      font-size: 3.3rem
+
+  @media (max-width : 420px)
+    p, li, form.ebook input[type=submit]
+      font-size: 4rem
+
+    p.final
+      font-size: 5.3rem
+
+    form.ebook input[type=email]
+      font-size: 3.5rem
+
