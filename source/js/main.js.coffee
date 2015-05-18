@@ -92,9 +92,11 @@ $ ->
   $(".utm-input").attr("value", getParameterByName("utm"))
 
 
-# funnel analysis font resizing
+# funnel analysis
 
 if $(".funnel-analysis").length or $(".funnel-thank-you").length
+
+  # font resizing
   scaleFn = ->
     wrapW = $("#wrap").width()
 
@@ -116,9 +118,41 @@ if $(".funnel-analysis").length or $(".funnel-thank-you").length
 
   scaleFn()
   $(window).resize scaleFn
+
+
+  # scroll analytics checkpoints
+  checkpoints = {}
+  reached = {}
+
+  for h2 in $("section > h2")
+    $h2 = $(h2)
+    checkpoints[$h2.text()] = $h2.offset().top
+
+  for cta,i in $("section.cta")
+    $cta = $(cta)
+    checkpoints["CTA #{i+1}"] = $cta.offset().top
+
+  checkpoints["Testimonials"] = $("section.testimonials").offset().top
+
+  $(window).on 'scroll', ->
+    scrollTop = $(this).scrollTop()
+
+    for k of checkpoints
+      unless k of reached
+        topDistance = checkpoints[k]
+
+        if topDistance < scrollTop
+          reached[k] = true
+          heap.track "Scrolled to '#{k}'"
+          break
+
+
   $ ->
     $("body").show()
     scaleFn()
     setTimeout(verticallyCenterCtaContent, 152)
     setTimeout(verticallyCenterCtaContent, 1000)
+
+
+
 
