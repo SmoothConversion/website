@@ -4,16 +4,16 @@
 
   .article-info
     text-align: center
-  
+
     &.is-summary
       margin-bottom: 30px * $multiplier
       padding-bottom: 30px * $multiplier
-  
+
     img
       width: 100%
       height: auto
       margin: 25px 0 5px 0
-  
+
     .article-heading
       text-align: left
       h1
@@ -22,27 +22,27 @@
         padding-bottom: 15px * $multiplier
         margin: 0
         margin-bottom: 25px * $multiplier
-  
-        &,a  
+
+        &,a
           color: $dark-gray
           font-family: "Quicksand"
           font-size: 35px * $multiplier
           line-height: 55px * $multiplier
           font-weight: 400
-        
+
         a
           text-decoration: none
-  
+
           &.back
             padding-right: 10px * $multiplier
             color: $blue
-  
+
         .title a:hover::after
           content: '»'
           margin-left: 8px
           color: $blue
-  
-  
+
+
       .heading-info
         font-family: "Quicksand"
         h6
@@ -51,7 +51,7 @@
           width: 100%
           margin: 0
           font-size: 22px * $multiplier
-  
+
           span.author
             margin-right: 10px
             // background: $dark-yellow
@@ -61,18 +61,18 @@
               color: $blue
               text-decoration: none
               font-weight: bold
-  
-          span.date 
-            display: inline-block 
+
+          span.date
+            display: inline-block
             margin-right: 13px
             font-size: 20px * $multiplier
             color: #838383
             font-weight: normal
-  
+
           span.num-comments
             display: inline-block
             float: right
-  
+
             a
               color: #838383
               font-weight: normal
@@ -80,10 +80,10 @@
               font-size: 20px * $multiplier
               color: black
               font-weight: normal
-  
+
             a:hover
               text-decoration: underline
-          
+
           .tags
             position: relative
             top: -2.5px
@@ -101,17 +101,23 @@
           div.mobile-tags
             display: if($mobile-portrait or $mobile-landscape, block, none)
             margin: 20px 0 0 5px
-            > span 
+            > span
               font-size: 14px
 
-  
+
     .summary
       text-align: left
       margin-bottom: 40px * $multiplier
       font-size: 21px * $multiplier
       font-weight: 200
       line-height: 38px * $multiplier
-  
+      p
+        a, a:visited
+          color: $green
+          text-decoration: none
+          font-weight: bold
+
+
     a.read-more
       background: $blue
       color: white
@@ -126,7 +132,7 @@
 
 @media (max-width : 800px)
   +article-info(true, false)
-  
+
   .article-info .article-heading > h1
     padding-bottom: 36px
 
