@@ -10,7 +10,7 @@
     .mobile-subscribe
       = partial "email_subscribe", locals: {subscribe_button: "Get New Posts By Email"}
 
-  .twitter
+  /.twitter
     - author = article.data.author.split(" ").first
     - twitter = {"Lennon" => "LennonRubin", "Dane" => "Danenania"}[author]
     span.copy.desktop ="Let's connect on Twitter!"
@@ -18,7 +18,13 @@
     a href="https://twitter.com/#{twitter}" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large"
       = "Follow @#{twitter}"
 
-  .contact-us
+  .contact-us.report-card
+    h3
+      | Want to know how well your web funnel is doing?
+    p.copy
+      | Enter your email address and website url and I’ll send you a user friction report card that grades each step in your signup flow.  Your report card will remain private. See an example report.
+
+  /.contact-us
     p.copy
       = article.data.contact_cta || "Need help with product strategy, design, or development?"
       = " Get in touch:"
