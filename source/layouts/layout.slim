@@ -89,6 +89,19 @@ html class="#{yield_content :page_class}"
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
 
+      var payboardCallback = function() {
+          Payboard.Events.trackPage();
+      };
+      var payboardScript = document.createElement("script");
+      payboardScript.src = '//az745252.vo.msecnd.net/scripts/c2f60a42-2a19-434c-bc4b-0fdff19741ef.js';
+      if (payboardScript.addEventListener) {
+          payboardScript.addEventListener('load', payboardCallback, false);
+      } else if (payboardScript.readyState) {
+          payboardScript.onreadystatechange = payboardCallback;
+      }
+      document.head.appendChild(payboardScript);
+
+
 
 
 
