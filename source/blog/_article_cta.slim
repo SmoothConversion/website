@@ -2,14 +2,6 @@
 .article-cta
   .social.split-cta
 
-
-  .register.mobile
-
-    span.mobile.copy Get notified of future posts
-
-    .mobile-subscribe
-      = partial "email_subscribe", locals: {subscribe_button: "Get New Posts By Email"}
-
   /.twitter
     - author = article.data.author.split(" ").first
     - twitter = {"Lennon" => "LennonRubin", "Dane" => "Danenania"}[author]
@@ -31,9 +23,16 @@
       p
         input id="fieldjhkilr" name="cm-f-jhkilr" type="text" required="true" placeholder="Your website"
       p
-        input type="submit" class="outline-button" id="get-report-button" value="Get My Funnel's Report Card"
+        input type="submit" class="outline-button" id="get-report-button" value="Get My Report Card"
       span
         | * Your report card will remain private.
+
+  .register.mobile
+
+    span.mobile.copy Free Funnel UX Teardown Series
+
+    .mobile-subscribe
+      = partial "email_subscribe", locals: {subscribe_button: "Get New Teardowns"}
 
   /.contact-us
     p.copy

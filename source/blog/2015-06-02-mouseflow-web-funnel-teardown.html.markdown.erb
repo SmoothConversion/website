@@ -35,17 +35,13 @@ I’m prefacing all my teardowns with the disclaimer that you should almost alwa
 
 To find out more about A/B testing, check out Chapter 7 of my free e-book, [Seven Steps to More Paid Signups](/resources/ebooks/SevenStepsToMorePaidSignups.pdf){:target="_blank"}.
 
-For Mouseflow I examined these funnel steps (make them in page links):
+Here is a brief overview of what I examined for Mouseflow and how I ranked their key steps:
 
-- [Home page](#home-page)
-- [Lead capture techniques (Exit intent, Email capture forms)](#lead-capture)
-- [Pricing page](#pricing)
-- [Signup form](#signup)
-- [Payment page](#payment)
-- [Demo](#demo)
-- [Free Tier Experience/Onboarding](#free-tier)
+<%= image_tag (current_page.path.gsub(".html", "/") + "mouseflow-report-card.png"), class: "full-width" %>
 
-Pay special attention to the payment pages breakdown.  I saw quite a few exciting opportunities in that step and dropoffs at the end of the funnel are particularly painful.  You get a visitor so close to converting only to lose them at the finish line.
+Down below I'll go into greater detail on why I gave the grades that I did.
+
+Pay special attention to the payment forms breakdown.  I saw quite a few exciting opportunities in that step and dropoffs at the end of the funnel are particularly painful.  You get a visitor so close to converting only to lose them at the finish line.
 
 <a name="home-page"></a>
 
@@ -191,11 +187,13 @@ My main improvement recommendation would be to remove the blue heatmaps bar and 
 
 <a name="payment"></a>
 
-### Payment Page
+### Payment Forms
 
 <%= image_tag (current_page.path.gsub(".html", "/") + "signup2.jpg"), class: "full-width" %>
 
-This is where things start to fall off the rails a little bit.  Remember how easy the previous form looked? This form looks the opposite.  I have to scroll quite a bit just to see all the fields.  There are also a number of optional (company name/phone/state) fields that are just making this form look scarier.  Removing them should increase conversions.
+This is where things start to fall off the rails a little bit.
+
+Remember how easy the previous form looked? This form looks the opposite.  I have to scroll quite a bit just to see all the fields.  There are also a number of optional (company name/phone/state) fields that are just making this form look scarier.  Removing them should increase conversions.
 
 Stripe could also be considered as a payment processor that doesn’t require address info which would further reduce form fields.
 
