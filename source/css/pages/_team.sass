@@ -31,7 +31,19 @@ section.team
       display: inline-flex
 
   > img
-    width: 100%
+    float: left
+    width: 33%
+    margin: 4%
+    border: 1px solid rgba(0, 0, 0, 0.1)
+
+    @media (max-width : 800px)
+      margin-top: 6%
+
+    @media (max-width : 550px)
+      width: 92%
+      margin: 4% 4% 6%
+
+
 
   .body
     padding: 10px 40px
