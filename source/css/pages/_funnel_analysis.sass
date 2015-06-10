@@ -298,21 +298,18 @@ html.funnel-analysis
       +clearfix
 
       h2
-        margin-bottom: 0
+        margin-bottom: -2px
+
 
       .team-images
         width: 100%
         > div
           display: inline-block
           position: relative
-          width: 50%
+          width: 33.333%
         img
           width: 100%
           margin: 0
-
-        div.lennon img
-          position: relative
-          top: -2px
 
         span.email
           position: absolute
@@ -341,15 +338,16 @@ html.funnel-analysis
         .lennon span.email
           right: 0
 
+        .spacer
+          .logo img
+            position: absolute
+            top: 7%
+            left: 7%
 
-      .logo-row
-        padding: 3% 0
-        border-left: 1px solid $light-border-gray
-        border-right: 1px solid $light-border-gray
-        background: white
-        position: relative
-        top: -3px
-        z-index: 2
+          img.bg
+            opacity: 0.15
+
+
 
       .row
         position: relative
@@ -396,12 +394,13 @@ html.funnel-analysis
 
       @media (max-width : 800px)
         .team-images
+          .spacer
+            display: none
           .dane, .lennon
-            display: block
-            width: 100%
+            width: 50%
 
             span.email
-              font-size: 2.2rem
+              font-size: 2.8rem
               width: 92%
               text-align: center
               right: inherit
@@ -409,7 +408,7 @@ html.funnel-analysis
               padding-bottom: 4%
 
               strong
-                font-size: 2.5rem
+                font-size: 3.1rem
         .row
           .numbers, .design, .tech
             display: block
