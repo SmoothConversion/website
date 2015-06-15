@@ -91,6 +91,11 @@ $("body").css visibility: "visible"
 $ ->
   $(".utm-input").attr("value", getParameterByName("utm"))
 
+# blog video script
+
+$ ->
+  if $(".article .youtube-video").length
+    $(".article-info img").replaceWith($(".article .youtube-video iframe"))
 
 # funnel analysis
 
