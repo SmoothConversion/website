@@ -90,6 +90,8 @@ html class="#{yield_content :page_class}"
       })();
 
     - if build?
+      script src="/js/vendor/remarketing-pixels.js"
+
       javascript:
         var payboardCallback = function() {
             Payboard.Events.trackPage();
