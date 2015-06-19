@@ -204,41 +204,7 @@ section.cta.lower
     h4 Let's plug the holes.
     = partial "funnel_audit_form", locals: {subscribe_button: "Get A Free Consultation"}
 
-
-section.ebook
-  h2.blue-heading
-    | Not quite
-    strong = " READY?"
-
-  .left-col
-    p
-      | In the meantime, check out this
-      em.ebook =" free ebook "
-      | about how to get
-      br
-      strong = " more paid signups "
-      | for your web business. It's a brief but highly informative 15-20 minute read.
-
-    p
-      strong You'll learn the basics of:
-
-    ul
-      li Mapping out your signup flow.
-      li Correlating analytics data and user experience insights to find weak spots.
-      li Making targeted, measurable improvements to the leakiest parts of your funnel.
-
-    p.final
-      strong
-        em ="Higher revenues "
-        | await!
-
-
-  .right-col
-    img.cover src="/img/seven-steps-more-paid-signups.png"
-
-    form.ebook action="http://smoothconversion.createsend.com/t/d/s/ittyn/" method="post"
-      input type="email" id="fieldEmail" placeholder="Your email" name="cm-ittyn-ittyn" required=true
-      input.outline-button type="submit" value="Send My Free Ebook"
+= partial "ebook-carrot", locals: {index: true}
 
 - content_for :post_content do
   img.footer src="/img/city-sketch.jpg"
