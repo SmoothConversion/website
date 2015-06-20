@@ -95,7 +95,7 @@ $ ->
 
 $ ->
   if $(".article .youtube-video").length
-    $(".article-info img").replaceWith($(".article .youtube-video iframe"))
+    $(".article-info img").replaceWith($(".article .youtube-video .embed-container"))
 
 # funnel analysis
 
