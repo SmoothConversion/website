@@ -144,3 +144,22 @@ section.bottom
 - content_for :post_content do
   img.footer src="/img/city-sketch.jpg"
 
+#overlay
+#modal
+  #content
+    .modal-header
+      span.details
+        | 1 User Experience Report Card
+      span.price
+        | $299
+    .close
+      span
+        | X
+    .modal-body
+      form
+        .errors
+        input type="email" placeholder="Your email" name="email"
+        input type="text" placeholder="Your website's url" name="url"
+        img.submit src="/img/report-card-landing/paypal-button.png"
+      p
+        | Report cards are confidential. We'll never share your email.

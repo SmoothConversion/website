@@ -92,6 +92,36 @@ $ ->
   $(".utm-input").attr("value", getParameterByName("utm"))
 
 
+# report card submission
+
+$(".report-card #modal form img.submit").click ->
+  errors = ""
+  email = $(".report-card #modal form input[name=email]").val()
+  url = $(".report-card #modal form input[name=url]").val()
+
+  fields = $(".report-card #modal form :input")
+  emptyFields = fields.filter ->
+    $.trim(this.value) == ""
+
+  if emptyFields.length
+    errors += "Please fill out all fields."
+
+  unless isValidEmailAddress(email)
+    errors += " Email is not valid."
+
+  if errors.length
+    messages = $(".report-card #modal form .errors")
+    messages.empty()
+    messages.text(errors)
+  else
+    data = {"cm-iiika-iiika": email, "cm-f-jhkilr": url}
+    $.ajax({
+      type: "POST",
+      url: "http://smoothconversion.createsend.com/t/d/s/iiika/",
+      data: data,
+      dataType: 'jsonp'
+    })
+
 # funnel analysis
 
 if $(".funnel-analysis").length or $(".funnel-thank-you").length
