@@ -94,12 +94,16 @@ $ ->
 
 # report card submission
 
-$(".report-card #modal form img.submit").click ->
-  errors = ""
-  email = $(".report-card #modal form input[name=email]").val()
-  url = $(".report-card #modal form input[name=url]").val()
+paypalForm = $(".report-card form.paypal")
 
-  fields = $(".report-card #modal form :input")
+paypalForm.submit (e)->
+  e.preventDefault()
+
+  errors = ""
+  email = $(".report-card #modal form.info input[name=email]").val()
+  url = $(".report-card #modal form.info input[name=url]").val()
+
+  fields = $(".report-card #modal form.info :input")
   emptyFields = fields.filter ->
     $.trim(this.value) == ""
 
@@ -109,9 +113,10 @@ $(".report-card #modal form img.submit").click ->
   unless isValidEmailAddress(email)
     errors += " Email is not valid."
 
+  messages = $(".report-card #modal form .errors")
+  messages.empty()
+
   if errors.length
-    messages = $(".report-card #modal form .errors")
-    messages.empty()
     messages.text(errors)
   else
     data = {"cm-iiika-iiika": email, "cm-f-jhkilr": url}
@@ -121,6 +126,9 @@ $(".report-card #modal form img.submit").click ->
       data: data,
       dataType: 'jsonp'
     })
+
+    paypalForm.unbind('submit')
+    paypalForm.submit()
 
 # funnel analysis
 
