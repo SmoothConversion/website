@@ -17,7 +17,8 @@ section.uvp
       | Product managers
     h2
       | User experience friction costs your business revenue every single day.
-    img src="/img/report-card-landing/user-friction.png"
+    img.desktop-friction src="/img/report-card-landing/user-friction.png"
+    img.mobile-friction src="/img/report-card-landing/user-friction-mobile.png"
 
 section.intro-bar
   .inner-wrap
@@ -89,11 +90,11 @@ section.clients
         = partial "adrian"
 
     .logos
-      img src="/img/report-card-landing/fp-logo.png"
-      img src="/img/report-card-landing/bob-vila-logo.png"
-      img src="/img/report-card-landing/mishkin-associates-logo.png"
-      img src="/img/report-card-landing/reserbus-logo.png"
-      img.last src="/img/report-card-landing/genie-logo.png"
+      img.fp src="/img/report-card-landing/fp-logo.png"
+      img.bv src="/img/report-card-landing/bob-vila-logo.png"
+      img.mishkin src="/img/report-card-landing/mishkin-associates-logo.png"
+      img.reserbus src="/img/report-card-landing/reserbus-logo.png"
+      img.genie.last src="/img/report-card-landing/genie-logo.png"
 
 section.intro-bar
   .inner-wrap
@@ -134,14 +135,13 @@ section.faq
       a.email href="mailto:commence@smoothconversion.com" commence@smoothconversion.com
       | .
 
-section.bottom
-  .inner-wrap
-    h1
-      | It’s time to start realizing your site’s full potential.
+  section.bottom
+    .inner-wrap
+      h1
+        | It’s time to start realizing your site’s full potential.
 
-    = partial "report-card-cta"
+      = partial "report-card-cta"
 
-- content_for :post_content do
   img.footer src="/img/city-sketch.jpg"
 
 #overlay
