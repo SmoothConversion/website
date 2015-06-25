@@ -91,6 +91,10 @@ $("body").css visibility: "visible"
 $ ->
   $(".utm-input").attr("value", getParameterByName("utm"))
 
+# Exit Intent Event Tracking
+
+$("#funnel-modal form").submit ->
+  heap.track "Exit Intent Conversion"
 
 # report card submission
 
