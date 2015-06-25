@@ -352,6 +352,8 @@ html.report-card
     position: absolute
     display: none
 
+  .purchase-report-card
+
     #content
       background: #fff
       -webkit-border-radius: $modal-border-radius $modal-border-radius 0 0
@@ -420,6 +422,64 @@ html.report-card
           color: #8C8C8C
           font-size: 0.9rem
           font-family: Merriweather
+
+  .purchase-report-card
+    width: 604px
+    margin: 0 auto
+    @media (max-width : 650px)
+      width: 90%
+
+    #content
+      background-color: #F2F2F2
+
+      .modal-header
+        width: 555px
+        -webkit-border-radius: $modal-border-radius $modal-border-radius 0 0
+        border-radius: $modal-border-radius $modal-border-radius 0 0
+
+        span.price
+          float: right
+
+      .close
+        display: none
+
+      @media (max-width : 650px)
+        .modal-header
+          width: 92%
+          padding-left: 4%
+          padding-right: 4%
+
+          span.details
+            margin-right: 0
+            @media (max-width : 500px)
+              font-size: 1rem
+            @media (max-width : 450px)
+              font-size: 0.9rem
+          span.price
+            @media (max-width : 500px)
+              font-size: 0.9rem
+            @media (max-width : 450px)
+              font-size: 0.8rem
+
+        .modal-body
+          padding: 1.25rem 0
+          form.info
+            input
+              width: 80%
+              height: 40px
+
+          form.paypal
+            input
+              width: 87%
+
+          p
+            font-size: 0.8rem
+            margin-top: 0.2rem
+            @media (max-width : 525px)
+              font-size: 0.6rem
+            @media (max-width : 475px)
+              font-size: 0.5rem
+
 
 
 

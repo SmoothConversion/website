@@ -54,7 +54,12 @@ var modal = (function(){
 
 $( document ).ready(function() {
     $('.report-card .cta').click(function(){
-       modal.open();
+        if ($(window).width() < 651) {
+          document.location = "/purchase-user-experience-report-card"
+        }
+        else {
+          modal.open();
+        }
     });
 });
 

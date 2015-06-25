@@ -100,10 +100,10 @@ paypalForm.submit (e)->
   e.preventDefault()
 
   errors = ""
-  email = $(".report-card #modal form.info input[name=email]").val()
-  url = $(".report-card #modal form.info input[name=url]").val()
+  email = $(".report-card form.info input[name=email]").val()
+  url = $(".report-card form.info input[name=url]").val()
 
-  fields = $(".report-card #modal form.info :input")
+  fields = $(".report-card form.info :input")
   emptyFields = fields.filter ->
     $.trim(this.value) == ""
 
@@ -113,7 +113,7 @@ paypalForm.submit (e)->
   unless isValidEmailAddress(email)
     errors += " Email is not valid."
 
-  messages = $(".report-card #modal form .errors")
+  messages = $(".report-card form.info .errors")
   messages.empty()
 
   if errors.length

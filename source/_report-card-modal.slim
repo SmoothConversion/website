@@ -1,0 +1,33 @@
+#content
+  .modal-header
+    span.details
+      | 1 User Experience Report Card
+    span.price
+      | $299
+  .close
+    span
+      | X
+  .modal-body
+    form.info
+      .errors
+      input type="email" placeholder="Your email" name="email"
+      input type="text" placeholder="Your website's url" name="url"
+      /img.submit src="/img/report-card-landing/paypal-button.png"
+
+    / REAL FORM
+    form.paypal action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"
+      input type="hidden" name="cmd" value="_s-xclick"
+      input type="hidden" name="hosted_button_id" value="5RU5JG589EX3Y"
+      input type="image" src="https://s3.amazonaws.com/smooth-conversion-static-assets/company-site/paypal-button.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"
+      img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"
+
+    / TEST FORM
+    /form.paypal action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"
+      input type="hidden" name="cmd" value="_s-xclick"
+      input type="hidden" name="hosted_button_id" value="X7ZECP3YFTXF8"
+      input type="image" src="https://s3.amazonaws.com/smooth-conversion-static-assets/company-site/paypal-button.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"
+      img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"
+
+
+    p
+      | Report cards are confidential. We'll never share your email.
