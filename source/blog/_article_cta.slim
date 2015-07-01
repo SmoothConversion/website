@@ -2,15 +2,7 @@
 .article-cta
   .social.split-cta
 
-
-  .register.mobile
-
-    span.mobile.copy Get notified of future posts
-
-    .mobile-subscribe
-      = partial "email_subscribe", locals: {subscribe_button: "Get New Posts By Email"}
-
-  .twitter
+  /.twitter
     - author = article.data.author.split(" ").first
     - twitter = {"Lennon" => "LennonRubin", "Dane" => "Danenania"}[author]
     span.copy.desktop ="Let's connect on Twitter!"
@@ -18,7 +10,31 @@
     a href="https://twitter.com/#{twitter}" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large"
       = "Follow @#{twitter}"
 
-  .contact-us
+  .get-report-card
+    p.copy
+      | Want to know how well your web funnel is doing?
+    p.details
+      | Enter your email address and website url and I’ll send you a free user friction report card that grades each step in your signup flow.
+    p.details
+      a href="/resources/example-friction-report-card.png" target="_blank" See an example report card.
+    form action="http://smoothconversion.createsend.com/t/d/s/iiika/" method="post" id="subForm"
+      p
+        input id="fieldEmail" name="cm-iiika-iiika" type="email" required="true" placeholder="Your email"
+      p
+        input id="fieldjhkilr" name="cm-f-jhkilr" type="text" required="true" placeholder="Your website"
+      p
+        input type="submit" class="outline-button" id="get-report-button" value="Get My Report Card"
+      span
+        | * Your report card will remain private.
+
+  .register.mobile
+
+    span.mobile.copy Free Funnel UX Teardown Series
+
+    .mobile-subscribe
+      = partial "email_subscribe", locals: {subscribe_button: "Get New Teardowns"}
+
+  /.contact-us
     p.copy
       = article.data.contact_cta || "Need help with product strategy, design, or development?"
       = " Get in touch:"

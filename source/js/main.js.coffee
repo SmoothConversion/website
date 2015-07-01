@@ -134,6 +134,12 @@ paypalForm.submit (e)->
     paypalForm.unbind('submit')
     paypalForm.submit()
 
+# blog video script
+
+$ ->
+  if $(".article .youtube-video").length
+    $(".article-info img").replaceWith($(".article .youtube-video .embed-container"))
+
 # funnel analysis
 
 if $(".funnel-analysis").length or $(".funnel-thank-you").length
