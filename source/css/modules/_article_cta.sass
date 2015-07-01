@@ -29,6 +29,7 @@
         font-size: if($mobile-portrait, 13.5px, 16.5px * $multiplier)
 
     .get-report-card
+      display: none
       +box-sizing(border-box)
       text-align: center
       color: darken($yellow, 50%)
@@ -197,6 +198,8 @@
       border: 2px solid $dark-blue
       padding: 20px 30px
       color: $dark-blue
+      @media (max-width : 500px)
+        text-align: center
 
       @if $mobile-portrait
         font-size: 14px
@@ -209,6 +212,8 @@
         position: absolute !important
         right: 30px
         top: 28px
+        @media (max-width : 500px)
+          position: relative !important
 
 
 +article-cta(false, false)
@@ -225,6 +230,8 @@
     #twitter-widget-0
       top: 25%
       right: 5%
+      @media (max-width : 500px)
+        right: 1.5%
 
 @media (max-width : 480px)
   +article-cta(false,true)
