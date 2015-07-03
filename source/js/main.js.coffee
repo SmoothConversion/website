@@ -98,6 +98,13 @@ $("#funnel-modal form").submit ->
 
 # report card submission
 
+infoForm = $(".report-card form.info")
+
+infoForm.find("span.promo").click (e)->
+  $(e.target).hide()
+
+  infoForm.find("input[name=promo]").show()
+
 paypalForm = $(".report-card form.paypal")
 
 paypalForm.submit (e)->
@@ -106,8 +113,9 @@ paypalForm.submit (e)->
   errors = ""
   email = $(".report-card form.info input[name=email]").val()
   url = $(".report-card form.info input[name=url]").val()
+  promo = $(".report-card form.info input[name=promo]").val()
 
-  fields = $(".report-card form.info :input")
+  fields = $(".report-card form.info input.main")
   emptyFields = fields.filter ->
     $.trim(this.value) == ""
 
@@ -131,8 +139,11 @@ paypalForm.submit (e)->
       dataType: 'jsonp'
     })
 
-    paypalForm.unbind('submit')
-    paypalForm.submit()
+    if promo == "smooth-discount"
+      document.location = "/user-experience-report-card-thank-you"
+    else
+      paypalForm.unbind('submit')
+      paypalForm.submit()
 
 # blog video script
 
