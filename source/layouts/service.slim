@@ -4,9 +4,10 @@
 
   #service
 
-    header
-      = partial "logo"
-      = partial "nav"
+    - unless current_page.metadata[:page]['nav'] == false
+      header
+        = partial "logo"
+        = partial "nav"
 
     /= partial "breadcrumbs", locals: {first: "SERVICES", second: current_page.data["service"]}
 

@@ -11,6 +11,24 @@ seo_meta_description: Thank You!
 
   h2 Check your email in the next few minutes for your free ebook download link.
 
+  .separator
+
+  h2 You might also be interested in:
+
+  .you-might-like
+    a href="/blog/how-to-model-your-website-s-funnel/"
+      .item
+        = image_tag "/img/blog/2014-12-04-how-to-model-your-website-s-funnel/website-funnel-science.jpg"
+        p How To Model Your Web Funnel
+    a href="/blog/mouseflow-web-funnel-teardown/"
+      .item
+        = image_tag "/img/blog/2015-06-02-mouseflow-web-funnel-teardown/mouseflow-logo.png", :class => "teardown"
+        p User Experience Teardown #1: Mouseflow.com
+    a href="/user-experience-report-card"
+      .item.last
+        = image_tag "/img/blog/2015-06-02-mouseflow-web-funnel-teardown/mouseflow-report-card.png"
+        p User Experience Report Cards
+
 - content_for :post_content do
   = image_tag "/img/city-sketch.jpg", :class => "footer"
 
