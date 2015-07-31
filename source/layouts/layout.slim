@@ -90,7 +90,7 @@ html class="#{yield_content :page_class}"
       })();
 
     - if build?
-      script src="/js/vendor/remarketing-pixels.js"
+      = partial "layouts/remarketing_pixels.html"
 
       javascript:
         var payboardCallback = function() {

@@ -126,3 +126,49 @@
         &:hover
           +box-shadow(rgba($fb-blue, 0.4) 0 0 6px 4px)
           +box-shadow(rgba($fb-blue, 0.4) 0 0 0.6rem 0.4rem)
+
+.free-ebook-thank-you
+  .thank-you
+    margin-top: 5%
+
+    .separator
+      width: 35%
+      height: 2px
+      background-color: $blue
+      margin: 4rem auto
+
+    .you-might-like
+      width: 1061px
+      margin: 4.5rem auto 0
+      @media (max-width : 800px)
+        width: 100%
+
+      a
+        text-decoration: none
+
+      .item
+        float: left
+        width: 315px
+        margin-right: 50px
+        @media (max-width : 800px)
+          float: none
+          margin: 4rem auto
+
+        img
+          margin-bottom: 0.25rem
+          border: 1px solid #eee
+
+        p.title
+          color: $green
+          text-decoration: none
+
+        p.details
+          font-size: 12px
+          line-height: 22px
+          color: $dark-gray
+          text-decoration: none
+
+      .item.last
+        margin-right: 0
+        @media (max-width : 800px)
+          margin-right: auto

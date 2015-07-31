@@ -13,6 +13,9 @@ nav.site-nav li
     border-bottom: 1px solid white
     +single-transition(border, 125ms, ease-out)
 
+    @media (max-width: 550px)
+      font-size: 15px
+
     &:visited
       color: $dark-yellowish-gray
       text-decoration: none
@@ -20,34 +23,41 @@ nav.site-nav li
   &:hover a
     border-bottom: 1px solid $dark-blue
 
+nav.site-nav li.report-card a
+  color: #5585C1
+  font-weight: bold
+
 @media (max-width: 800px)
-  header 
-    text-align: center 
+  header
+    text-align: center
     +box-sizing(border-box)
     .logo, nav.site-nav
-      display: block 
+      display: block
       clear: both
       float: none !important
       top: 0
       position: initial
-    
+
     nav.site-nav
-      height: 55px
+      height: auto
       width: 100%
-      
-      ul 
+
+      ul
         padding: 0
 
       &:first-of-type
         margin-left: 0
 
-  .blog-layout header 
+        li a
+          line-height: 30px !important
+
+  .blog-layout header
     margin: 15px 45px 0 45px
     padding: 10px 0 7px
     border-bottom: 1px solid $light-border-gray
-  
+
     nav.site-nav
-      position: relative 
+      position: relative
       top: 2px
 
 

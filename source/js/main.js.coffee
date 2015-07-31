@@ -91,6 +91,65 @@ $("body").css visibility: "visible"
 $ ->
   $(".utm-input").attr("value", getParameterByName("utm"))
 
+# Exit Intent Event Tracking
+
+$("#funnel-modal form").submit ->
+  heap.track "Exit Intent Conversion"
+
+# report card submission
+
+infoForm = $(".report-card form.info")
+
+infoForm.find("span.promo").click (e)->
+  $(e.target).hide()
+
+  infoForm.find("input[name=promo]").show()
+
+paypalForm = $(".report-card form.paypal")
+
+paypalForm.submit (e)->
+  e.preventDefault()
+
+  errors = ""
+  email = $(".report-card form.info input[name=email]").val()
+  url = $(".report-card form.info input[name=url]").val()
+  promo = $(".report-card form.info input[name=promo]").val()
+
+  fields = $(".report-card form.info input.main")
+  emptyFields = fields.filter ->
+    $.trim(this.value) == ""
+
+  if emptyFields.length
+    errors += "Please fill out all fields."
+
+  unless isValidEmailAddress(email)
+    errors += " Email is not valid."
+
+  messages = $(".report-card form.info .errors")
+  messages.empty()
+
+  if errors.length
+    messages.text(errors)
+  else
+    data = {"cm-iiika-iiika": email, "cm-f-jhkilr": url}
+    $.ajax({
+      type: "POST",
+      url: "http://smoothconversion.createsend.com/t/d/s/iiika/",
+      data: data,
+      dataType: 'jsonp'
+    })
+
+    if promo == "smooth-discount"
+      document.location = "/user-experience-report-card-thank-you"
+    else
+      paypalForm.unbind('submit')
+      paypalForm.submit()
+
+# blog video script
+
+$ ->
+  if $(".article .youtube-video").length
+    $(".article-info img").replaceWith($(".article .youtube-video .embed-container"))
 
 # funnel analysis
 

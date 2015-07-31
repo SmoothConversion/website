@@ -1,0 +1,149 @@
+---
+title: User Experience Report Card - Smooth Conversion
+page: funnel
+layout: landing
+seo_meta_description: User experience friction costs your business revenue every single day. Find out where your your biggest opportunities are.
+og_title: User Experience Report Card - Smooth Conversion
+og_description: User experience friction costs your business revenue every single day. Find out where your your biggest opportunities are.
+og_img: diagram-step3.png
+og_url: ""
+---
+
+- content_for :page_class, " landing-layout report-card"
+
+section.uvp
+  .inner-wrap
+    h1
+      | Product managers
+    h2
+      | User experience friction costs your business revenue every single day.
+    img.desktop-friction src="/img/report-card-landing/user-friction.png"
+    img.mobile-friction src="/img/report-card-landing/user-friction-mobile.png"
+
+section.intro-bar
+  .inner-wrap
+    h1
+      | Introducing
+
+section.description
+  .inner-wrap
+    .inner-right
+      img src="/img/report-card-landing/report-card-screenshot.png"
+
+    .inner-left
+      h1
+        | User Experience Report Cards
+      h2
+        | for web businesses.
+
+      p
+        ' We’ll examine up to 15 key steps in your funnel and give them each a grade, from
+        span.green
+          ' A+
+        ' to
+        span.red
+          | F
+        | . The lower the grade, the greater the opportunity for improvement.
+
+    .inner-left-bottom
+      p
+        | You’ll also get notes on each section, an overall grade for your whole funnel, and a 20 minute walkthrough by phone.
+
+    .inner-bottom
+      p
+        | Whether or not you decide to enlist our help, waiting to find and address high friction areas means continuing to lose revenue. Before developing costly new features or running a big marketing campaign, consider first consolidating and making the most out of the funnel you’ve already established. We’ve helped clients realize improvements of
+        strong =" over 35% "
+        | through simple changes.
+
+
+      .special-offer
+        .special-left
+          h4
+            | Special offer
+          h5
+            | 40% off
+
+        .special-right
+          p
+            | The price?
+            strong =" $499"
+            ' . But we’re cutting it to
+            span.green
+              ' $299
+            | for a
+            strong =" limited time"
+            | . Either way, it’s nothing compared to what this can do for your bottom line.
+
+      = partial "report-card-cta"
+
+section.intro-bar
+  .inner-wrap
+    h1
+      | Our clients
+
+section.clients
+  .inner-wrap
+    .testimonials
+      .testimonial.first
+        = partial "arnon"
+      .testimonial
+        = partial "adrian"
+
+    .logos
+      img.fp src="/img/report-card-landing/fp-logo.png"
+      img.bv src="/img/report-card-landing/bob-vila-logo.png"
+      img.mishkin src="/img/report-card-landing/mishkin-associates-logo.png"
+      img.reserbus src="/img/report-card-landing/reserbus-logo.png"
+      img.genie.last src="/img/report-card-landing/genie-logo.png"
+
+section.intro-bar
+  .inner-wrap
+    h1
+      | Faq
+
+section.faq
+  .inner-wrap
+    h2
+      | What if we get a bad grade? That’s a bummer for the team.
+    p
+      | On this report card, bad grades are good! It means there’s a good chance that some lucrative gains are ripe for the picking. And it doesn’t mean anyone screwed up—there never has been and never will be a piece of software with perfect user experience. It’s fundamentally difficult to get right, and at some point you just have to ship.
+
+    p
+      | But that doesn’t mean you can’t occasionally circle back and smooth out important paths that were neglected during the push. If you never do, you’ll quickly end up paying a huge penalty, and  you may not even realize you’re paying it.
+
+    h2
+      | How do I know you’re right? Isn’t it subjective?
+
+    p
+      | User experience design, like all types of design, has its subjective aspects. But it can be approached scientifically too. The most subjective issues are often the most marginal. The big wins are generally not found in tweaking colors and slogans, but in streamlining important workflows that clearly require superfluous thought and action.
+
+    p
+      | For example, the exact number of decisions and interactions necessary to reach a particular goal can be counted, and that count can be compared with other possible designs. When a new design is decided on, it should be AB tested against the original verison to ensure it’s really an improvement. Often it won’t be. A failed test is not a failure—it’s an experimental outcome that can yield a huge amount of insight and lead to success on subsequent attempts.
+
+    h2
+      | Can you go into more depth? The report card isn’t enough.
+
+    p
+      ' We also offer a full funnel analysis package that includes the report card, a thorough user experience audit, an analytics audit,  datamining, revenue projections, and a strategy session.
+      a href="/" Go here to learn more.
+
+    p
+      | Under the right circumstances, we’re open to customized arrangements too.
+
+    p
+      ' More questions? Don’t hesitate to drop us an email:
+      a.email href="mailto:commence@smoothconversion.com" commence@smoothconversion.com
+      | .
+
+  section.bottom
+    .inner-wrap
+      h1
+        | It’s time to start realizing your site’s full potential.
+
+      = partial "report-card-cta"
+
+  img.footer src="/img/city-sketch.jpg"
+
+#overlay
+#modal.purchase-report-card
+  = partial "report-card-modal"
