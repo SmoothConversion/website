@@ -66,25 +66,68 @@ $( document ).ready(function() {
 
 // THIS IS THE EXIT INTENT CODE
 
+function initOuiModal(modalType){
+  $('#funnel-modal').data("modal-type", modalType);
+  $("body").css("overflow", "hidden");
+
+  setTimeout(function(){
+    $("#funnel-modal").scrollTop(0);
+  }, 10)
+
+  if (!window.IS_TOUCH_DEVICE){
+    $("#funnel-modal input#fieldEmail").focus();
+  }
+}
+
 if ($(".free-funnel-course.free-course.full-page, .funnel-course-thank-you").length == 0){
+  if (!$.cookie('more-signups-download')){
+    window.ouibounceModal = ouibounce(document.getElementById('funnel-modal'), {
+      aggressive: window.DEV_MODE,
+      cookieExpire: 60,
+      callback: function() {
+        console.log('ouibounce fired!');
+        $(".slideout").css({right: window.slideoutStartRight});
+        initOuiModal("exit-intent");
+      }
+    });
+  }
 
-  var _ouibounce = ouibounce(document.getElementById('funnel-modal'), {
-    aggressive: window.DEV_MODE,
-    cookieExpire: 60,
-    callback: function() { console.log('ouibounce fired!'); }
-  });
-
-  $('#funnel-modal .underlay').on('click', function() {
-    $('#funnel-modal').hide();
-  });
-
-  $('#funnel-modal .modal-footer').on('click', function() {
-    $('#funnel-modal').hide();
-  });
+  $("#funnel-modal .underlay, #funnel-modal .modal-footer h3").on('click', closeModal);
 
   $('#funnel-modal .modal').on('click', function(e) {
     e.stopPropagation();
   });
+
+  $('#funnel-modal form').on("submit", function(e) {
+    if ($("#funnel-modal").data("modal-type") == "slideout"){
+      e.preventDefault();
+      $form = $(e.target);
+      email = $form.find("input[type=email]").val();
+
+      if(email){
+        $.ajax({
+          type: "POST",
+          url: $form.attr("action"),
+          data: $form.serialize(),
+          dataType: "jsonp"
+        });
+      }
+
+      $.cookie('more-signups-download', moment().toISOString(), {expires: 9999});
+      closeModal();
+      return false;
+    }
+
+    return true;
+  });
+
+  function closeModal(){
+    $('#funnel-modal').hide();
+    $("body").css("overflow", "visible");
+    $(".slideout").css({right: window.slideoutStartRight});
+  }
+
+
 
   // To stop exit intent on blog post if you've already seen the post's CTA:
   function isScrolledIntoView(elem)
@@ -105,7 +148,7 @@ if ($(".free-funnel-course.free-course.full-page, .funnel-course-thank-you").len
 
     $(window).scroll(function(){
       if (!disabled && isScrolledIntoView($signup)){
-        _ouibounce.disable();
+        window.ouibounceModal.disable();
         disabled = true;
       }
     });

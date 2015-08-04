@@ -16,8 +16,6 @@ section.ebook
     position: relative
     left: 4.5%
 
-
-
   .right-col
     float: right
     width: 56%
@@ -77,7 +75,7 @@ section.ebook
       border: none
       text-transform: uppercase
       color: white
-      padding: 2.9% 0
+      padding: 2.5% 0
       font-family: $heading-font
       margin-top: 3.75%
       outline-color: $blue
@@ -89,18 +87,6 @@ section.ebook
 
     h2
       margin-bottom: 0
-
-    .left-col
-      float: none
-      width: auto
-      padding: 0 10%
-      left: 1%
-      margin-top: 7%
-
-    .right-col
-      float: none
-      width: 100%
-      top: 0
 
     p
       text-align: center
@@ -120,7 +106,7 @@ section.ebook
       font-size: 3.8rem
 
     img.cover, form.ebook input[type=email], form.ebook input[type=submit]
-      width: 65%
+      width: 75%
 
     form.ebook input[type=email]
       font-size: 2.5rem
@@ -131,8 +117,6 @@ section.ebook
 
 
   @media (max-width : 620px)
-    .left-col
-      padding: 0 7%
 
     p, li, form.ebook input[type=submit]
       font-size: 3.2rem
@@ -173,35 +157,49 @@ section.ebook
     form.ebook input[type=email]
       font-size: 3.5rem
 
-#funnel-modal
-  .ebook
+#funnel-modal .ebook
+  margin-top: 0
+
+  form.ebook
+    input
+      width: 60%
+      display: block
+      margin: 20px auto 0
+
+  input[type=email]
+    font-size: 16px
+
+  input[type=submit]
+    font-size: 20px
+
+  img.cover
+    width: 43%
+    margin-top: 20px
+
+  h2
+    font-size: 30px
+    text-align: center
+    font-family: Quicksand
+    background-color: #1F4068
+    color: white
+    padding: 35px 0
+    margin-bottom: 12px
     margin-top: 0
 
-    form.ebook
-      input
-        width: 60%
-        display: block
-        margin: 20px auto 0
+    strong
+      color: #ffc152
 
-    input[type=email]
-      font-size: 16px
+  p, li
+    font-size: 20px
 
-    input[type=submit]
-      font-size: 22px
+  .left-col
+    left: 1.5%
 
-    img.cover
-      width: 43%
-      margin-top: 20px
-
+  @media (max-width : 900px)
     h2
-      font-size: 30px
-      text-align: center
-      font-family: Quicksand
-      background-color: #1F4068
-      color: white
-      padding: 35px 0
-      margin-bottom: 12px
-      margin-top: 0
+      line-height: 150%
+      padding: 35px
 
-    p, li
-      font-size: 16px
+
+
+

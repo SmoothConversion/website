@@ -1,5 +1,5 @@
 - wrap_layout :blog do
-  
+
   = partial "/blog/article_info", locals: {article: current_page, summary: false}
 
   .article
@@ -15,12 +15,12 @@
       a href="http://disqus.com/?ref_noscript"
         ="comments powered by Disqus."
 
-    a.dsq-brlink href="http://disqus.com" 
+    a.dsq-brlink href="http://disqus.com"
       ="comments powered by "
       span.logo-disqus
 
   javascript:
-    var disqus_shortname = 'smoothconversion'; 
+    var disqus_shortname = 'smoothconversion';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -30,5 +30,4 @@
 
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 
- 
-    
+

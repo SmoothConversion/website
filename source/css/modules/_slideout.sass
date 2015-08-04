@@ -1,0 +1,98 @@
+.slideout
+  +box-shadow(rgba(#000,0.5) 0 0 2px)
+  +transition(right 0.5s ease-in-out)
+  position: fixed
+  bottom: 0
+  right: -601px
+  background: #f5f5f5
+  border-left: 12px solid #1d3f69
+  border-top: 12px solid $yellow
+  padding: 20px
+  cursor: pointer
+
+  .main
+    +clearfix
+
+  h3,h4
+    margin: 0
+    font-family: $heading-font
+    line-height: 150%
+
+  h3
+    display: block
+    color: #1d3f69
+    font-weight: normal
+    font-size: 22px
+    margin-bottom: 10px
+
+  h4
+    color: $blue
+    font-size: 15px
+
+    span.arrow
+      font-size: 26px
+      position: relative
+      top: 2px
+      margin-left: 5px
+
+  .left-col
+    float: left
+    margin-right: 50px
+
+  .right-col
+    float: right
+
+    img
+      width: 90px
+      height: auto
+      +box-shadow(rgba(#000,0.1) 0 0 1px)
+
+  .close
+    position: absolute
+    top: -27px
+    right: -1px
+    width: 27px
+    height: 27px
+    background: $yellow
+    text-align: center
+    line-height: 31.5px
+
+    span
+      font-family: $heading-font
+      font-size: 16px
+      color: rgba(#000,0.5)
+      position: relative
+      top: -5px
+      left: 0.5px
+
+  @media (max-width : 450px)
+    width: 100%
+    box-sizing: border-box
+
+    .left-col
+      margin-right: 0
+
+    .right-col
+      width: 28%
+      max-width: 93px
+      img
+        width: 100%
+        height: auto
+        +box-shadow(rgba(#000,0.1) 0 0 1px)
+
+  @media (max-width : 375px)
+    h3
+      font-size: 18px
+
+    h4
+      font-size: 14px
+
+      span.arrow
+        font-size: 20px
+        position: relative
+        top: 2px
+        margin-left: 4px
+
+
+
+

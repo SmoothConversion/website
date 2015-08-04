@@ -1,4 +1,5 @@
 window.DEV_MODE = window.location.toString().indexOf("//localhost:") != -1
+window.IS_TOUCH_DEVICE = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 
 #scroll sidebar horizontal rather than pushing content behind
 $(window).scroll -> $('.sidebar').css('left',-$(window).scrollLeft())
