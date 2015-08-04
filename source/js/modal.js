@@ -99,6 +99,8 @@ if ($(".free-funnel-course.free-course.full-page, .funnel-course-thank-you").len
   });
 
   $('#funnel-modal form').on("submit", function(e) {
+    $.cookie('more-signups-download', moment().toISOString(), {expires: 9999});
+
     if ($("#funnel-modal").data("modal-type") == "slideout"){
       e.preventDefault();
       $form = $(e.target);
@@ -113,7 +115,6 @@ if ($(".free-funnel-course.free-course.full-page, .funnel-course-thank-you").len
         });
       }
 
-      $.cookie('more-signups-download', moment().toISOString(), {expires: 9999});
       closeModal();
       return false;
     }
