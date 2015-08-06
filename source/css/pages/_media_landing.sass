@@ -1,13 +1,142 @@
 .media-landing
 
+  #wrap
+    margin: 0
+    width: 100%
+    min-width: 320px
+
+  header
+    display: none
+
+
   .cover
     img.bg-overlay
       position: absolute
       top: 0
       left: 0
+      width: 100%
 
     img.bg
       width: 100%
 
     img.bg-overlay
       width: 51.1875%
+
+    section.heading
+      position: absolute
+      left: 2.5%
+      top: 0
+      margin-top: 10%
+
+      h1
+        font-family: $heading-font
+        width: 43%
+
+        .row
+          +clearfix
+          height: 2.5rem
+          box-sizing: border-box
+
+        .top
+          background: $blue
+          strong
+            color: white
+
+        .top, .col-left, .col-right
+          text-align: center
+
+        .bottom
+          .col-left
+            float: left
+            background: #ede9e6
+            height: 100%
+            width: 20%
+            span
+              color: $dark-gray
+              text-transform: lowercase
+              font-weight: 100
+
+          .col-right
+            float: right
+            background: $yellow
+            height: 100%
+            width: 80%
+            strong
+              color: white
+
+
+        strong
+          text-transform: uppercase
+          color: white
+          font-weight: bold
+
+      p
+        width: 43%
+        color: white
+
+
+
+  .logo
+    position: absolute
+    top: 0
+    left: 0
+    width: 26.75%
+    background: white
+    line-height: 0
+    text-align: center
+    padding: 0.25% 0
+
+  section.benefits
+    +clearfix
+    width: 100%
+    .col-left
+      +clearfix
+      width: 66.6%
+      float: left
+      list-style: none
+      margin: 0
+      padding: 0
+
+      li
+        float: left
+        display: inline-block
+        width: calc(33.3% - 1px)
+        border-right: 1px solid rgba(#000, 0.1)
+
+        h4
+          font-family: $heading-font
+          font-weight: bold
+          text-transform: uppercase
+          font-size: 1.3rem
+
+        &.ad-revenues
+          img
+            width: 57%
+
+        &.prioritize
+          img
+            width: 37.5%
+
+        &.insight
+          img
+            width: 34.1%
+
+        &:last-of-type
+          border-right: none
+
+    .col-right
+      width: 33.3%
+      float: right
+
+      p
+        font-weight: 200
+
+        strong
+          font-weight: bold
+          color: $green
+
+
+
+
+    img
+      width: 84%
