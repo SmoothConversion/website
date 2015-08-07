@@ -62,19 +62,19 @@ section.diagram
         = " for your business."
     img src="/img/diagram-step3.png"
 
-section.who-for
-  h2.blue-heading
-    | Who is this
-    strong = " for?"
+/ section.who-for
+/   h2.blue-heading
+/     | Who is this
+/     strong = " for?"
 
-  p
-    | While we believe that funnel analysis can benefit just about any company, we specialize in working with web-based
-    strong = " software-as-a-service, ecommerce"
-    | , and
-    strong = " media "
-    | businesses that have at least
-    strong =" $20,000 "
-    | in monthly revenue.
+/   p
+/     | While we believe that funnel analysis can benefit just about any company, we specialize in working with web-based
+/     strong = " software-as-a-service, ecommerce"
+/     | , and
+/     strong = " media "
+/     | businesses that have at least
+/     strong =" $20,000 "
+/     | in monthly revenue.
 
 section.cta.upper
   img.cta-bg src="/img/poker-table.jpg"
@@ -138,64 +138,64 @@ section.bullets.deliverables
       a href="/resources/ExampleFunnelOptimizationpSpreadsheet.xls" download=true
         img src="/img/funnel-analysis-spreadsheet.png" title="Download a (simplified) example spreadsheet."
 
-    li.odd
-      h5 Optional ongoing analytics monitoring, funnel analysis, user experience design, and AB test recommendations.
-      / a
-        / = "See an example AB test recommendation."
+    / li.odd
+    /   h5 Optional ongoing analytics monitoring, funnel analysis, user experience design, and AB test recommendations.
+    /   / a
+    /     / = "See an example AB test recommendation."
 
-section.why-us
-  h2.blue-heading
-    | Why
-    strong = " us?"
+/ section.why-us
+/   h2.blue-heading
+/     | Why
+/     strong = " us?"
 
-  .team-images
-    .dane
-      a href="/team#dane" target="_blank"
-        img src="/img/dane-home.jpg"
-      span.email
-        strong dane
-        = "@smoothconversion.com"
+/   .team-images
+/     .dane
+/       a href="/team#dane" target="_blank"
+/         img src="/img/dane-home.jpg"
+/       span.email
+/         strong dane
+/         = "@smoothconversion.com"
 
-    .spacer
-      = partial "logo"
-      img.bg src="/img/blog/blog-building-sketch.png"
+/     .spacer
+/       = partial "logo"
+/       img.bg src="/img/blog/blog-building-sketch.png"
 
-    .lennon
-      a href="/team#lennon" target="_blank"
-        img src="/img/lennon-home.jpg"
-      span.email
-        strong lennon
-        = "@smoothconversion.com"
+/     .lennon
+/       a href="/team#lennon" target="_blank"
+/         img src="/img/lennon-home.jpg"
+/       span.email
+/         strong lennon
+/         = "@smoothconversion.com"
 
 
 
-  .row
-    .numbers
-      img src="/img/numbers-icon.png"
-      h6
-        | We know
-        br
-        | the numbers
-      p We'll ensure that you collect the analytics data you need,  stay on the right side of statistical significance, and establish reasonable goals for improvement based on industry benchmarks.
+/   .row
+/     .numbers
+/       img src="/img/numbers-icon.png"
+/       h6
+/         | We know
+/         br
+/         | the numbers
+/       p We'll ensure that you collect the analytics data you need,  stay on the right side of statistical significance, and establish reasonable goals for improvement based on industry benchmarks.
 
-    .design
-      img src="/img/design-icon.png"
-      h6
-        | We know
-        br
-        | design and ux
-      p We’re fanatical about top notch design and user experience. Here are some recent examples of our design work:
-      p.links
-        a href="https://padrush.nyc" target="_blank" padrush.nyc
-        a href="http://greatdesign.io/designers.html" target="_blank" greatdesign.io/designers.html
+/     .design
+/       img src="/img/design-icon.png"
+/       h6
+/         | We know
+/         br
+/         | design and ux
+/       p We’re fanatical about top notch design and user experience. Here are some recent examples of our design work:
+/       p.links
+/         a href="https://padrush.nyc" target="_blank" padrush.nyc
+/         a href="http://greatdesign.io/designers.html" target="_blank" greatdesign.io/designers.html
 
-    .tech
-      img src="/img/tech-icon.png"
-      h6
-        | We know
-        br
-        | technology
-      p We’re experienced software engineers with many web and mobile applications under our belts. We can help you accurately estimate difficulty, solve problems efficiently, and avoid technical pitfalls.
+/     .tech
+/       img src="/img/tech-icon.png"
+/       h6
+/         | We know
+/         br
+/         | technology
+/       p We’re experienced software engineers with many web and mobile applications under our belts. We can help you accurately estimate difficulty, solve problems efficiently, and avoid technical pitfalls.
 
 section.cta.lower
   img.cta-bg src="/img/funnel-bg.jpg"
@@ -204,10 +204,11 @@ section.cta.lower
     h4 Let's plug the holes.
     = partial "funnel_audit_form", locals: {subscribe_button: "Get A Free Consultation"}
 
-= partial "ebook-carrot", locals: {index: true}
+
 
 - content_for :post_content do
-  img.footer src="/img/city-sketch.jpg"
+  = partial "/blog/slideout"
+  / img.footer src="/img/city-sketch.jpg"
 
 - if build?
   - content_for :bottom do

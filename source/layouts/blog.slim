@@ -14,8 +14,10 @@
       .content
         = yield
 
+      = partial "/blog/slideout"
+
 javascript:
-  var disqus_shortname = 'smoothconversion'; 
+  var disqus_shortname = 'smoothconversion';
 
   (function () {
   var s = document.createElement('script'); s.async = true;
