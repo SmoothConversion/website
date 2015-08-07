@@ -89,7 +89,7 @@ if ($(".free-funnel-course.free-course.full-page, .funnel-course-thank-you").len
         console.log('ouibounce fired!');
         $(".slideout").css({right: window.slideoutStartRight});
         initOuiModal("exit-intent");
-        heap.track "Exit intent triggered"
+        heap.track("Exit intent triggered");
       }
     });
   }
