@@ -77,6 +77,7 @@ function initOuiModal(modalType){
   if (!window.IS_TOUCH_DEVICE){
     $("#funnel-modal input#fieldEmail").focus();
   }
+
 }
 
 if ($(".free-funnel-course.free-course.full-page, .funnel-course-thank-you").length == 0){
@@ -88,6 +89,7 @@ if ($(".free-funnel-course.free-course.full-page, .funnel-course-thank-you").len
         console.log('ouibounce fired!');
         $(".slideout").css({right: window.slideoutStartRight});
         initOuiModal("exit-intent");
+        heap.track "Exit intent triggered"
       }
     });
   }
