@@ -8,6 +8,7 @@ if ($slideout = $(".slideout")).length and !$.cookie('more-signups-download')
     $(window).scroll ->
       if !triggered and $(window).scrollTop() >= 800
         $slideout.css {"right": "0"}
+        heap.track "Ebook slideout triggered"
         triggered = true
 
     $slideout.on "click", (e)->
