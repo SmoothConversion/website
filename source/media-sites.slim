@@ -57,29 +57,60 @@ section.row.benefits
       p
         | We've found
         strong = " millions "
-        | in uptapped revenue
-        | potential for our
-        | clients
+        | in uptapped revenue potential for our clients.
 
 section.row.clients
 
   .col-left.testimonials
+    .testimonial.first
+      = partial "gretchen"
+
+    .testimonial.last
+      = partial "arnon"
 
   .col-right.logos
-
-
+    img.fp src="/img/report-card-landing/fp-logo.png"
+    img.bv src="/img/report-card-landing/bob-vila-logo.png"
+    img.mishkin src="/img/report-card-landing/mishkin-associates-logo.png"
 
 section.row.process
   .col-left.diagram
     h2
       | The
-      span =" Process"
+      em =" Process"
+
+    .step.first
+    h5
+      span.number ="1."
+      span.text
+        = "We map out "
+        em = "key user paths"
+        = " to determine pageview stats and revenue significance."
+    img src="/img/media-diagram-1.png"
+
+  .step.second
+    h5
+      span.number ="2."
+      span.text
+        = "We examine user experience and mine analytics data to "
+        em ="identify weak spots"
+        = " where visitors drop off unnecessarily."
+    img src="/img/diagram-step2.png"
+
+  .step.third
+    h5
+      span.number ="3."
+      span.text
+        = "We help you "
+        em = "develop a strategy"
+        = " to make targeted, measurable improvements to the most critical areas, increasing pageviews."
+    img src="/img/media-diagram-3.png"
 
 
   .col-right.deliverables
     h2
       | You
-      span = " Receive"
+      em = " Receive"
 
 
 section.row.longform

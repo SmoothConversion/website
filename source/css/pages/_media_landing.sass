@@ -80,19 +80,28 @@
     position: absolute
     top: 0
     left: 0
-    width: 26.75%
+    width: 27.1%
     background: white
     line-height: 0
     text-align: center
     padding: 0.25% 0
 
-  section.benefits
+  #landing-content > section
     +clearfix
+
+    .col-left
+      float: left
+      width: 66.6%
+
+    .col-right
+      float: right
+      width: 33.3%
+
+
+  section.benefits
     width: 100%
     .col-left
       +clearfix
-      width: 66.6%
-      float: left
       list-style: none
       margin: 0
       padding: 0
@@ -125,9 +134,6 @@
           border-right: none
 
     .col-right
-      width: 33.3%
-      float: right
-
       p
         font-weight: 200
 
@@ -135,8 +141,9 @@
           font-weight: bold
           color: $green
 
+  section.clients
+
+  section.process
 
 
 
-    img
-      width: 84%
