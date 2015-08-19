@@ -51,3 +51,15 @@ input
 
   &:-ms-input-placeholder
     @content
+
+.responsive-text
+  $base-width: 1200px
+
+  font-size: 62.5%
+
+  @each $bp in $responsive-breakpoints
+    @media (max-width : $bp)
+      $width-percentage: ($bp - $responsive-min-width) / ($base-width - $responsive-min-width)
+      $responsive-font-size: 62.5% * $width-percentage
+      @debug $responsive-font-size
+      font-size: $responsive-font-size

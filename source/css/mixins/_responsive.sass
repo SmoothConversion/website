@@ -1,0 +1,66 @@
+$responsive-full-width: 1440px
+$responsive-min-width: 320px
+$responsive-breakpoints: $responsive-full-width 1200px 1020px 900px 800px 700px 600px 500px 400px $responsive-min-width
+
+=border($direction,$size, $type, $color)
+  @if $direction == "none"
+    border: $size $type $color
+
+  @if $direction == "top"
+    border-top: $size $type $color
+
+  @if $direction == "left"
+    border-left: $size $type $color
+
+  @if $direction == "right"
+    border-right: $size $type $color
+
+  @if $direction == "bottom"
+    border-bottom: $size $type $color
+
+
+=responsive-border($direction, $type, $color, $max, $min)
+  $diff: $max - $min
+  +border($direction, $max, $type, $color)
+
+  @each $bp in $responsive-breakpoints
+    @media (max-width : $bp)
+      $width-percentage: ($bp - $responsive-min-width) / ($responsive-full-width - $responsive-min-width)
+      $responsive-size:  ceil($min + ($diff * $width-percentage))
+      +border($direction, $responsive-size, $type, $color)
+
+
+=rb-calc($prop, $percentage, $max, $min)
+  $diff: $max - $min
+  #{$prop}: calc(#{$percentage} - #{$max})
+
+  @each $bp in $responsive-breakpoints
+    @media (max-width : $bp)
+      $width-percentage: ($bp - $responsive-min-width) / ($responsive-full-width - $responsive-min-width)
+      $responsive-size:  ceil($min + ($diff * $width-percentage))
+
+      #{$prop}: calc(#{$percentage} - #{$responsive-size})
+
+
+=responsive-prop($prop, $max, $min)
+  $diff: $max - $min
+  #{$prop}: $max
+
+  @each $bp in $responsive-breakpoints
+    @media (max-width : $bp)
+      $width-percentage: ($bp - $responsive-min-width) / ($responsive-full-width - $responsive-min-width)
+      $responsive-size:  ceil($min + ($diff * $width-percentage))
+
+      #{$prop}: $responsive-size
+
+=responsive-border-radius($max, $min)
+  $diff: $max - $min
+  +border-radius($max)
+
+  @each $bp in $responsive-breakpoints
+    @media (max-width : $bp)
+      $width-percentage: ($bp - $responsive-min-width) / ($responsive-full-width - $responsive-min-width)
+      $responsive-size:  ceil($min + ($diff * $width-percentage))
+
+      +border-radius($responsive-size)
+

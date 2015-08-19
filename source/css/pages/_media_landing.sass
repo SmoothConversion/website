@@ -1,20 +1,31 @@
 .media-landing
+  $border-max: 20px
+  $border-min: 4px
+
+  body
+    display: none
 
   #wrap
-    margin: 0
     width: 100%
     min-width: 320px
 
   header
     display: none
 
+  section.bg-cover
+    max-height: 100%
+    overflow: hidden
 
-  .cover
+    > .col-left
+      +clearfix
+
     img.bg-overlay
       position: absolute
       top: 0
       left: 0
       width: 100%
+      max-height: 100%
+
 
     img.bg
       width: 100%
@@ -24,17 +35,18 @@
 
     section.heading
       position: absolute
-      left: 2.5%
+      left: 2.2%
       top: 0
-      margin-top: 10%
+      margin-top: 11%
 
       h1
         font-family: $heading-font
-        width: 43%
+        font-size: 3.7rem
+        width: 39.25%
+        margin: 0
 
         .row
           +clearfix
-          height: 2.5rem
           box-sizing: border-box
 
         .top
@@ -44,6 +56,10 @@
 
         .top, .col-left, .col-right
           text-align: center
+
+
+        .top, .bottom .col-left, .bottom .col-right
+          padding: 2.3% 0
 
         .bottom
           .col-left
@@ -70,9 +86,19 @@
           color: white
           font-weight: bold
 
+        strong, span
+          line-height: 100%
+
       p
-        width: 43%
+        width: 40%
         color: white
+        font-size: 2.5rem
+        line-height: 150%
+        font-weight: 100
+        margin-left: 1.5%
+
+        @media (max-width : 800px)
+          font-size: 2.7rem
 
 
 
@@ -80,70 +106,501 @@
     position: absolute
     top: 0
     left: 0
-    width: 27.1%
-    background: white
+    width: 25.9%
+    background: none
     line-height: 0
     text-align: center
-    padding: 0.25% 0
+    padding: 0.3% 0 0
+
+
+    img
+      width: 80%
 
   #landing-content > section
     +clearfix
 
-    .col-left
-      float: left
-      width: 66.6%
+    &,> .col-left, > .col-right, .inner
+      box-sizing: border-box
 
-    .col-right
-      float: right
-      width: 33.3%
+    > .col-left
+      width: 66.667%
+
+    > .col-right
+      width: 33.333%
+
+    @media (max-width : 800px)
+      display: block
+      > .col-left, > .col-right, .inner
+        width: 100%
 
 
   section.benefits
+    display: flex
     width: 100%
     .col-left
       +clearfix
+      float: none
+      display: flex
       list-style: none
       margin: 0
       padding: 0
 
+      +responsive-border(top, solid, $blue, $border-max, $border-min)
+      +responsive-border(bottom, solid, #bababa, $border-max, $border-min)
+
+      @media (max-width : 800px)
+        +responsive-border(bottom, solid, $yellow, $border-max, $border-min)
+
       li
-        float: left
         display: inline-block
         width: calc(33.3% - 1px)
         border-right: 1px solid rgba(#000, 0.1)
+        text-align: center
+        padding-top: 20.5%
+        position: relative
+        @media (max-width : 625px)
+          padding-top: 22%
+        @media (max-width : 450px)
+          padding-top: 23%
+
+        > div
+          position: absolute
+          bottom: 1.5%
+          width: 100%
+          text-align: center
 
         h4
           font-family: $heading-font
           font-weight: bold
           text-transform: uppercase
-          font-size: 1.3rem
+          font-size: 1.5rem
+          color: #666
+          margin: 8% 0
+
+          @media (max-width : 800px)
+            font-size: 2rem
 
         &.ad-revenues
           img
-            width: 57%
+            width: 50%
 
         &.prioritize
           img
-            width: 37.5%
+            width: 32.5%
 
         &.insight
           img
-            width: 34.1%
+            width: 29.1%
 
         &:last-of-type
           border-right: none
 
     .col-right
+      display: flex
+      float: none
+      +responsive-border(left, solid, $darkest-blue, $border-max, $border-min)
+      @media (max-width : 800px)
+        +responsive-border(bottom, solid, #bababa, $border-max, $border-min)
+        border-left: none
+
+      h3
+        margin: 0
       p
         font-weight: 200
+        margin: 0
+        font-size: 2.1rem
+        line-height: 150%
+        color: #666
 
         strong
           font-weight: bold
           color: $green
 
+        @media (max-width : 800px)
+          font-size: 2.7rem
+
+      .inner
+        +responsive-border(top, solid, $yellow, $border-max, $border-min)
+        +responsive-border(bottom, solid, #bababa, $border-max, $border-min)
+        padding: 0 10%
+        display: flex
+        align-items: center
+
+        @media (max-width : 800px)
+          +responsive-border(left, solid, $darkest-blue, $border-max, $border-min)
+          +responsive-border(right, solid, $darkest-blue, $border-max, $border-min)
+          border-bottom: none
+          display: block
+          border-top: none
+          text-align: center
+          padding: 4% 0
+
   section.clients
+    display: flex
+
+    @media (max-width : 800px)
+      display: flex !important
+      flex-direction: column-reverse
+
+    .testimonials
+      +responsive-border(left, solid, #666, $border-max, $border-min)
+
+      padding: 3.5% 3.5% 3.75%
+
+      @media (max-width : 800px)
+        padding: 5% 5% 5.75%
+
+      .testimonial
+        .text
+          font-size: 1.4rem
+          float: left
+          width: 80%
+
+        .name, .title
+          font-size: 1.3rem
+
+        a img
+          width: 14%
+          margin-right: 4%
+          margin-top: 0.75%
+
+        &.first
+          border-bottom: none
+          padding-bottom: 0
+
+        @media (max-width : 800px)
+          .text
+            font-size: 2.3rem
+
+            .row
+              margin-top: 1%
+
+          .name, .title
+            font-size: 2.1rem
+
+          a img
+            margin-top: 0.5%
+
+
+
+
+    .logos
+      background: #f5f5f5
+      text-align: center
+      +responsive-border(left, solid, $darkest-blue, $border-max, $border-min)
+      +responsive-border(right, solid, #bababa, $border-max, $border-min)
+      display: flex
+      align-items: center
+
+      @media (max-width : 800px)
+        border-left: none
+        border-right: none
+        +responsive-border(bottom, solid, #bababa, $border-max, $border-min)
+
+      > div
+        flex-direction: column
+        padding: 1% 0 2%
+        display: flex
+
+        @media (max-width : 800px)
+          flex-direction: row
+          align-items: center
+          padding: 4% 2.5%
+          .row
+            width: 33.333%
+
+            img
+              margin: 0
+
+            &.bv-text img
+              display: inline-block
+              width: 85%
+
+            &.bv
+              display: none
+
+            &.fp img
+              width: 50%
+
+            &.mishkin img
+              width: 85%
+
+      img
+        height: auto
+        margin-bottom: 8%
+        opacity: 0.7
+
+      .row
+
+        &.bv-text img
+          display: none
+
+        &.bv img, &.fp img
+          width: 25%
+
+        &.mishkin img
+          width: 41%
+          margin-bottom: 0
+
 
   section.process
+    display: flex
+
+    h2
+      font-size: 2rem
+      font-family: $heading-font
+      font-weight: bold
+      margin: 0
+      text-align: center
+      text-transform: uppercase
+      padding: 8% 0
+      line-height: 0
+      @media (max-width : 800px)
+        font-size: 3.5rem
+      em
+        font-style: normal
+
+    .diagram
+      +responsive-border(left, solid, $darkest-blue, $border-max, $border-min)
+      +responsive-border(bottom, solid, $darkest-blue, $border-max, $border-min)
+      padding-bottom: 0
+
+      @media (max-width : 800px)
+        +responsive-border(right, solid, $darkest-blue, $border-max, $border-min)
+        border-bottom: none
+        padding-bottom: 6%
+
+      h2
+        background: $darkest-blue
+        color: white
+        padding: 3.75% 0
+
+        @media (max-width : 800px)
+          padding: 4.5% 0
+
+      em
+        color: $yellow
+
+      .step
+        +clearfix
+        margin: 5.5% 0
+
+        @media (max-width : 800px)
+          margin: 10% 0
+
+
+        h5
+          +clearfix
+          font-size: 1.45rem
+          line-height: 150%
+          width: 90%
+          margin: 0 auto
+          display: block
+          max-width: 90%
+
+          @media (max-width : 800px)
+            font-size: 2.6rem
+
+          span.number
+            width: 4.5%
+            padding: 0.7% 0
+            margin-right: 2%
+            font-size: 1.6rem
+
+            @media (max-width : 800px)
+              width: 6%
+              font-size: 3rem
+              margin-right: 3%
+
+        img
+          display: block
+          margin: 3.5% auto 0
+
+          @media (max-width : 800px)
+            margin: 4% auto 0
+
+
+        &.first img
+          width: 39%
+
+        &.second img
+          width: 30%
+
+        &.third img
+          width: 56%
+
+        @media (max-width : 800px)
+          &.first
+            margin-top: 6%
+            img
+              width: 60%
+
+          &.second img
+            width: 50%
+
+          &.third
+            margin-bottom: 0
+            img
+              width: 80%
+
+
+    .deliverables
+      display: flex
+      +responsive-border(left, solid, $darkest-blue, $border-max, $border-min)
+      position: relative
+
+      .inner
+        +responsive-border(bottom, solid, $blue, $border-max, $border-min)
+        +responsive-border(right, solid, $blue, $border-max, $border-min)
+        width: 100%
+
+      h2
+        background: $blue
+        color: #16304f
+
+        @media (max-width : 800px)
+          padding: 4.5% 0
+
+
+      em
+        color: white
+
+      .items
+        display: flex
+        flex-direction: column
+        position: absolute
+        +rb-calc(width, 100%, $border-max, $border-min)
+        +rb-calc(height, 90.5%, $border-max, $border-min)
+        top: 9.5%
+
+        @media (max-width : 800px)
+          position: static
+          width: 100%
+
+      .deliverable
+        +clearfix
+        flex: 1
+        display: flex
+        align-items: center
+        padding: 0 7.5%
+
+        @media (max-width : 800px)
+          padding: 5% 7.5%
+
+        .col-left
+          float: left
+          width: 15%
+          text-align: center
+
+          @media (max-width : 800px)
+            width: 10%
+
+        .col-right
+          float: right
+          width: 75%
+          margin-left: 5%
+
+          font-size: 1.2rem
+          line-height: 160%
+          color: #737373
+
+          @media (max-width : 800px)
+            font-size: 2.2rem
+            width: 90%
+
+        strong
+          color: $blue
+
+        &.ux
+          .col-left img
+            width: 74.5%
+
+        &.analytics
+          background: #f2f2f2
+          .col-left img
+            width: 89.4%
+
+        &.spreadsheet
+          .col-left img
+            width: 76.2%
+
+        &.strategy
+          background: #f2f2f2
+          .col-left img
+            width: 92.7%
+
+  section.longform
+    +responsive-border(right, solid, $blue, $border-max, $border-min)
+    +responsive-border(left, solid, $darkest-blue, $border-max, $border-min)
+
+    padding: 3% 8% 15%
+
+    p
+      font-size: 2.1rem
+      font-weight: 200
+      color: #666
+      line-height: 180%
+      max-width: 750px
+      margin-left: auto
+      margin-right: auto
+      text-align: center
+
+      @media (max-width : 800px)
+        font-size: 2.6rem
+
+    strong
+      color: $green
+
+    form
+      margin-top: 6%
+
+      input
+        display: block
+        margin: 3% auto
+
+
+      input[type=text], input[type=email]
+        font-size: 1.5rem
+        padding: 1.5%
+        width: 80%
+        max-width: 600px
+
+        @media (max-width : 800px)
+          font-size: 2rem
+
+
+      input.outline-button
+        font-size: 2rem
+        font-family: $heading-font
+        border: solid 2px $green
+        font-weight: bold
+        background: $green
+        color: white
+        margin-top: 6%
+        text-transform: uppercase
+        padding: 1.8% 3.6%
+        +responsive-border-radius(15px,5px)
+
+        @media (max-width : 800px)
+          font-size: 2.6rem
+
+  div.footer
+    margin: -17.5% 0
+    position: relative
+    overflow: hidden
+
+    img
+      position: relative
+      left: -1%
+      width: 102%
+      max-width: 102%
+      min-width: 0
+
+
+
+
+
+
 
 
 

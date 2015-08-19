@@ -80,6 +80,12 @@ function initOuiModal(modalType){
 
 }
 
+function closeModal(){
+  $('#funnel-modal').hide();
+  $("body").css("overflow", "visible");
+  $(".slideout").css({right: window.slideoutStartRight});
+}
+
 if ($(".free-funnel-course.free-course.full-page, .funnel-course-thank-you").length == 0){
   if (!$.cookie('more-signups-download')){
     window.ouibounceModal = ouibounce(document.getElementById('funnel-modal'), {
@@ -123,13 +129,6 @@ if ($(".free-funnel-course.free-course.full-page, .funnel-course-thank-you").len
 
     return true;
   });
-
-  function closeModal(){
-    $('#funnel-modal').hide();
-    $("body").css("overflow", "visible");
-    $(".slideout").css({right: window.slideoutStartRight});
-  }
-
 
 
   // To stop exit intent on blog post if you've already seen the post's CTA:
