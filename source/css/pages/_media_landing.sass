@@ -1,6 +1,4 @@
 .media-landing
-  $border-max: 20px
-  $border-min: 4px
 
   body
     display: none
@@ -116,17 +114,38 @@
     img
       width: 80%
 
+  $col-left-width: 65.7299%
+
   #landing-content > section
     +clearfix
+    position: relative
 
     &,> .col-left, > .col-right, .inner
       box-sizing: border-box
 
     > .col-left
-      width: 66.667%
+      width: $col-left-width
+      float: left
 
     > .col-right
-      width: 33.333%
+      width: 32.8649%
+      float: right
+
+    .border-col.border-middle
+      background: $darkest-blue
+      width: 1.405%
+      position: absolute
+      top: 0
+      height: 100%
+      left: $col-left-width
+
+    .col-left .border-row
+      padding-top: 2.112%
+      width: 100%
+
+    .col-right .border-row
+      padding-top: 4.225%
+      width: 100%
 
     @media (max-width : 800px)
       display: block
@@ -135,37 +154,30 @@
 
 
   section.benefits
-    display: flex
     width: 100%
+
     .col-left
       +clearfix
-      float: none
-      display: flex
-      list-style: none
-      margin: 0
-      padding: 0
 
-      +responsive-border(top, solid, $blue, $border-max, $border-min)
-      +responsive-border(bottom, solid, #bababa, $border-max, $border-min)
+      ul
+        list-style: none
+        margin: 0
+        padding: 0
 
       @media (max-width : 800px)
-        +responsive-border(bottom, solid, $yellow, $border-max, $border-min)
+
 
       li
-        display: inline-block
+        display: table-cell
+        vertical-align: bottom
+        float: left
         width: calc(33.3% - 1px)
         border-right: 1px solid rgba(#000, 0.1)
         text-align: center
-        padding-top: 20.5%
+        padding-top: 3.5%
         position: relative
-        @media (max-width : 625px)
-          padding-top: 22%
-        @media (max-width : 450px)
-          padding-top: 23%
 
         > div
-          position: absolute
-          bottom: 1.5%
           width: 100%
           text-align: center
 
@@ -185,10 +197,12 @@
             width: 50%
 
         &.prioritize
+          padding-top: 2.4%
           img
             width: 32.5%
 
         &.insight
+          padding-top: 3.2%
           img
             width: 29.1%
 
@@ -196,12 +210,13 @@
           border-right: none
 
     .col-right
-      display: flex
-      float: none
-      +responsive-border(left, solid, $darkest-blue, $border-max, $border-min)
+      .inner
+        padding: 2% 7%
+
       @media (max-width : 800px)
-        +responsive-border(bottom, solid, #bababa, $border-max, $border-min)
-        border-left: none
+        display: block
+        text-align: center
+        padding: 4% 0
 
       h3
         margin: 0
@@ -219,33 +234,17 @@
         @media (max-width : 800px)
           font-size: 2.7rem
 
-      .inner
-        +responsive-border(top, solid, $yellow, $border-max, $border-min)
-        +responsive-border(bottom, solid, #bababa, $border-max, $border-min)
-        padding: 0 10%
-        display: flex
-        align-items: center
+    .col-left .border-row
+      background: $blue
 
-        @media (max-width : 800px)
-          +responsive-border(left, solid, $darkest-blue, $border-max, $border-min)
-          +responsive-border(right, solid, $darkest-blue, $border-max, $border-min)
-          border-bottom: none
-          display: block
-          border-top: none
-          text-align: center
-          padding: 4% 0
+    .col-right .border-row
+      background: $yellow
 
   section.clients
-    display: flex
-
-    @media (max-width : 800px)
-      display: flex !important
-      flex-direction: column-reverse
 
     .testimonials
-      +responsive-border(left, solid, #666, $border-max, $border-min)
-
-      padding: 3.5% 3.5% 3.75%
+      .inner
+        padding: 3.5% 3.5% 3.75%
 
       @media (max-width : 800px)
         padding: 5% 5% 5.75%
@@ -281,71 +280,72 @@
           a img
             margin-top: 0.5%
 
+    .border-row.border-top
+      background-color: #bababa
 
 
+  #landing-content .logos
+    background: #f5f5f5
+    text-align: center
 
-    .logos
-      background: #f5f5f5
-      text-align: center
-      +responsive-border(left, solid, $darkest-blue, $border-max, $border-min)
-      +responsive-border(right, solid, #bababa, $border-max, $border-min)
-      display: flex
-      align-items: center
+    .border-row.border-top
+      padding-top: 2.275%
 
-      @media (max-width : 800px)
-        border-left: none
-        border-right: none
-        +responsive-border(bottom, solid, #bababa, $border-max, $border-min)
-
-      > div
-        flex-direction: column
-        padding: 1% 0 2%
-        display: flex
-
-        @media (max-width : 800px)
-          flex-direction: row
-          align-items: center
-          padding: 4% 2.5%
-          .row
-            width: 33.333%
-
-            img
-              margin: 0
-
-            &.bv-text img
-              display: inline-block
-              width: 85%
-
-            &.bv
-              display: none
-
-            &.fp img
-              width: 50%
-
-            &.mishkin img
-              width: 85%
-
-      img
-        height: auto
-        margin-bottom: 8%
-        opacity: 0.7
+    &.mobile-only
+      display: none
 
       .row
+        display: inline-block
 
-        &.bv-text img
-          display: none
+    @media (max-width : 800px)
+      display: none
 
-        &.bv img, &.fp img
-          width: 25%
+      &.mobile-only
+        display: block
 
-        &.mishkin img
-          width: 41%
-          margin-bottom: 0
+    > div
+      padding: 7% 0 2%
+      width: 100%
+      overflow: hidden
+
+      @media (max-width : 800px)
+        padding: 4% 2.5%
+        .row
+          width: 33.333%
+
+          img
+            margin: 0
+
+          &.bv-text img
+            display: inline-block
+            width: 85%
+
+          &.fp img
+            width: 50%
+
+          &.mishkin img
+            width: 85%
+
+    img
+      height: auto
+      margin-bottom: 8%
+      opacity: 0.7
+
+    .row
+
+      &.bv-text img
+        display: none
+
+      &.bv img, &.fp img
+        width: 25%
+
+      &.mishkin img
+        width: 41%
+        margin-bottom: 0
 
 
   section.process
-    display: flex
-
+    position: relative
     h2
       font-size: 2rem
       font-family: $heading-font
@@ -353,7 +353,6 @@
       margin: 0
       text-align: center
       text-transform: uppercase
-      padding: 8% 0
       line-height: 0
       @media (max-width : 800px)
         font-size: 3.5rem
@@ -361,12 +360,12 @@
         font-style: normal
 
     .diagram
-      +responsive-border(left, solid, $darkest-blue, $border-max, $border-min)
-      +responsive-border(bottom, solid, $darkest-blue, $border-max, $border-min)
+
+
       padding-bottom: 0
 
       @media (max-width : 800px)
-        +responsive-border(right, solid, $darkest-blue, $border-max, $border-min)
+
         border-bottom: none
         padding-bottom: 6%
 
@@ -445,33 +444,28 @@
 
 
     .deliverables
-      display: flex
-      +responsive-border(left, solid, $darkest-blue, $border-max, $border-min)
-      position: relative
+      position: absolute
+      right: 0
+      top: 0
+      height: 100%
 
-      .inner
-        +responsive-border(bottom, solid, $blue, $border-max, $border-min)
-        +responsive-border(right, solid, $blue, $border-max, $border-min)
-        width: 100%
+      @media (max-width : 800px)
+        position: static
 
       h2
         background: $blue
         color: #16304f
+        padding: 7.5% 0
 
         @media (max-width : 800px)
           padding: 4.5% 0
-
 
       em
         color: white
 
       .items
-        display: flex
-        flex-direction: column
         position: absolute
-        +rb-calc(width, 100%, $border-max, $border-min)
-        +rb-calc(height, 90.5%, $border-max, $border-min)
-        top: 9.5%
+        height: 90%
 
         @media (max-width : 800px)
           position: static
@@ -479,26 +473,27 @@
 
       .deliverable
         +clearfix
-        flex: 1
-        display: flex
-        align-items: center
+        display: table
         padding: 0 7.5%
+        height: 25%
 
         @media (max-width : 800px)
           padding: 5% 7.5%
 
         .col-left
-          float: left
-          width: 15%
+          display: table-cell
+          vertical-align: middle
           text-align: center
+          width: 15%
 
           @media (max-width : 800px)
             width: 10%
 
         .col-right
-          float: right
-          width: 75%
-          margin-left: 5%
+          display: table-cell
+          vertical-align: middle
+          padding-left: 7.5%
+          padding-right: 2.5%
 
           font-size: 1.2rem
           line-height: 160%
@@ -530,8 +525,8 @@
             width: 92.7%
 
   section.longform
-    +responsive-border(right, solid, $blue, $border-max, $border-min)
-    +responsive-border(left, solid, $darkest-blue, $border-max, $border-min)
+
+
 
     padding: 3% 8% 15%
 

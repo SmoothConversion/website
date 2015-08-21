@@ -36,25 +36,30 @@ og_url:
 
 
 section.row.benefits
-  ul.col-left
-    li.ad-revenues
-      div
-        img src="/img/icon-ad-revenue.png"
-        h4 Increase ad revenues
+  .col-left
+    .border-row.border-top
+    ul
+      li.ad-revenues
+        div
+          img src="/img/icon-ad-revenue.png"
+          h4 Increase ad revenues
 
 
-    li.prioritize
-      div
-        img src="/img/icon-prioritize-features.png"
-        h4 Prioritize effectively
+      li.prioritize
+        div
+          img src="/img/icon-prioritize-features.png"
+          h4 Prioritize effectively
 
 
-    li.insight
-      div
-        img src="/img/icon-gain-insight.png"
-        h4 Gain new insight
+      li.insight
+        div
+          img src="/img/icon-gain-insight.png"
+          h4 Gain new insight
+
+  .border-col.border-middle
 
   .col-right
+    .border-row.border-top
     .inner
       h3
         p
@@ -62,19 +67,32 @@ section.row.benefits
           strong = " millions "
           | in untapped revenue potential for our media clients.
 
+section.row.logos.mobile-only
+  div
+    .row.bv-text
+      img src="/img/report-card-landing/bob-vila-logo-text.png"
+    .row.fp
+      img src="/img/fp-logo.png"
+    .row.mishkin
+      img src="/img/mishkin-associates-logo.png"
+
 section.row.clients
-
   .col-left.testimonials
-    .testimonial.first
-      = partial "gretchen"
+    .border-col.border-left
+    .border-row.border-top
 
-    .testimonial.last
-      = partial "arnon"
+    .inner
+      .testimonial.first
+        = partial "gretchen"
+
+      .testimonial.last
+        = partial "arnon"
+
+  .border-col.border-middle
 
   .col-right.logos
+    .border-row.border-top
     div
-      .row.bv-text
-        img src="/img/report-card-landing/bob-vila-logo-text.png"
       .row.bv
         img src="/img/bv-logo.png"
       .row.fp
@@ -82,8 +100,11 @@ section.row.clients
       .row.mishkin
         img src="/img/mishkin-associates-logo.png"
 
+    .border-col.border-right
+
 section.row.process
   .col-left.diagram
+    .border-col.border-left
     h2
       | The
       em =" Process"
@@ -115,48 +136,54 @@ section.row.process
           = " to make targeted, measurable improvements to the most critical areas, increasing pageviews and revenues."
       img src="/img/media-diagram-3.png"
 
+    .border-row.border-bottom
+
+  .border-col.border-middle
+
   .col-right.deliverables
-    .inner
-      h2
-        | You
-        em = " Receive"
+    h2
+      | You
+      em = " Receive"
 
-      .items
-        .deliverable.ux
-          .col-left
-            img src="/img/icon-hurdle.png"
+    .items
+      .deliverable.ux
+        .col-left
+          img src="/img/icon-hurdle.png"
 
-          .col-right
-            | A
-            strong =" user experience report "
-            | that highlights critical paths and identifies points with high friction.
+        .col-right
+          | A
+          strong =" user experience report "
+          | that highlights critical paths and identifies points with high friction.
 
-        .deliverable.analytics
-          .col-left
-            img src="/img/icon-analytics.png"
+      .deliverable.analytics
+        .col-left
+          img src="/img/icon-analytics.png"
 
-          .col-right
-            | An
-            strong =" analytics report "
-            | that tells you how well you're tracking user behavior and points out anything that's missing.
+        .col-right
+          | An
+          strong =" analytics report "
+          | that tells you how well you're tracking user behavior and points out anything that's missing.
 
-        .deliverable.spreadsheet
-          .col-left
-            img src="/img/icon-spreadsheet.png"
+      .deliverable.spreadsheet
+        .col-left
+          img src="/img/icon-spreadsheet.png"
 
-          .col-right
-            | A
-            strong =" spreadsheet model "
-            | that puts key conversion rates and financial projections in one place so you can estimate ROI for potential projects.
+        .col-right
+          | A
+          strong =" spreadsheet model "
+          | that puts key conversion rates and financial projections in one place so you can estimate ROI for potential projects.
 
-        .deliverable.strategy
-          .col-left
-            img src="/img/icon-strategy.png"
+      .deliverable.strategy
+        .col-left
+          img src="/img/icon-strategy.png"
 
-          .col-right
-            | A
-            strong =" strategy session "
-            | that sums up our findings and shows you where to focus for the largest gains.
+        .col-right
+          | A
+          strong =" strategy session "
+          | that sums up our findings and shows you where to focus for the largest gains.
+
+    .border-col.border-right
+    .border-row.border-bottom
 
 section.row.longform
   / p
@@ -168,10 +195,14 @@ section.row.longform
   /   =" how much "
   /   | you're leaving on the table.
 
+  .border-col.border-left
+
   p
     strong Find out where you're strong, where you're weak, and how much you're leaving on the table.
 
   = partial "funnel_audit_form", locals: {subscribe_button: "Get A Free Consultation"}
+
+  .border-col.border-right
 
 - content_for :post_content do
 
