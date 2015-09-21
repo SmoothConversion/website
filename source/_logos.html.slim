@@ -1,0 +1,19 @@
+- fp = {class: "fp", filepath: "/img/report-card-landing/fp-logo.png"}
+- bv = {class: "bv", filepath: "/img/report-card-landing/bob-vila-logo.png"}
+- seamly = {class: "seamly", filepath: "/img/content-homepage/seamly-logo.png"}
+- webster = {class: "webster", filepath: "/img/content-homepage/webster-logo.png"}
+- reserbus = {class: "reserbus", filepath: "/img/report-card-landing/reserbus-logo.png"}
+- genie = {class: "genie", filepath: "/img/report-card-landing/genie-logo.png"}
+
+- if logos_type == "desktop"
+  - logo_order = [fp, bv, seamly, webster, reserbus, genie]
+  - logo_order.each do |logo|
+    = partial "logo_template", locals: {logo: logo}
+- else
+  = partial "logo_template", locals: {logo: fp}
+  .mid-logo-container
+    = partial "logo_template", locals: {logo: webster}
+    = partial "logo_template", locals: {logo: seamly}
+  = partial "logo_template", locals: {logo: genie}
+  = partial "logo_template", locals: {logo: bv}
+  = partial "logo_template", locals: {logo: reserbus}

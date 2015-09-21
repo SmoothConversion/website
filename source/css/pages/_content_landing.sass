@@ -1,5 +1,7 @@
 .content-homepage-container
   width: 950px
+  @media (max-width : 800px)
+    width: 100%
 
   .clear
     clear: both
@@ -7,49 +9,78 @@
   a
     text-decoration: none
 
-  .hero-image
-    background-image: image-url('content-homepage/temp-hero.png')
-    background-size: 100%
-    text-align: center
-    padding: 2.5em 0
+  .hero-image-container
     width: 100%
+    overflow: hidden
 
-    h1
-      background-color: #5789C4
-      text-transform: uppercase
-      width: 30%
-      margin: 0 auto
-      padding: 0.25em 0
-      color: white
-      font-family: "Quicksand"
-      font-size: 1.75rem
+    .hero-image
+      background-image: image-url('content-homepage/temp-hero.png')
+      background-size: 100%
+      text-align: center
+      padding: 2.5em 0
+      width: 100%
+      @media (max-width : 800px)
+        width: 160%
+        margin-left: -30%
+      @media (max-width : 615px)
+        width: 200%
+        margin-left: -50%
+      @media (max-width : 540px)
+        width: 250%
+        margin-left: -75%
+      @media (max-width : 450px)
+        width: 300%
+        margin-left: -100%
 
-    h2
-      color: white
-      text-transform: uppercase
-      font-size: 1rem
-      letter-spacing: 0.5rem
-      font-weight: 200
-      font-family: "Quicksand"
+      h1
+        background-color: #5789C4
+        text-transform: uppercase
+        width: 30%
+        margin: 0 auto
+        padding: 0.25em 0
+        color: white
+        font-family: "Quicksand"
+        font-size: 1.75rem
 
-      span
-        color: #946612
-        font-weight: bold
+      h2
+        color: white
+        text-transform: uppercase
+        font-size: 1rem
+        letter-spacing: 0.5rem
+        font-weight: 200
+        font-family: "Quicksand"
 
-    p
-      color: white
-      font-family: "Merriweather"
-      font-size: 0.91rem
-      font-weight: 200
-      width: 540px
-      margin: 0 auto
+        span
+          color: $yellow
+          font-weight: bold
+
+      p
+        color: white
+        font-family: "Merriweather"
+        font-size: 0.91rem
+        font-weight: 200
+        width: 540px
+        margin: 0 auto
+        @media (max-width : 615px)
+          width: 500px
+        @media (max-width : 570px)
+          width: 400px
+        @media (max-width : 450px)
+          width: 335px
 
   .logos
     width: 100%
     padding: 2em 4em
+    @media (max-width : 800px)
+      width: 340px
+      margin-left: auto
+      margin-right: auto
+      padding-left: 0
+      padding-right: 0
 
     img
       margin-right: 25px
+      vertical-align: top
 
     .fp
       width: 84px
@@ -64,37 +95,91 @@
     .genie
       width: 90px
 
-  .headers
-    font-family: "Quicksand"
-    text-transform: uppercase
+  .logos.desktop-logos
+    @media (max-width : 800px)
+      display: none
 
+  .logos.mobile-logos
+    display: none
+    @media (max-width : 800px)
+      display: block
+
+    .mid-logo-container
+      display: inline-block
+      vertical-align: top
+
+      .webster
+        margin-bottom: 6px
+
+      .seamly
+        display: block
+        width: 108px
+
+    .bv, .reserbus
+      margin-top: 15px
+      display: inline-block
+
+    .bv
+      margin-right: 44px
+      height: 30px
+
+    .genie
+      width: 96px
+
+    .genie, .reserbus
+      margin-right: 0
+
+  .content-column
     h1
       font-weight: 200
       font-size: 1.75rem
       text-align: center
+      font-family: "Quicksand"
+      text-transform: uppercase
 
     .resources
       background-color: #598AC5
       color: white
       width: 66%
       float: left
+      width: 100%
 
     .services
       color: #1E3F6A
       width: 34%
       background-color: #FBCB6B
       float: left
+      width: 100%
 
   .resources-content
-    padding: 1.5em 1em
     float: left
-    width: 596px
+    width: 630px
+    @media (max-width : 800px)
+      width: 100%
+
+    .lower-column
+      padding: 1.5em 1em
+      @media (max-width : 800px)
+        padding-left: 0
+        padding-right: 0
 
     .content-box
       width: 595px
+      @media (max-width : 800px)
+        margin-right: auto
+        margin-left: auto
+      @media (max-width : 610px)
+        width: 100%
 
     .email-course
       background-image: image-url('content-homepage/email-course.jpg')
+
+      .dane-thumb.mobile-thumb
+        display: none
+        @media (max-width : 610px)
+          display: block
+          float: left
+          width: 20%
 
       h2
         font-family: "Quicksand"
@@ -109,6 +194,11 @@
         font-size: 1.25rem
         padding: 0.2em 1em
         margin: 0.6em 0 0
+        @media (max-width : 610px)
+          clear: none
+          margin-top: 0
+          float: left
+          width: auto
 
       h2.how-to
         color: white
@@ -117,15 +207,37 @@
         padding: 0.3em 0.6em
         font-size: 1.45rem
         margin-bottom: 0
+        @media (max-width : 610px)
+          font-size: 1.2rem
+          width: 59%
+          float: left
+          margin-top: 0
+
+      .desktop-clear
+        clear: both
+        @media (max-width : 610px)
+          clear: none
 
       .bottom
-        .dane-thumb
+        .dane-thumb.desktop-thumb
           float: left
+          @media (max-width : 610px)
+            display: none
         p
           float: left
           color: white
           margin-left: 1em
           font-size: 1rem
+          @media (max-width : 610px)
+            margin-bottom: 0
+          @media (max-width : 520px)
+            font-size: 0.9rem
+            margin-top: 18px
+          @media (max-width : 485px)
+            font-size: 0.8rem
+            margin-top: 19px
+          @media (max-width : 440px)
+            font-size: 0.7rem
 
           span
             font-weight: bold
@@ -138,6 +250,8 @@
           font-weight: bold
           padding: 0.25em 0.75em 0.25em 1.5em
           margin-top: 1.1em
+          @media (max-width : 410px)
+            padding: 0.15em 0.5em 0.15em 1em
 
           img
             margin: 0 0.2em 0 1.5em
@@ -146,37 +260,86 @@
       background-color: #F5F5F5
       border: 1px solid #E4E4E4
       margin-top: 2em
+      @media (max-width : 610px)
+      border-left: none
 
       img.lennon-thumb
         float: left
         border-right: 1px solid #E4E4E4
+        @media (max-width : 610px)
+          width: 20%
 
       .top-right
         float: left
         width: 425px
         padding: 20px 20px 0
+        @media (max-width : 610px)
+          width: 74%
+          padding: 0.75rem 0 0 1rem
+        @media (max-width : 550px)
+          padding-top: 0.5rem
+        @media (max-width : 490px)
+          padding-top: 0.3rem
+        @media (max-width : 430px)
+          padding-top: 0.15rem
+
 
         h2
           color: #789147
           font-family: "Quicksand"
           font-size: 1.45rem
           margin-top: 0
+          @media (max-width : 610px)
+            margin-bottom: 0.4rem
+            font-size: 1.3rem
+          @media (max-width : 550px)
+            margin-bottom: 0
+            font-size: 1.1rem
 
         p
           color: #4D4D4D
           font-size: 0.9rem
           line-height: 1.7rem
+          @media (max-width : 610px)
+            font-size: 0.8rem
+            line-height: 1.5rem
+          @media (max-width : 550px)
+            line-height: 1.4rem
+            margin-top: 0.4rem
+          @media (max-width : 490px)
+            margin: 0.3rem
+            font-size: 0.7rem
+            line-height: 1.2rem
+
 
       .bottom
         img.report-card
           border-left: 1px solid #B3B4B4
           float: left
+          @media (max-width : 610px)
+            width: 20%
 
         .right-content
           background-color: #5789C4
           width: 436px
           float: left
           padding: 7px 15px
+          @media (max-width : 610px)
+            width: 73.8%
+            padding: 5px 3%
+          @media (max-width : 550px)
+            padding-top: 4px
+            padding-bottom: 4px
+          @media (max-width : 525px)
+            padding-top: 3px
+            padding-bottom: 3px
+          @media (max-width : 501px)
+            width: 73.7%
+            padding-top: 2px
+            padding-bottom: 2px
+          @media (max-width : 475px)
+            padding-top: 2px
+            padding-bottom: 2px
 
           h4
             text-transform: uppercase
@@ -184,10 +347,24 @@
             font-family: "Quicksand"
             font-size: 0.9rem
             margin: 0
+            @media (max-width : 610px)
+              font-size: 0.8em
+              display: inline-block
 
           h4.label
             color: #1A385E
             margin-right: 50px
+            @media (max-width : 610px)
+              margin-right: 0
+
+          h4.label.desktop-label
+            @media (max-width : 610px)
+              display: none
+
+          h4.label.mobile-label
+            display: none
+            @media (max-width : 610px)
+              display: block
 
           h4.website
             color: white
@@ -197,19 +374,45 @@
             float: left
             margin-top: 9px
 
+          .cta-container
+            @media (max-width : 610px)
+              float: right
+
     .blog-posts
       margin-top: 2em
+      @media (max-width : 800px)
+        margin-right: auto
+        margin-left: auto
+        width: 598px
+      @media (max-width : 610px)
+        width: 100%
+        margin-bottom: 1.5rem
+
+      .mobile-clear
+        @media (max-width : 610px)
+          clear: both
 
       .post.margin-right
         margin-right: 40px
+        @media (max-width : 610px)
+          margin-right: 0
 
       .post
         float: left
         width: 278px
+        @media (max-width : 610px)
+          width: 100%
+          float: none
+          margin-bottom: 1.5em
+          clear: both
 
         .cover
           width: 278px
           height: 135px
+          @media (max-width : 610px)
+            width: 34%
+            height: 0
+            float: left
 
           .post-thumb
             height: 100%
@@ -217,6 +420,19 @@
             -moz-background-size: cover
             -webkit-background-size: cover
             background-position: center
+            @media (max-width : 610px)
+              padding-top: 50%
+
+        .title-container
+          background-color: $very-light-gray
+          min-height: 102px
+          @media (max-width : 610px)
+            min-height: 0
+            float: right
+            width: 66%
+            position: relative
+            padding-bottom: 17%
+            height: 0
 
         h3
           font-family: "Quicksand"
@@ -225,21 +441,44 @@
           padding: 15px
           margin-top: 0
           line-height: 1.5rem
+          @media (max-width : 610px)
+            position: absolute
+            width: 93%
+            height: 100%
+            font-size: 1rem
+            line-height: 1.4rem
+          @media (max-width : 560px)
+            top: -8px
+          @media (max-width : 560px)
+            font-size: 0.9rem
+            line-height: 1.3rem
+          @media (max-width : 560px)
+            font-size: 0.8rem
+            line-height: 1.2rem
+            top: -10px
+
+
 
   .services-content
     float: left
     width: 317px
+    @media (max-width : 800px)
+      width: 100%
 
-    h1
+    h1.banner
       background-color: #505050
       font-family: "Quicksand"
       color: white
       text-transform: uppercase
       font-size: 0.9rem
       text-align: center
+      font-weight: bold
       width: 281px
-      margin: 1.8em auto 0.5em
+      margin: 1.8em auto 0
       padding: 0.4em 0
+      @media (max-width : 800px)
+        width: 100%
+        margin-top: 0
 
     img
       width: 256px
@@ -256,6 +495,11 @@
     .subheadline
       text-align: center
       margin-bottom: 2.5em
+      background-color: $very-light-gray
+      width: 281px
+      padding: 1em 0
+      @media (max-width : 800px)
+        width: 100%
 
     .learn-more
       background-color: #678300
