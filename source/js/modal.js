@@ -81,18 +81,18 @@ function initOuiModal(modalType){
 }
 
 if ($(".free-funnel-course.free-course.full-page, .funnel-course-thank-you").length == 0){
-  if (!$.cookie('more-signups-download')){
-    window.ouibounceModal = ouibounce(document.getElementById('funnel-modal'), {
-      aggressive: window.DEV_MODE,
-      cookieExpire: 60,
-      callback: function() {
-        console.log('ouibounce fired!');
-        $(".slideout").css({right: window.slideoutStartRight});
-        initOuiModal("exit-intent");
-        heap.track("Exit intent triggered");
-      }
-    });
-  }
+  // if (!$.cookie('more-signups-download')){
+  //   window.ouibounceModal = ouibounce(document.getElementById('funnel-modal'), {
+  //     aggressive: window.DEV_MODE,
+  //     cookieExpire: 60,
+  //     callback: function() {
+  //       console.log('ouibounce fired!');
+  //       $(".slideout").css({right: window.slideoutStartRight});
+  //       initOuiModal("exit-intent");
+  //       heap.track("Exit intent triggered");
+  //     }
+  //   });
+  // }
 
   $("#funnel-modal .underlay, #funnel-modal .modal-footer h3").on('click', closeModal);
 
