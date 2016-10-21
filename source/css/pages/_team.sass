@@ -49,6 +49,7 @@ section.team
     padding: 10px 40px
     font-size: $team-body-font
     line-height: $team-body-line-height
+    min-height: 510px
 
     a, a:visited, a:hover
       text-decoration: none
@@ -56,13 +57,13 @@ section.team
       font-weight: bold
 
   &#dane .name-bar
-    background: $dark-blue
+    background: $green
 
   &#lennon .name-bar
     background: $dark-yellow
 
   &#dante .name-bar
-    background: $green
+    background: $dark-blue
 
 @media (max-width : 800px)
   section.team
@@ -73,6 +74,7 @@ section.team
       font-size: $mobile-font-multiplier * $team-body-font
       line-height: $mobile-font-multiplier * $team-body-line-height
       padding: 1.5% 6%
+      min-height: auto
     .name-bar
       padding: 17px 0px 24px 0px
       text-align: center
