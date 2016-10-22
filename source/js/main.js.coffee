@@ -87,8 +87,6 @@ if $(".index-page").length
   landingResponsive()
   $(window).resize landingResponsive
 
-$("body").css visibility: "visible"
-
 $ ->
   $(".utm-input").attr("value", getParameterByName("utm"))
 
@@ -209,6 +207,7 @@ if $(".funnel-analysis").length or $(".funnel-thank-you").length
 
   $ ->
     $("body").show()
+    $("body").css visibility: "visible"
     scaleFn()
     setTimeout(verticallyCenterCtaContent, 152)
     setTimeout(verticallyCenterCtaContent, 1000)

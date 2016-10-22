@@ -1,0 +1,69 @@
+.diagram
+  background: #fff url(/img/grid-bg.png) repeat
+  background-size: 256px 192px
+  padding-bottom: 8.3%
+
+  .step
+    padding: 0 6%
+    h5
+      font-family: $heading-font
+      font-weight: 700
+      font-size: 18px
+      color: $dark-gray
+      text-align: left
+      max-width: 685px
+      line-height: 150%
+      display: table
+      vertical-align: middle
+      margin: 8.3% auto 4.5% auto
+
+      @media (max-width : 800px)
+        margin: 16% auto 8% auto
+        font-size: 14px
+
+      @media (max-width : 600px)
+        font-size: 13px
+
+      > span
+        display: table-cell
+        vertical-align: middle
+
+      .number
+        float: left
+        text-align: center
+        display: inline-block
+        width: 36px
+        padding: 0.6rem 0
+        padding: 6px 0
+        font-size: 24px
+        margin-right: 15px
+        margin-right: 1.5rem
+        background: $yellow
+        color: $dark-brown
+
+        @media (max-width : 800px)
+          font-size: 18px
+          width: 28px
+          margin-right: 3rem
+
+      em
+        font-style: normal
+        text-decoration: underline
+
+    &.first
+      h5
+        @media (max-width : 800px)
+          margin-top: 10%
+
+
+    &.first, &.third
+      img
+        width: 100%
+        max-width: 617px
+
+
+
+    &.second
+      img
+        width: 70%
+        max-width: 427px

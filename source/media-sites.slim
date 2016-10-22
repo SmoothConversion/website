@@ -1,0 +1,215 @@
+---
+title: Smooth Conversion - User Flow Analysis For Media Websites
+seo_meta_description: We dive into your site’s user experience and behavioral data, uncovering opportunities to maximize pageviews.
+og_title: Smooth Conversion - User Flow Analysis For Media Websites
+og_description: We dive into your site’s user experience and behavioral data, uncovering opportunities to maximize pageviews.
+og_img:
+og_url:
+---
+
+- content_for :page_class, " media-landing service responsive-text"
+
+- content_for :pre_content do
+  section.row.bg-cover
+    img.bg src="/img/media-cover2.jpg"
+
+
+    .col-left
+      / img.bg-overlay src="/img/media-bg-overlay.png"
+
+      = partial "logo"
+
+      section.heading
+
+        h1
+          .row.top
+            strong User Flow Analysis
+          .row.bottom
+            .col-left
+              span= " for "
+            .col-right
+              strong Media Websites
+
+        p
+          | We dive into your site’s user experience and analytics data, uncovering opportunities to
+          strong= " maximize pageviews."
+
+
+section.row.benefits
+  .col-left
+    .border-row.border-top
+    ul
+      li.ad-revenues
+        div
+          img src="/img/icon-ad-revenue.png"
+          h4 Increase ad revenues
+
+
+      li.prioritize
+        div
+          img src="/img/icon-prioritize-features.png"
+          h4 Prioritize effectively
+
+
+      li.insight
+        div
+          img src="/img/icon-gain-insight.png"
+          h4 Gain new insight
+
+  .border-col.border-middle
+
+  .col-right
+    .border-row.border-top
+    .inner
+      h3
+        p
+          | We've found
+          strong = " millions "
+          | in untapped revenue potential for our media clients.
+
+section.row.logos.mobile-only
+  div
+    .row.bv-text
+      img src="/img/report-card-landing/bob-vila-logo-text.png"
+    .row.fp
+      img src="/img/fp-logo.png"
+    .row.mishkin
+      img src="/img/mishkin-associates-logo.png"
+
+section.row.clients
+  .col-left.testimonials
+    .border-col.border-left
+    .border-row.border-top
+
+    .inner
+      .testimonial.first
+        = partial "gretchen"
+
+      .testimonial.last
+        = partial "arnon"
+
+  .border-col.border-middle
+
+  .col-right.logos
+    .border-row.border-top
+    div
+      .row.bv
+        img src="/img/bv-logo.png"
+      .row.fp
+        img src="/img/fp-logo.png"
+      .row.mishkin
+        img src="/img/mishkin-associates-logo.png"
+
+    .border-col.border-right
+
+section.row.process
+  .col-left.diagram
+    .border-col.border-left
+    h2
+      | The
+      em =" Process"
+
+    .step.first
+      h5
+        span.number ="1."
+        span.text
+          = "We map out "
+          em = "key user paths"
+          = " to determine pageview and revenue stats."
+      img src="/img/media-diagram-1.png"
+
+    .step.second
+      h5
+        span.number ="2."
+        span.text
+          = "We examine user experience and mine analytics data to "
+          em ="identify weak spots"
+          = " where visitors drop off unnecessarily."
+      img src="/img/diagram-step2.png"
+
+    .step.third
+      h5
+        span.number ="3."
+        span.text
+          = "We help you "
+          em = "develop a strategy"
+          = " to make targeted, measurable improvements to the most critical areas, increasing pageviews and revenues."
+      img src="/img/media-diagram-3.png"
+
+    .border-row.border-bottom
+
+  .border-col.border-middle
+
+  .col-right.deliverables
+    h2
+      | You
+      em = " Receive"
+
+    .items
+      .deliverable.ux
+        .col-left
+          img src="/img/icon-hurdle.png"
+
+        .col-right
+          | A
+          strong =" user experience report "
+          | that highlights critical paths and identifies points with high friction.
+
+      .deliverable.analytics
+        .col-left
+          img src="/img/icon-analytics.png"
+
+        .col-right
+          | An
+          strong =" analytics report "
+          | that tells you how well you're tracking user behavior and points out anything that's missing.
+
+      .deliverable.spreadsheet
+        .col-left
+          img src="/img/icon-spreadsheet.png"
+
+        .col-right
+          | A
+          strong =" spreadsheet model "
+          | that puts key conversion rates and financial projections in one place so you can estimate ROI for potential projects.
+
+      .deliverable.strategy
+        .col-left
+          img src="/img/icon-strategy.png"
+
+        .col-right
+          | A
+          strong =" strategy session "
+          | that sums up our findings and shows you where to focus for the largest gains.
+
+    .border-col.border-right
+    .border-row.border-bottom
+
+section.row.longform
+  / p
+  /   | Find out where you're
+  /   =" strong, "
+  /   | where you're
+  /   =" weak, "
+  /   | and
+  /   =" how much "
+  /   | you're leaving on the table.
+
+  .border-col.border-left
+
+  p
+    strong Find out where you're strong, where you're weak, and how much you're leaving on the table.
+
+  = partial "funnel_audit_form", locals: {subscribe_button: "Get A Free Consultation"}
+
+  .border-col.border-right
+
+- content_for :post_content do
+
+  = partial "footer"
+
+
+
+
+
+

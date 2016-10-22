@@ -1,0 +1,159 @@
+section.why-us
+  margin-bottom: 7.5%
+  +clearfix
+
+  h2
+    margin-bottom: -2px
+
+
+  .team-images
+    width: 100%
+    > div
+      display: inline-block
+      position: relative
+      width: 33.333%
+    img
+      width: 100%
+      margin: 0
+
+    span.email
+      position: absolute
+      margin: 0 auto
+      display: block
+      text-align: center
+      bottom: 0
+      color: rgba(white,0.9)
+      // color: $dark-brown
+      font-size: 1.5rem
+      padding: 4%
+      // background: rgba($dark-yellow, 0.9)
+
+      strong
+        font-size: 1.7rem
+        position: relative
+        top: 0.1rem
+        color: $yellow
+
+        @media (max-width : 745px)
+          top: 0
+
+    .dane span.email
+      left: 0
+
+    .lennon span.email
+      right: 0
+
+    .spacer
+      .logo img
+        position: absolute
+        top: 7%
+        left: 7%
+
+      img.bg
+        opacity: 0.15
+
+
+
+  .row
+    position: relative
+    top: -3px
+    display: table
+    img
+      width: 30%
+
+    .design img
+      margin-top: -13px
+
+    > div
+      padding: 25px 18px
+      padding: 2.5rem 1.8rem
+      +box-sizing(border-box)
+      display: table-cell
+      width: 33.33%
+      color: #fff
+      margin-top: 0
+      h6
+        font-family: $heading-font
+        font-size: 20px
+        font-size: 2rem
+        text-transform: uppercase
+        margin: 8% auto
+        line-height: 155%
+
+
+      p
+        font-size: 14px
+        font-size: 1.4rem
+        line-height: 160%
+        margin: 0 20px
+        margin: 0 2rem
+
+      .links
+        margin-top: 5%
+        a
+          font-family: $heading-font
+          display: block
+          text-decoration: underline
+          color: white
+          margin-bottom: 1%
+
+  @media (max-width : 800px)
+    .team-images
+      .spacer
+        display: none
+      .dane, .lennon
+        width: 50%
+
+        span.email
+          font-size: 2.8rem
+          width: 92%
+          text-align: center
+          right: inherit
+          left: inherit
+          padding-bottom: 4%
+
+          strong
+            font-size: 3.1rem
+    .row
+      .numbers, .design, .tech
+        display: block
+        width: 101%
+        padding: 5% 8% 8%
+
+        img
+          width: 18%
+          position: relative
+          margin-top: -8%
+
+        h6
+          font-size: 3.5rem
+          margin: 4% 0
+          display: inline-block
+          margin-left: 6%
+          text-align: left
+        p
+          font-size: 2.4rem
+          margin-top: 4%
+          line-height: 160%
+
+  @media (max-width : 600px)
+    .row
+      .numbers, .design, .tech
+        img
+        h6
+          font-size: 3.8rem
+        p
+          font-size: 3.2rem
+          margin-top: 4%
+          line-height: 160%
+
+
+  .numbers
+    background: lighten($darkest-blue, 12%)
+
+  .design
+    background: lighten($darkest-blue, 22%)
+
+  .tech
+    background: lighten($darkest-blue, 32%)
+
