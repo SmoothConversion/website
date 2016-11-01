@@ -1,44 +1,74 @@
 .roadmapping
   section.roadmapping-hero
-    background-image: url("/img/roadmapping/roadmapping-hero.png")
-    height: 600px
     width: 1007px
+    position: relative
 
-    h1
-      color: white
-      font-size: 50px
-      position: relative
-      top: 430px
-      font-family: Quicksand
+    img
+      width: 100%
 
-    h3
-      color: white
-      font-size: 27px
-      position: relative
-      top: 450px
-      font-weight: 200
+    @media (max-width : 800px)
+      width: 100%
+
+    .hero-content
+      position: absolute
+      bottom: 10%
+      width: 100%
+      text-align: center
+
+      @media (max-width : 500px)
+        bottom: 6%
+
+      h1
+        color: white
+        font-size: 800%
+        font-family: Quicksand
+        margin-bottom: 4%
+
+        @media (max-width : 500px)
+          font-size: 20px
+
+      h3
+        color: white
+        font-size: 450%
+        font-weight: 200
+
+        @media (max-width : 500px)
+          font-size: 12px
 
   section.book-session
     padding: 30px 60px
     text-align: left
     margin-top: 15px
 
+    @media (max-width : 800px)
+      padding: 30px
+    @media (max-width : 650px)
+      text-align: center
+
     h1
-      font-size: 25px
+      font-size: 400%
       color: $green
       font-family: Quicksand
       float: left
       margin-right: 40px
 
+      @media (max-width : 650px)
+        float: none
+        margin-right: 0
+        font-size: 20px
+        line-height: 28px
+
     .cta
       background-color: #1D3F69
-      width: 130px
+      width: 14%
       padding: 1.5rem 3%
       +border-radius(13px)
       cursor: pointer
-      @media (max-width : 500px)
-        width: 90%
-        padding: 1rem 4%
+      @media (max-width : 800px)
+        width: 15%
+      @media (max-width : 650px)
+        width: 120px
+        margin: 20px auto
 
       p.cta-copy
         color: white
@@ -47,9 +77,7 @@
         font-weight: bold
         margin: 0
         @media (max-width : 500px)
-          font-size: 1.1rem
-        @media (max-width : 425px)
-          font-size: 0.9rem
+          font-size: 13px
 
         span.arrow
           color: #FFCB6B
@@ -58,13 +86,11 @@
           position: relative
           top: 2px
           @media (max-width : 500px)
-            font-size: 1.4rem
-          @media (max-width : 425px)
-            font-size: 1.2rem
+            font-size: 13px
 
   section.book-session.bottom
     text-align: center
-    width: 910px
+    width: 80%
     margin-top: 30px
 
     .cta
@@ -75,16 +101,27 @@
       p.cta-copy
         font-size: 2.5rem 
 
+        @media (max-width : 800px)
+          font-size: 15px
+
         span.arrow
           font-size: 2.5rem
+
+          @media (max-width : 800px)
+            font-size: 15px
 
   section.details
     .unbolded
       font-weight: 200
 
     h2
-      width: 986px
-      padding: 1%
+      width: 1007px
+      padding: 1% 0
+      
+      @media (max-width : 800px)
+        width: 100%
+        font-size: 28px
+
 
     h3
       line-height: 27px
@@ -115,12 +152,22 @@
     .list-container.ordered
       width: 555px
 
+      @media (max-width : 800px)
+        width: 80%
+
     .list-container.unordered
       width: 600px
+
+      @media (max-width : 800px)
+        width: 80%
 
     .goal-container
       border: 1px solid black
       margin: 30px 0 45px
+      width: 90%
+
+      @media (max-width : 800px)
+        padding: 0 10px
 
       p
         font-size: 14px
