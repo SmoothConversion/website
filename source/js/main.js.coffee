@@ -154,7 +154,7 @@ $ ->
 
 # funnel analysis
 
-if $(".funnel-analysis").length or $(".funnel-thank-you").length
+if ($(".funnel-analysis").length or $(".funnel-thank-you").length) and !$(".roadmapping").length
 
   # font resizing
   scaleFn = ->
@@ -212,7 +212,3 @@ if $(".funnel-analysis").length or $(".funnel-thank-you").length
     scaleFn()
     setTimeout(verticallyCenterCtaContent, 152)
     setTimeout(verticallyCenterCtaContent, 1000)
-
-
-
-
